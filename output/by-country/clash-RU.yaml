@@ -13,40 +13,19 @@ proxies:
   udp: true
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
-  server: 45.9.15.206
+  server: 172.67.158.34
   port: 443
-  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
+  uuid: 07821f66-cdb7-4c70-9de6-e230cffac470
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ru05.abvpn.ru
+  servername: wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev
   network: ws
   ws-opts:
-    path: /websocket
+    path: /vl/Li1khIHH3DNItJyzraemsPBQvu
     headers:
-      Host: ru05.abvpn.ru
+      Host: wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev
 - name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  type: ss
-  server: 138.124.68.88
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: Y2ZlN
-  udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  type: vless
-  server: 45.9.15.206
-  port: 443
-  uuid: a289a3d3-5833-4b28-8809-ae72898a98d0
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ru05.abvpn.ru
-  network: ws
-  ws-opts:
-    path: /websocket
-    headers:
-      Host: 45.9.15.206
-- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   type: vless
   server: 45.12.75.242
   port: 26424
@@ -66,8 +45,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,7 +53,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
 rules:
 - MATCH,PROXIES

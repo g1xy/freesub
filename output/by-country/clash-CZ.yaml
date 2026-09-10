@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇿 CZ 01 - xiaohe
+  type: vless
+  server: lucky-lab-ac6d.caveyi8071.workers.dev
+  port: 443
+  uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lucky-lab-ac6d.caveyi8071.workers.dev
+  network: ws
+  ws-opts:
+    path: /rN50nmm9L1DeY73C?ed=2560
+    headers:
+      Host: lucky-lab-ac6d.caveyi8071.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇿 CZ 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇿 CZ 01 - xiaohe
+rules:
+- MATCH,PROXIES
