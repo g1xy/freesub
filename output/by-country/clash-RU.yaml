@@ -6,37 +6,46 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: /63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8=
+  server: 195.133.23.200
+  port: 20111
+  cipher: aes-256-gcm
+  password: 81a20429165df87e
   udp: true
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  type: vless
-  server: 172.67.158.34
-  port: 443
-  uuid: 07821f66-cdb7-4c70-9de6-e230cffac470
+  type: ss
+  server: 46.17.42.166
+  port: 10661
+  cipher: aes-256-gcm
+  password: 6b39ae3234dfd68b
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev
-  network: ws
-  ws-opts:
-    path: /vl/Li1khIHH3DNItJyzraemsPBQvu
-    headers:
-      Host: wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev
 - name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  type: vless
-  server: 45.12.75.242
-  port: 26424
-  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+  type: ss
+  server: 195.133.5.102
+  port: 20111
+  cipher: aes-256-gcm
+  password: 895b4b796a357570
   udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
-  servername: ya.ru
-  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  type: ss
+  server: 195.58.48.137
+  port: 20111
+  cipher: aes-256-gcm
+  password: 8ad9d72a5571df86
+  udp: true
+- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  type: ss
+  server: 194.87.196.13
+  port: 20111
+  cipher: aes-256-gcm
+  password: 4938e975724d0ed1
+  udp: true
+- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  type: ss
+  server: 46.17.40.234
+  port: 2011
+  cipher: aes-256-gcm
+  password: bdb313adf74c2ede
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -45,6 +54,9 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -53,5 +65,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
 rules:
 - MATCH,PROXIES
