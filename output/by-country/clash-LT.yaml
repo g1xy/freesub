@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇪🇬 EG 01 - xiaohe
+- name: 🇱🇹 LT 01 - xiaohe
   type: vless
-  server: 38.54.59.209
-  port: 2087
-  uuid: cd842ef8-9577-47f3-83ca-627147ed291b
+  server: 89.117.112.40
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /d1000b16fe76
+    path: /
     headers:
-      Host: Telegram-Leviko_v2ray
+      Host: vms.lifetime11.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇪🇬 EG 01 - xiaohe
+  - 🇱🇹 LT 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇪🇬 EG 01 - xiaohe
+  - 🇱🇹 LT 01 - xiaohe
 rules:
 - MATCH,PROXIES
