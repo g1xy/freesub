@@ -5,19 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
-  type: vless
-  server: 87.121.82.237.vhubtest.ru
-  port: 443
-  uuid: 49d39628-53cf-5345-a8d7-b31e0069b545
+  type: ss
+  server: 138.124.15.120
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: ZjQ1N
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 87.121.82.237.vhubtest.ru
-  network: ws
-  ws-opts:
-    path: /websocket?ed=2560
-    headers:
-      Host: 87.121.82.237.vhubtest.ru
 proxy-groups:
 - name: PROXIES
   type: select
