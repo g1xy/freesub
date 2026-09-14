@@ -13,7 +13,7 @@ proxies:
   udp: true
 - name: 🇵🇱 PL 02 - xiaohe
   type: vless
-  server: 178.95.170.115
+  server: 178.95.170.98
   port: 2087
   uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
   udp: true
@@ -23,7 +23,20 @@ proxies:
   ws-opts:
     path: /4bc027a44532
     headers:
-      Host: 178.95.170.115
+      Host: 178.95.170.98
+- name: 🇵🇱 PL 03 - xiaohe
+  type: vless
+  server: 178.95.170.83
+  port: 2087
+  uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /4bc027a44532
+    headers:
+      Host: 178.95.170.83
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +44,7 @@ proxy-groups:
   - AUTO
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
+  - 🇵🇱 PL 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -38,5 +52,6 @@ proxy-groups:
   proxies:
   - 🇵🇱 PL 01 - xiaohe
   - 🇵🇱 PL 02 - xiaohe
+  - 🇵🇱 PL 03 - xiaohe
 rules:
 - MATCH,PROXIES
