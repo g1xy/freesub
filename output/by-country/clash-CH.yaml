@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇨🇭 CH 01 - xiaohe
   type: vless
-  server: 104.18.28.234
+  server: 104.21.117.9
   port: 443
-  uuid: f6b5a6a3-f3e1-63ca-bb68-bdc400000000
+  uuid: bd9ff08b-d042-3650-48e4-c4b400000000
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: netlivpn5505.ffffdsaaa.workers.dev
+  servername: netlivpn2950.bbxff.workers.dev
   network: ws
   ws-opts:
-    path: /
+    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
     headers:
-      Host: netlivpn5505.ffffdsaaa.workers.dev
+      Host: netlivpn2950.bbxff.workers.dev
 - name: 🇨🇭 CH 02 - xiaohe
   type: vless
   server: 188.114.97.6
@@ -33,18 +33,18 @@ proxies:
       Host: netlivpn2950.bbxff.workers.dev
 - name: 🇨🇭 CH 03 - xiaohe
   type: vless
-  server: 104.21.117.9
+  server: 104.18.28.234
   port: 443
-  uuid: bd9ff08b-d042-3650-48e4-c4b400000000
+  uuid: f6b5a6a3-f3e1-63ca-bb68-bdc400000000
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: netlivpn2950.bbxff.workers.dev
+  servername: netlivpn5505.ffffdsaaa.workers.dev
   network: ws
   ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
+    path: /
     headers:
-      Host: netlivpn2950.bbxff.workers.dev
+      Host: netlivpn5505.ffffdsaaa.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
