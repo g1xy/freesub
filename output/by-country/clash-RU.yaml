@@ -6,8 +6,8 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 31.59.121.156
-  port: 2053
+  server: 64.225.65.116
+  port: 8443
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   tls: true
@@ -15,24 +15,10 @@ proxies:
   servername: cdn8848.776676.xyz
   network: ws
   ws-opts:
-    path: /
+    path: /bd/pictures
     headers:
       Host: cdn8848.776676.xyz
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  type: vless
-  server: 46.8.200.91
-  port: 443
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cf3.rumedia-cdn.com
-  network: ws
-  ws-opts:
-    path: /casc
-    headers:
-      Host: cf3.rumedia-cdn.com
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   type: vless
   server: 46.8.200.91
   port: 443
@@ -44,6 +30,20 @@ proxies:
   network: ws
   ws-opts:
     path: /cdn/v3/live
+    headers:
+      Host: cf3.rumedia-cdn.com
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  type: vless
+  server: 46.8.200.91
+  port: 443
+  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cf3.rumedia-cdn.com
+  network: ws
+  ws-opts:
+    path: /casc
     headers:
       Host: cf3.rumedia-cdn.com
 proxy-groups:
