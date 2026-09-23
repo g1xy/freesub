@@ -33,18 +33,18 @@ proxies:
       Host: shuma.ccwu.cc
 - name: 🇨🇭 CH 03 - xiaohe
   type: vless
-  server: 104.18.28.234
+  server: 103.63.30.73
   port: 443
-  uuid: f6b5a6a3-f3e1-63ca-bb68-bdc400000000
+  uuid: b2593749-691c-428c-9481-14979cba3446
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: netlivpn5505.ffffdsaaa.workers.dev
+  servername: xi.tbv.ccwu.cc
   network: ws
   ws-opts:
-    path: /
+    path: /proxyip=us.xiabibi.cffp=chrome
     headers:
-      Host: netlivpn5505.ffffdsaaa.workers.dev
+      Host: xi.tbv.ccwu.cc
 proxy-groups:
 - name: PROXIES
   type: select
