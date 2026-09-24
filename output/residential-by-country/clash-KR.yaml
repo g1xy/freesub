@@ -6,9 +6,9 @@ log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
   type: vless
-  server: 104.20.28.74
+  server: 172.67.152.71
   port: 8880
-  uuid: 80cead8e-0d28-4b0a-bacd-8005471a5c39
+  uuid: 5bbf0601-8431-45f6-a4e9-a1e8b44c0055
   udp: true
   tls: false
   skip-cert-verify: true
@@ -16,7 +16,7 @@ proxies:
   ws-opts:
     path: /pyip=ProxyIP.KR.CMLiussss.net
     headers:
-      Host: flat-fire-40ed.96-042.workers.dev
+      Host: misty-mouse-141d.177-f18.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
