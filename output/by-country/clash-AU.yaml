@@ -13,65 +13,17 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: 172.105.169.70
-- name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
-  type: vless
-  server: 208.103.161.5
-  port: 443
-  uuid: d042a74a-c305-4eec-a89f-39a348022c92
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: dry-butterfly-8eb9.tmpgnacio83.workers.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: dry-butterfly-8eb9.tmpgnacio83.workers.dev
-- name: 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
-  type: vless
-  server: nova.freshnet.ir
-  port: 2082
-  uuid: ce2bd817-7fb1-4b94-8125-d6161de31962
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: nova.freshnet.ir
-  network: ws
-  ws-opts:
-    path: /cats/FslNz
-    headers:
-      Host: nova.freshnet.ir
-- name: 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
-  type: vless
-  server: 208.103.161.5
-  port: 443
-  uuid: d042a74a-c305-4eec-a89f-39a348022c92
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: dry-butterfly-8eb9.tmpgnacio83.workers.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: dry-butterfly-8eb9.tmpgnacio83.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
 rules:
 - MATCH,PROXIES
