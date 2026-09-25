@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇺🇿 UZ 01 - xiaohe
   type: vless
-  server: 104.24.143.217
+  server: 104.25.155.45
   port: 443
   uuid: 50414e45-4c5f-5a45-5553-4eef5adc237a
   udp: true
@@ -20,7 +20,7 @@ proxies:
       Host: r5zenrelur2s.pqzdileiu8es.workers.dev
 - name: 🇺🇿 UZ 02 - xiaohe
   type: vless
-  server: 104.25.155.45
+  server: 172.67.210.146
   port: 443
   uuid: 50414e45-4c5f-5a45-5553-4eef5adc237a
   udp: true
@@ -34,7 +34,7 @@ proxies:
       Host: r5zenrelur2s.pqzdileiu8es.workers.dev
 - name: 🇺🇿 UZ 03 - xiaohe
   type: vless
-  server: 172.67.210.146
+  server: 104.24.143.217
   port: 443
   uuid: 50414e45-4c5f-5a45-5553-4eef5adc237a
   udp: true
