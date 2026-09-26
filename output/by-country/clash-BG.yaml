@@ -4,31 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇱 IL 01 - xiaohe
+- name: 🇧🇬 BG 01 - xiaohe
   type: vless
-  server: fserver-worker-001.mapleridgeway.top
-  port: 443
-  uuid: 83b4af70-376e-427c-8c11-a025bec6b085
+  server: 131.123.37.199
+  port: 8081
+  uuid: 54ee5e59-55a3-4599-83ff-0c67b3f411b2
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: fserver-worker-001.mapleridgeway.top
   network: ws
   ws-opts:
-    path: /cdn/99294c014f2c7791?ed=2056
+    path: /vless-test
     headers:
-      Host: fserver-worker-001.mapleridgeway.top
+      Host: 131.123.37.199
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇱 IL 01 - xiaohe
+  - 🇧🇬 BG 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇱 IL 01 - xiaohe
+  - 🇧🇬 BG 01 - xiaohe
 rules:
 - MATCH,PROXIES
