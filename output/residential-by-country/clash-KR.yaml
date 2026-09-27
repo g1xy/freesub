@@ -6,13 +6,18 @@ log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
   type: vless
-  server: 188.72.103.4
-  port: 443
-  uuid: 4cf9c712-11c4-47d8-aa31-a1693a1aa4e5
+  server: 103.177.249.40
+  port: 2083
+  uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: edge1.office2v.ru
+  servername: yf.962456.xyz
+  network: ws
+  ws-opts:
+    path: /proxyip=kr.william.us.ci
+    headers:
+      Host: yf.962456.xyz
 proxy-groups:
 - name: PROXIES
   type: select
