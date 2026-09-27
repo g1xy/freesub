@@ -6,38 +6,18 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 185.229.9.160
-  port: 443
-  uuid: 9e4f675b-d6bf-42d1-be55-389f622783af
+  server: 104.18.34.14
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  reality-opts:
-    public-key: 4Y0QLEasqtkWqfbrRedWqrZSPTnB14FDfI9q1v5SsHs
-  servername: smartcaptcha.yandexcloud.net
-  client-fingerprint: safari
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  type: vless
-  server: 46.8.200.91
-  port: 443
-  uuid: b8201bab-fa6c-4f6e-b289-b5da660c6f69
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: cf3.rumedia-cdn.com
   network: ws
   ws-opts:
-    path: /cdn/v3/live
+    path: /?ed=2560security=tls
     headers:
-      Host: cf3.rumedia-cdn.com
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  type: ss
-  server: 188.225.78.31
-  port: 2053
-  cipher: 2022-blake3-aes-256-gcm
-  password: g4h/AcJh1+jg9+yonlMK4Wq7fhbFY3NkcOzUVlZ9GjU=
-  udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
   server: fbsv6.guardora.pro
   port: 443
@@ -51,30 +31,59 @@ proxies:
     path: /ws
     headers:
       Host: fbsv6.guardora.pro
-- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: ziOeKejhhw+fmWet+xvuJsVJH7U9DvSWq1hlqtaKv+I=
-  udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   type: vless
-  server: 104.21.96.1
+  server: 185.229.9.160
   port: 443
-  uuid: 0836463b-214f-4af6-aa85-85a56a62388e
+  uuid: 9e4f675b-d6bf-42d1-be55-389f622783af
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev
+  reality-opts:
+    public-key: 4Y0QLEasqtkWqfbrRedWqrZSPTnB14FDfI9q1v5SsHs
+  servername: smartcaptcha.yandexcloud.net
+  client-fingerprint: safari
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  type: vless
+  server: 185.229.9.157
+  port: 443
+  uuid: 9e4f675b-d6bf-42d1-be55-389f622783af
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k
+  servername: 360.yandex.ru
+  client-fingerprint: safari
+- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  type: vless
+  server: 172.64.53.55
+  port: 2095
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  type: vless
+  server: 162.159.48.32
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: d2127a49-flat-wood-c4b5.milia-akbarpoor.workers.dev
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   type: vless
-  server: 185.229.9.157
+  server: 62.152.58.182
   port: 443
   uuid: 9e4f675b-d6bf-42d1-be55-389f622783af
   udp: true
