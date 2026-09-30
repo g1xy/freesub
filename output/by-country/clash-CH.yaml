@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 LV 01 - xiaohe
+- name: 🇨🇭 CH 01 - xiaohe
   type: vless
-  server: latvia-3.kochvpn.pw
+  server: 185.18.250.245
   port: 443
-  uuid: 8de0e6f4-d365-fa64-d5ba-eed9ea513e06
+  uuid: f77299ea-e13d-417d-8cdc-ce5566dfc94b
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: latvia-3.kochvpn.pw
+  servername: edu.ruangguru.com.r3xxe.eu.cc
   network: ws
   ws-opts:
-    path: /stream/ws
+    path: /nl-tw
     headers:
-      Host: latvia-3.kochvpn.pw
+      Host: edu.ruangguru.com.r3xxe.eu.cc
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 LV 01 - xiaohe
+  - 🇨🇭 CH 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 LV 01 - xiaohe
+  - 🇨🇭 CH 01 - xiaohe
 rules:
 - MATCH,PROXIES
