@@ -5,15 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇾 MY 01 - xiaohe
-  type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: platform128.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
   tls: false
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform128
+    headers:
+      Host: platform128.golnamakcert.top
 - name: 🇲🇾 MY 02 - xiaohe
   type: vless
   server: platform128.golnamakcert.top
@@ -26,34 +29,27 @@ proxies:
   ws-opts:
     path: /platform128
     headers:
-      Host: platform128.halalkhor.info
+      Host: platform128.golnamakcert.top
 - name: 🇲🇾 MY 03 - xiaohe
-  type: vless
-  server: 141.11.90.160
-  port: 443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: shephe.dpdns.org
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: shephe.dpdns.org
-- name: 🇲🇾 MY 04 - xiaohe
-  type: vless
-  server: platform128.golnamakcert.top
-  port: 80
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /platform128
-    headers:
-      Host: platform128.golnamakcert.top
+- name: 🇲🇾 MY 04 - xiaohe
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: true
 - name: 🇲🇾 MY 05 - xiaohe
   type: vmess
   server: 47.250.135.244
@@ -65,15 +61,18 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: 🇲🇾 MY 06 - xiaohe
-  type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: platform128.golnamakcert.top
+  port: 80
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   udp: true
   tls: false
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform128
+    headers:
+      Host: platform128.halalkhor.info
 - name: 🇲🇾 MY 07 - xiaohe
   type: vless
   server: platform128.golnamakcert.top
@@ -86,7 +85,7 @@ proxies:
   ws-opts:
     path: /platform128
     headers:
-      Host: platform128.golnamakcert.top
+      Host: platform128.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select

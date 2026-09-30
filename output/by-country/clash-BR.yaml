@@ -18,33 +18,17 @@ proxies:
     path: /
     headers:
       Host: edgetunnel-4uw.pages.dev
-- name: 🇧🇷 BR 02 - xiaohe
-  type: vless
-  server: 188.114.97.3
-  port: 2083
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: newwk1.f1w.de5.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: newwk1.f1w.de5.net
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇷 BR 01 - xiaohe
-  - 🇧🇷 BR 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇧🇷 BR 01 - xiaohe
-  - 🇧🇷 BR 02 - xiaohe
 rules:
 - MATCH,PROXIES
