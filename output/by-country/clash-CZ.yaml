@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇨🇿 CZ 01 - xiaohe
   type: vless
-  server: 95.182.95.178
+  server: 8.47.69.9
   port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  uuid: 11e9eea1-b1a9-4f02-a1a1-b24f7664b1cf
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ccc.010304.xyz
+  servername: ancIEnt-HeaRt-60c5.dPccgIzieB.WoRKers.dEV
   network: ws
   ws-opts:
-    path: /fp
+    path: /eyJqdW5rIjoiYW1sczlYWkFHOCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0
     headers:
-      Host: ccc.010304.xyz
+      Host: ancient-heart-60c5.dpccgizieb.workers.dev
 - name: 🇨🇿 CZ 02 - xiaohe
   type: vless
   server: 95.182.95.178
@@ -34,18 +34,32 @@ proxies:
       Host: ccc.010304.xyz
 - name: 🇨🇿 CZ 03 - xiaohe
   type: vless
-  server: 138.124.58.39
+  server: 172.67.145.21
   port: 443
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: fzo5i.ir46.90k.hh.ov0.kdns.fr
+  servername: INDEX.Arcane509.Workers.DEV
   network: ws
   ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
+    path: /
     headers:
-      Host: fzo5i.ir46.90k.hh.ov0.kdns.fr
+      Host: index.arcane509.workers.dev
+- name: 🇨🇿 CZ 04 - xiaohe
+  type: vless
+  server: 95.182.95.178
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: ccc.010304.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,6 +68,7 @@ proxy-groups:
   - 🇨🇿 CZ 01 - xiaohe
   - 🇨🇿 CZ 02 - xiaohe
   - 🇨🇿 CZ 03 - xiaohe
+  - 🇨🇿 CZ 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -62,5 +77,6 @@ proxy-groups:
   - 🇨🇿 CZ 01 - xiaohe
   - 🇨🇿 CZ 02 - xiaohe
   - 🇨🇿 CZ 03 - xiaohe
+  - 🇨🇿 CZ 04 - xiaohe
 rules:
 - MATCH,PROXIES
