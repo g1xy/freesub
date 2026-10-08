@@ -15,12 +15,12 @@ proxies:
   servername: ccc.010304.xyz
   network: ws
   ws-opts:
-    path: /fp=chromefp=chrome
+    path: /fp=chrome
     headers:
       Host: ccc.010304.xyz
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   type: vless
-  server: 155.103.71.142
+  server: 203.202.232.211
   port: 443
   uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
