@@ -26,24 +26,18 @@ proxies:
   skip-cert-verify: true
 - name: 🇹🇭 TH 03 - xiaohe
   type: ss
-  server: 103.107.52.106
+  server: pphfree2.mvpnpvpn.de5.net
   port: 52351
   cipher: aes-256-gcm
   password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
   udp: true
 - name: 🇹🇭 TH 04 - xiaohe
-  type: vless
-  server: 103.86.49.57
-  port: 80
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  type: ss
+  server: 103.107.52.106
+  port: 52351
+  cipher: aes-256-gcm
+  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
   udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: aIs.SpEeDtEsT.nEt
 proxy-groups:
 - name: PROXIES
   type: select
