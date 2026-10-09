@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇷🇴 RO 01 - xiaohe
   type: vless
-  server: 45.136.199.148
-  port: 443
-  uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
+  server: 46.183.16.4
+  port: 2087
+  uuid: 69d76969-4c52-40f5-ac1d-303571634362
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: x.m-90.xyz
+  servername: ro1.b0w.ir
   network: ws
   ws-opts:
-    path: t.me/TEAMNETGRATISCOL
+    path: /
     headers:
-      Host: x.m-90.xyz
+      Host: 46.183.16.4
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,19 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: vless
-  server: 45.9.13.99
-  port: 443
-  uuid: 489f1717-d3c7-4940-ad68-bdbdbab857f4
+  type: ss
+  server: 46.17.45.31
+  port: 50660
+  cipher: aes-256-gcm
+  password: bdb313adf74c2ede
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: x.m-90.xyz
-  network: ws
-  ws-opts:
-    path: t.me/TEAMNETGRATISCOL
-    headers:
-      Host: x.m-90.xyz
 proxy-groups:
 - name: PROXIES
   type: select
