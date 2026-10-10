@@ -5,40 +5,38 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: vless
-  server: 172.67.145.21
-  port: 443
-  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: INDEX.Arcane509.Workers.DEV
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: index.arcane509.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: ss
   server: 130.49.189.158
   port: 43558
   cipher: chacha20-ietf-poly1305
   password: eicdhshSrFLCx/sZ1PSpuKyoVWGZpU95tFS4iGC1c04=
   udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
-  server: 172.67.167.77
+  server: 79.174.92.222
   port: 443
-  uuid: cc08d2d0-8a7a-4469-81d2-c43704451271
+  uuid: 03ca8c3f-e777-45b5-a1b1-592094ca99ee
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+  reality-opts:
+    public-key: _PYBo3dyZRpGC44vADqcmlBCSeAVh1X8l3mulghVsTI
+  servername: m.vk.com
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  type: vless
+  server: 172.66.44.124
+  port: 8443
+  uuid: b2f2f9f2-1864-48ea-839b-22815faff1f1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
   network: ws
   ws-opts:
-    path: /vl/6871nrbnl9WsdAiOUInt
+    path: /
     headers:
-      Host: 9tg-d0htbrb5e3tp0c-o7ix23cx0f.ftfgblgft6-1h2iv2oo4h0.workers.dev
+      Host: stf839dvvyog9d2qa4-b8z6ahgn7b7qi.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
