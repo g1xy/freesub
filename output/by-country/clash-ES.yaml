@@ -5,12 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇸 西班牙 (Spain) 01 - xiaohe
-  type: ss
-  server: 108.181.121.226
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: WSyL4XTwNsdv
+  type: vless
+  server: es3.h1cloud.net
+  port: 25136
+  uuid: c1c13ef7-affa-47e1-8967-25cc67679c10
   udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w
+  servername: www.cloudflare.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
