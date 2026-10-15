@@ -4,29 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇷 BR 01 - xiaohe
+- name: 🇩🇰 DK 01 - xiaohe
   type: vless
-  server: 35.199.90.53
+  server: 188.114.97.6
   port: 443
-  uuid: 5e517b94-e207-47ee-be3c-3020a57594e8
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
   udp: true
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: pCImwRkTjx8OIUiu1WFelZQFt1p3Q0lUoPbvjVq8GTs
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--V2ray_confiig?ed=2560
+    headers:
+      Host: lucasjow.us.ci
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇷 BR 01 - xiaohe
+  - 🇩🇰 DK 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷 BR 01 - xiaohe
+  - 🇩🇰 DK 01 - xiaohe
 rules:
 - MATCH,PROXIES
