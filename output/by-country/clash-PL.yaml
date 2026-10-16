@@ -44,7 +44,7 @@ proxies:
   type: vless
   server: pl4.h1cloud.net
   port: 25080
-  uuid: ec572cf0-1337-4c51-b4ec-ff2f538c1f4c
+  uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b
   udp: true
   tls: true
   skip-cert-verify: true
