@@ -5,11 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇦 UA 01 - xiaohe
-  type: vless
-  server: s3-ge.videocdnpink.video
+  server: 188.225.25.71
   port: 443
-  uuid: b3a7fe26-2ea7-4aa1-ba7a-8ef37a1a71c5
   udp: true
+  type: vless
+  uuid: b3a7fe26-2ea7-4aa1-ba7a-8ef37a1a71c5
   tls: true
   skip-cert-verify: true
   servername: s3-ge.videocdnpink.video

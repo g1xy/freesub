@@ -1,0 +1,240 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "default": "auto",
+      "outbounds": [
+        "auto",
+        "🇲🇩 MD 01 - xiaohe",
+        "🇲🇩 MD 02 - xiaohe",
+        "🇲🇩 MD 03 - xiaohe",
+        "🇲🇩 MD 04 - xiaohe",
+        "🇲🇩 MD 05 - xiaohe",
+        "🇲🇩 MD 06 - xiaohe",
+        "🇲🇩 MD 07 - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇲🇩 MD 01 - xiaohe",
+        "🇲🇩 MD 02 - xiaohe",
+        "🇲🇩 MD 03 - xiaohe",
+        "🇲🇩 MD 04 - xiaohe",
+        "🇲🇩 MD 05 - xiaohe",
+        "🇲🇩 MD 06 - xiaohe",
+        "🇲🇩 MD 07 - xiaohe"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 MD 01 - xiaohe",
+      "server": "89.35.14.33",
+      "server_port": 443,
+      "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "md4.univesalsrv.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "TZVMqglhHzteJ6t34mtku75LKzXNq0CB6glKYMAH6zg",
+          "short_id": "8e07337954f9823f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "hub.v1.ApiService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 MD 02 - xiaohe",
+      "server": "md1.aiage.work",
+      "server_port": 443,
+      "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "md1.aiage.work",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "0dtXhkhkh-_MBFoGwzdW4PdlJtVX9oswhJZHbUPGCmo",
+          "short_id": "e829f50f0a3f416b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 MD 03 - xiaohe",
+      "server": "195.178.106.23",
+      "server_port": 443,
+      "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "md1.aiage.work",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "0dtXhkhkh-_MBFoGwzdW4PdlJtVX9oswhJZHbUPGCmo",
+          "short_id": "e829f50f0a3f416b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 MD 04 - xiaohe",
+      "server": "89.35.14.31",
+      "server_port": 443,
+      "uuid": "2f35965a-9a9b-45fd-ba32-987296dfb6be",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "md2.univesalsrv.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o",
+          "short_id": "d36a38659ce106cb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "hub.v1.SyncService"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 MD 05 - xiaohe",
+      "server": "ro2.aiage.work",
+      "server_port": 443,
+      "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ro2.aiage.work",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c",
+          "short_id": "1d2fecf1d2475168"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 MD 06 - xiaohe",
+      "server": "85.120.144.116",
+      "server_port": 443,
+      "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ro2.aiage.work",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "pkKL2cqqPNxc1rqrvhJmexI7NOeZFaGUawAwqQpVY3c",
+          "short_id": "1d2fecf1d2475168"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇩 MD 07 - xiaohe",
+      "server": "85.120.144.27",
+      "server_port": 443,
+      "uuid": "6338c01a-310e-42c3-bf4f-2a20e161054b",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "md1.aiage.work",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "0dtXhkhkh-_MBFoGwzdW4PdlJtVX9oswhJZHbUPGCmo",
+          "short_id": "5d7a45ac0ad6adff"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "inbound": [
+          "mixed-in"
+        ],
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  }
+}

@@ -1,0 +1,54 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇧🇬 BG 01 - xiaohe
+  server: 45.9.156.42
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: RDWvDEygSk1eyAQhIK95H9EteFbrS2d9JEjBrco54Bw
+  servername: bg5.univesalsrv.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: gw.v2.RelayService
+    grpc-multi-mode: true
+- name: 🇧🇬 BG 02 - xiaohe
+  server: bg2.univesalsrv.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: 0f0dh_FUju5cHgQcIwUjHvxQb9aIZ00p0kZRHeE7Ey4
+  servername: bg2.univesalsrv.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: api.v2.PushService
+    grpc-multi-mode: true
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇧🇬 BG 01 - xiaohe
+  - 🇧🇬 BG 02 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇧🇬 BG 01 - xiaohe
+  - 🇧🇬 BG 02 - xiaohe
+rules:
+- MATCH,PROXIES

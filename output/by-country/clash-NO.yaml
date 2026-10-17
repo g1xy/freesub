@@ -5,12 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇴 NO 01 - xiaohe
-  type: ss
   server: 185.213.23.63
   port: 990
+  udp: true
+  type: ss
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select

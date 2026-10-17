@@ -1,9 +1,21 @@
 {
-  "version": 1,
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
   "outbounds": [
     {
       "type": "selector",
       "tag": "select",
+      "default": "auto",
       "outbounds": [
         "auto",
         "🇲🇾 MY 01 - xiaohe",
@@ -19,7 +31,8 @@
         "🇲🇾 MY 02 - xiaohe",
         "🇲🇾 MY 03 - xiaohe"
       ],
-      "url": "https://www.google.com/generate_204"
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m"
     },
     {
       "type": "direct",
@@ -28,6 +41,98 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇾 MY 01 - xiaohe",
+      "server": "216.173.67.59",
+      "server_port": 443,
+      "uuid": "d342d11e-d224-4463-b982-532309285094",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "ccc.010304.xyz",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fp=chrome",
+        "headers": {
+          "Host": "ccc.010304.xyz"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇲🇾 MY 02 - xiaohe",
+      "server": "76.13.218.192",
+      "server_port": 8443,
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443",
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇲🇾 MY 03 - xiaohe",
+      "server": "104.21.23.80",
+      "server_port": 443,
+      "uuid": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
+      "alter_id": 0,
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "my.lovehk.xyz",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/KualaLumpur1",
+        "headers": {
+          "Host": "my.lovehk.xyz"
+        }
+      }
     }
-  ]
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "inbound": [
+          "mixed-in"
+        ],
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  }
 }

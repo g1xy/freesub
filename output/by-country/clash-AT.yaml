@@ -5,19 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇹 AT 01 - xiaohe
-  type: ss
-  server: 82.110.60.9
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  server: api.mediakaskad.cc
+  port: 443
   udp: true
+  type: vless
+  uuid: 082f5694-9019-4110-b67b-8125dbb9bab8
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs
+  servername: api.mediakaskad.cc
+  client-fingerprint: firefox
 - name: 🇦🇹 AT 02 - xiaohe
-  type: ss
   server: 82.110.60.9
   port: 19999
+  udp: true
+  type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select

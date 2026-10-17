@@ -1,25 +1,26 @@
 {
-  "version": 1,
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
   "outbounds": [
     {
       "type": "selector",
       "tag": "select",
+      "default": "auto",
       "outbounds": [
         "auto",
         "🇮🇳 印度 (India) 01 - xiaohe",
         "🇮🇳 印度 (India) 02 - xiaohe",
-        "🇮🇳 印度 (India) 03 - xiaohe",
-        "🇮🇳 印度 (India) 04 - xiaohe",
-        "🇮🇳 印度 (India) 05 - xiaohe",
-        "🇮🇳 印度 (India) 06 - xiaohe",
-        "🇮🇳 印度 (India) 07 - xiaohe",
-        "🇮🇳 印度 (India) 08 - xiaohe",
-        "🇮🇳 印度 (India) 09 - xiaohe",
-        "🇮🇳 印度 (India) 10 - xiaohe",
-        "🇮🇳 印度 (India) 11 - xiaohe",
-        "🇮🇳 印度 (India) 12 - xiaohe",
-        "🇮🇳 印度 (India) 13 - xiaohe",
-        "🇮🇳 印度 (India) 14 - xiaohe"
+        "🇮🇳 印度 (India) 03 - xiaohe"
       ]
     },
     {
@@ -28,20 +29,10 @@
       "outbounds": [
         "🇮🇳 印度 (India) 01 - xiaohe",
         "🇮🇳 印度 (India) 02 - xiaohe",
-        "🇮🇳 印度 (India) 03 - xiaohe",
-        "🇮🇳 印度 (India) 04 - xiaohe",
-        "🇮🇳 印度 (India) 05 - xiaohe",
-        "🇮🇳 印度 (India) 06 - xiaohe",
-        "🇮🇳 印度 (India) 07 - xiaohe",
-        "🇮🇳 印度 (India) 08 - xiaohe",
-        "🇮🇳 印度 (India) 09 - xiaohe",
-        "🇮🇳 印度 (India) 10 - xiaohe",
-        "🇮🇳 印度 (India) 11 - xiaohe",
-        "🇮🇳 印度 (India) 12 - xiaohe",
-        "🇮🇳 印度 (India) 13 - xiaohe",
-        "🇮🇳 印度 (India) 14 - xiaohe"
+        "🇮🇳 印度 (India) 03 - xiaohe"
       ],
-      "url": "https://www.google.com/generate_204"
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m"
     },
     {
       "type": "direct",
@@ -50,6 +41,70 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 01 - xiaohe",
+      "server": "194.61.31.126",
+      "server_port": 2053,
+      "uuid": "1d4e18bd-1f26-4915-b35a-7ace4826e76a",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "PuAGLfJy6cu1TNoHuKIKSxPetCbZI41fc8hQDjWPIAU",
+          "short_id": "9980e0609b0d3891"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇳 印度 (India) 02 - xiaohe",
+      "server": "13.140.56.100",
+      "server_port": 14430,
+      "uuid": "68512eac-cd53-4de3-8d1e-08f6e04af1a9",
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "13.140.56.100"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇳 印度 (India) 03 - xiaohe",
+      "server": "139.84.166.47",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "GEdoeeqLZtkJRgSa"
     }
-  ]
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "inbound": [
+          "mixed-in"
+        ],
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  }
 }

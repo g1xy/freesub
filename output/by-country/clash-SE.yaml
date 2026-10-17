@@ -5,11 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 SE 01 - xiaohe
-  type: vless
   server: 5.178.109.174
   port: 14430
-  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   udp: true
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   tls: false
   skip-cert-verify: true
   network: ws
@@ -18,11 +18,24 @@ proxies:
     headers:
       Host: 5.178.109.174
 - name: 🇸🇪 SE 02 - xiaohe
+  server: 193.188.21.253
+  port: 10444
+  udp: true
   type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+  servername: video.yandex.ru
+  client-fingerprint: firefox
+- name: 🇸🇪 SE 03 - xiaohe
   server: 77.110.97.245
   port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
   udp: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
   tls: true
   skip-cert-verify: true
   servername: ccc.010304.xyz
@@ -31,26 +44,12 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- name: 🇸🇪 SE 03 - xiaohe
-  type: vless
-  server: 94.143.231.146
-  port: 443
-  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: sub.merky.top
-  network: ws
-  ws-opts:
-    path: /merky-connect/de6/
-    headers:
-      Host: sub.merky.top
 - name: 🇸🇪 SE 04 - xiaohe
-  type: vless
   server: 193.188.21.253
   port: 14430
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
   udp: true
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
   tls: false
   skip-cert-verify: true
   network: ws
@@ -58,6 +57,20 @@ proxies:
     path: /vless
     headers:
       Host: 193.188.21.253
+- name: 🇸🇪 SE 05 - xiaohe
+  server: 62.182.192.195
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +80,7 @@ proxy-groups:
   - 🇸🇪 SE 02 - xiaohe
   - 🇸🇪 SE 03 - xiaohe
   - 🇸🇪 SE 04 - xiaohe
+  - 🇸🇪 SE 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,5 +90,6 @@ proxy-groups:
   - 🇸🇪 SE 02 - xiaohe
   - 🇸🇪 SE 03 - xiaohe
   - 🇸🇪 SE 04 - xiaohe
+  - 🇸🇪 SE 05 - xiaohe
 rules:
 - MATCH,PROXIES

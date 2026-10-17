@@ -1,0 +1,83 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "default": "auto",
+      "outbounds": [
+        "auto",
+        "🇮🇷 IR 01 - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇮🇷 IR 01 - xiaohe"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇷 IR 01 - xiaohe",
+      "server": "f36.tivexabot.ir",
+      "server_port": 8443,
+      "uuid": "cf89fddb-e76b-430e-8952-61e33d4da4a6",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "stg-ru-images.shop.samsung.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "QJ0hQw2eD-EVhhGSr28CN10dVFDNGKgaIZ8spSZFO3M",
+          "short_id": "19fad7d75677e2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "inbound": [
+          "mixed-in"
+        ],
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  }
+}

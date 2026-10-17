@@ -1,0 +1,78 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇱🇻 LV 01 - xiaohe
+  server: 193.163.203.170
+  port: 443
+  udp: true
+  type: vless
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+  servername: yandex.ru
+  client-fingerprint: chrome
+- name: 🇱🇻 LV 02 - xiaohe
+  server: 195.123.208.32
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1ebcb694-875c-4be7-b6a2-d53c8208991b
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ICrsmE5hqN7IsDIyHPG2WkDUUFK_VEj9yobLv8zuDwk
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇱🇻 LV 03 - xiaohe
+  server: 138.124.180.137
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇱🇻 LV 04 - xiaohe
+  server: lv.aiage.work
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6338c01a-310e-42c3-bf4f-2a20e161054b
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ds-U8G06uZvV9qFhAeO16dwS9Nkcw_coYr_4puEUGFg
+  servername: lv.aiage.work
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇱🇻 LV 01 - xiaohe
+  - 🇱🇻 LV 02 - xiaohe
+  - 🇱🇻 LV 03 - xiaohe
+  - 🇱🇻 LV 04 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇱🇻 LV 01 - xiaohe
+  - 🇱🇻 LV 02 - xiaohe
+  - 🇱🇻 LV 03 - xiaohe
+  - 🇱🇻 LV 04 - xiaohe
+rules:
+- MATCH,PROXIES

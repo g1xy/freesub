@@ -1,0 +1,37 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇷🇸 RS 01 - xiaohe
+  server: 150.40.126.24
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: X8mPYnsoTd8QCnvFZKSy7VvpSn_nrt_NWJkCUJhFCyE
+  servername: rs5.univesalsrv.com
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: gw.v1.ObjectService
+    grpc-authority: /t.me/V2rayBaaz
+    grpc-multi-mode: true
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇷🇸 RS 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇷🇸 RS 01 - xiaohe
+rules:
+- MATCH,PROXIES

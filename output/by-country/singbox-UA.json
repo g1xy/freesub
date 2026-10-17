@@ -1,9 +1,21 @@
 {
-  "version": 1,
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
   "outbounds": [
     {
       "type": "selector",
       "tag": "select",
+      "default": "auto",
       "outbounds": [
         "auto",
         "🇺🇦 UA 01 - xiaohe"
@@ -15,7 +27,8 @@
       "outbounds": [
         "🇺🇦 UA 01 - xiaohe"
       ],
-      "url": "https://www.google.com/generate_204"
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m"
     },
     {
       "type": "direct",
@@ -24,6 +37,49 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇦 UA 01 - xiaohe",
+      "server": "188.225.25.71",
+      "server_port": 443,
+      "uuid": "b3a7fe26-2ea7-4aa1-ba7a-8ef37a1a71c5",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "s3-ge.videocdnpink.video",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/53d53ac3/a7fa61/096357bebc62",
+        "headers": {
+          "Host": "s3-ge.videocdnpink.video"
+        }
+      }
     }
-  ]
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "inbound": [
+          "mixed-in"
+        ],
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  }
 }

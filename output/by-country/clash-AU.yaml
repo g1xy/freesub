@@ -5,13 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
-  type: vmess
   server: 172.67.195.146
   port: 443
+  udp: true
+  type: vmess
   uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
   alterId: 0
   cipher: auto
-  udp: true
   tls: true
   skip-cert-verify: true
   servername: aus.lovehk.xyz
@@ -21,37 +21,30 @@ proxies:
     headers:
       Host: aus.lovehk.xyz
 - name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
-  type: vmess
-  server: 172.67.195.146
-  port: 443
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  alterId: 0
-  cipher: auto
+  server: funagfrdfs.alixxplay.com
+  port: 54528
   udp: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
   tls: true
   skip-cert-verify: true
-  servername: aus.lovehk.xyz
-  network: ws
-  ws-opts:
-    path: /Sydney3
-    headers:
-      Host: aus.lovehk.xyz
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
+  servername: www.apple.com
+  client-fingerprint: ios
 - name: 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
-  type: vmess
-  server: 172.67.195.146
-  port: 443
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  alterId: 0
-  cipher: auto
+  server: 137.23.2.56
+  port: 20000
   udp: true
-  tls: true
+  type: hysteria2
+  password: b42d90fa667942aebc734d60
+  sni: rmgyvpn.rest
+  alpn:
+  - h3
   skip-cert-verify: true
-  servername: aus.lovehk.xyz
-  network: ws
-  ws-opts:
-    path: /Sydney3
-    headers:
-      Host: aus.lovehk.xyz
+  obfs: salamander
+  obfs-password: b42d90fa667942aebc734d60
 proxy-groups:
 - name: PROXIES
   type: select

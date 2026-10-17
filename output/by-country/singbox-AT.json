@@ -1,9 +1,21 @@
 {
-  "version": 1,
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
   "outbounds": [
     {
       "type": "selector",
       "tag": "select",
+      "default": "auto",
       "outbounds": [
         "auto",
         "🇦🇹 AT 01 - xiaohe",
@@ -17,7 +29,8 @@
         "🇦🇹 AT 01 - xiaohe",
         "🇦🇹 AT 02 - xiaohe"
       ],
-      "url": "https://www.google.com/generate_204"
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m"
     },
     {
       "type": "direct",
@@ -26,6 +39,56 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇹 AT 01 - xiaohe",
+      "server": "api.mediakaskad.cc",
+      "server_port": 443,
+      "uuid": "082f5694-9019-4110-b67b-8125dbb9bab8",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.mediakaskad.cc",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇦🇹 AT 02 - xiaohe",
+      "server": "82.110.60.9",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     }
-  ]
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "inbound": [
+          "mixed-in"
+        ],
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  }
 }

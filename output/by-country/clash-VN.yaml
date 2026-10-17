@@ -1,0 +1,64 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇻🇳 VN 01 - xiaohe
+  server: 103.38.236.248
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- name: 🇻🇳 VN 02 - xiaohe
+  server: 154.21.203.106
+  port: 51279
+  udp: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A
+  servername: www.tesla.com
+  client-fingerprint: random
+- name: 🇻🇳 VN 03 - xiaohe
+  server: funagfrdfs.alixxplay.com
+  port: 55688
+  udp: true
+  type: vless
+  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: KeV1nArisy7FO5DjqTSmn0hBnlNd38rzhbIMMpe-MBw
+  servername: bilibili-vn.biliimg.com
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇻🇳 VN 01 - xiaohe
+  - 🇻🇳 VN 02 - xiaohe
+  - 🇻🇳 VN 03 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇻🇳 VN 01 - xiaohe
+  - 🇻🇳 VN 02 - xiaohe
+  - 🇻🇳 VN 03 - xiaohe
+rules:
+- MATCH,PROXIES

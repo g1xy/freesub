@@ -1,9 +1,21 @@
 {
-  "version": 1,
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
   "outbounds": [
     {
       "type": "selector",
       "tag": "select",
+      "default": "auto",
       "outbounds": [
         "auto",
         "🇨🇾 CY 01 - xiaohe",
@@ -11,7 +23,9 @@
         "🇨🇾 CY 03 - xiaohe",
         "🇨🇾 CY 04 - xiaohe",
         "🇨🇾 CY 05 - xiaohe",
-        "🇨🇾 CY 06 - xiaohe"
+        "🇨🇾 CY 06 - xiaohe",
+        "🇨🇾 CY 07 - xiaohe",
+        "🇨🇾 CY 08 - xiaohe"
       ]
     },
     {
@@ -23,9 +37,12 @@
         "🇨🇾 CY 03 - xiaohe",
         "🇨🇾 CY 04 - xiaohe",
         "🇨🇾 CY 05 - xiaohe",
-        "🇨🇾 CY 06 - xiaohe"
+        "🇨🇾 CY 06 - xiaohe",
+        "🇨🇾 CY 07 - xiaohe",
+        "🇨🇾 CY 08 - xiaohe"
       ],
-      "url": "https://www.google.com/generate_204"
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m"
     },
     {
       "type": "direct",
@@ -34,6 +51,183 @@
     {
       "type": "block",
       "tag": "block"
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 CY 01 - xiaohe",
+      "server": "5.253.30.99",
+      "server_port": 40443,
+      "uuid": "511c1563-2cb6-4064-abc6-a59ee49818a8",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0",
+          "short_id": "88b6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 CY 02 - xiaohe",
+      "server": "5.253.42.164",
+      "server_port": 40443,
+      "uuid": "e99ba96d-dec8-42eb-be53-19e71eef7cab",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw",
+          "short_id": "68a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 CY 03 - xiaohe",
+      "server": "dorado.yokkastars.com",
+      "server_port": 40443,
+      "uuid": "af5eac96-e478-488a-bc8c-45269d7e8847",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw",
+          "short_id": "68a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 CY 04 - xiaohe",
+      "server": "5.253.28.224",
+      "server_port": 40443,
+      "uuid": "af5eac96-e478-488a-bc8c-45269d7e8847",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw",
+          "short_id": "68a8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 CY 05 - xiaohe",
+      "server": "5.253.29.254",
+      "server_port": 10443,
+      "uuid": "c7c27192-60a5-4ce1-b613-95270d82309d",
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 CY 06 - xiaohe",
+      "server": "hydra.yokkastars.com",
+      "server_port": 2443,
+      "uuid": "5e679ccd-1586-4d5f-b87b-48251046cad8",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg",
+          "short_id": "92c32de179e5d908"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "rex-eb0bf76b710ce763"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇾 CY 07 - xiaohe",
+      "server": "5.253.29.254",
+      "server_port": 14430,
+      "uuid": "c7c27192-60a5-4ce1-b613-95270d82309d",
+      "packet_encoding": "xudp",
+      "transport": {
+        "type": "ws",
+        "path": "/vless",
+        "headers": {
+          "Host": "5.253.29.254"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇨🇾 CY 08 - xiaohe",
+      "server": "fi1server.rabstvo.shop",
+      "server_port": 443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "9yOIR2_QAChKs26rYaiX_aoNnOALd0aU",
+      "tls": {
+        "enabled": true,
+        "server_name": "fi1server.rabstvo.shop",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     }
-  ]
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "inbound": [
+          "mixed-in"
+        ],
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  }
 }

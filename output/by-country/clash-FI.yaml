@@ -5,23 +5,26 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
-  type: vless
-  server: 95.216.27.15
-  port: 2053
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  server: 36a466g.fi1.h1clayd.click
+  port: 443
   udp: true
+  type: vless
+  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-  servername: www.google.com
-  client-fingerprint: random
+    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
+  servername: 36a466g.fi1.h1clayd.click
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 0adb9638509b
 - name: 🇫🇮 FI 02 - xiaohe
-  type: vless
   server: 95.216.27.15
   port: 2053
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
   udp: true
+  type: vless
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
   tls: true
   skip-cert-verify: true
   reality-opts:
@@ -29,35 +32,92 @@ proxies:
   servername: www.google.com
   client-fingerprint: chrome
 - name: 🇫🇮 FI 03 - xiaohe
-  type: vless
-  server: 95.216.27.15
-  port: 2053
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  server: 95.111.212.241
+  port: 443
   udp: true
+  type: vless
+  uuid: 924fe46b-b6e0-479e-ae7f-a3661680e706
   tls: true
   skip-cert-verify: true
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-  servername: www.google.com
+    public-key: BSTnEthBXhb_UyuWpLBDxg82-C-wcpU2_kOD5ohS12g
+  servername: www.samsung.com
   client-fingerprint: chrome
 - name: 🇫🇮 FI 04 - xiaohe
-  type: vless
-  server: 95.216.27.15
-  port: 2053
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  server: 45.133.151.187
+  port: 443
   udp: true
+  type: vless
+  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-  servername: www.google.com
+    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
+  servername: 36a466g.fi1.h1clayd.click
   client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 0adb9638509b
 - name: 🇫🇮 FI 05 - xiaohe
+  server: samgeez.online
+  port: 8443
+  udp: true
   type: vless
+  uuid: a04c750d-3b71-493b-b2c1-6473ff1209dd
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: RcXsA7OGsbBAG_4Xs5jQ1YaLlq3oglNHEvyRphqbHko
+  servername: npdev.uk
+  client-fingerprint: firefox
+- name: 🇫🇮 FI 06 - xiaohe
+  server: 152.233.71.81
+  port: 443
+  udp: true
+  type: vless
+  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+  servername: brointelengence.com
+  client-fingerprint: random
+- name: 🇫🇮 FI 07 - xiaohe
+  server: 2.29.101.158
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9a0e84f8-4b58-477f-99da-5fac5a2e58e8
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: pAgrBKJCmuSJHIzYkEJTqsOBOVBK_DMtEqFPo-PaTkg
+  servername: 36a466g.fi1.h1clayd.click
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 0adb9638509b
+- name: 🇫🇮 FI 08 - xiaohe
+  server: fl1.balancer.vbuste-bot.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+  servername: fl1.balancer.vbuste-bot.com
+  client-fingerprint: chrome
+- name: 🇫🇮 FI 09 - xiaohe
   server: 45.144.234.157
   port: 14430
-  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
   udp: true
+  type: vless
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
   tls: false
   skip-cert-verify: true
   network: ws
@@ -65,18 +125,6 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
-- name: 🇫🇮 FI 06 - xiaohe
-  type: vless
-  server: 95.216.27.15
-  port: 2053
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-  servername: www.google.com
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -88,6 +136,9 @@ proxy-groups:
   - 🇫🇮 FI 04 - xiaohe
   - 🇫🇮 FI 05 - xiaohe
   - 🇫🇮 FI 06 - xiaohe
+  - 🇫🇮 FI 07 - xiaohe
+  - 🇫🇮 FI 08 - xiaohe
+  - 🇫🇮 FI 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -99,5 +150,8 @@ proxy-groups:
   - 🇫🇮 FI 04 - xiaohe
   - 🇫🇮 FI 05 - xiaohe
   - 🇫🇮 FI 06 - xiaohe
+  - 🇫🇮 FI 07 - xiaohe
+  - 🇫🇮 FI 08 - xiaohe
+  - 🇫🇮 FI 09 - xiaohe
 rules:
 - MATCH,PROXIES

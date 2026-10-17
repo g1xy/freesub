@@ -5,67 +5,102 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇾 CY 01 - xiaohe
-  type: vless
-  server: 5.253.29.254
-  port: 10443
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  server: 5.253.30.99
+  port: 40443
   udp: true
-  tls: false
+  type: vless
+  uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8
+  tls: true
   skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0
+  servername: deepl.com
+  client-fingerprint: chrome
 - name: 🇨🇾 CY 02 - xiaohe
-  type: vless
-  server: 5.253.29.254
-  port: 14430
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  server: 5.253.42.164
+  port: 40443
   udp: true
-  tls: false
+  type: vless
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.253.29.254
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+  servername: deepl.com
+  client-fingerprint: chrome
 - name: 🇨🇾 CY 03 - xiaohe
-  type: vless
-  server: 5.253.29.254
-  port: 10443
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  server: dorado.yokkastars.com
+  port: 40443
   udp: true
-  tls: false
+  type: vless
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
+  tls: true
   skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+  servername: deepl.com
+  client-fingerprint: chrome
 - name: 🇨🇾 CY 04 - xiaohe
-  type: vless
-  server: 5.253.29.254
-  port: 14430
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  server: 5.253.28.224
+  port: 40443
   udp: true
-  tls: false
+  type: vless
+  uuid: af5eac96-e478-488a-bc8c-45269d7e8847
+  tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.253.29.254
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+  servername: deepl.com
+  client-fingerprint: random
 - name: 🇨🇾 CY 05 - xiaohe
-  type: vless
-  server: 5.253.29.254
-  port: 14430
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 5.253.29.254
-- name: 🇨🇾 CY 06 - xiaohe
-  type: vless
   server: 5.253.29.254
   port: 10443
-  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
   udp: true
+  type: vless
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
   tls: false
+  skip-cert-verify: true
+- name: 🇨🇾 CY 06 - xiaohe
+  server: hydra.yokkastars.com
+  port: 2443
+  udp: true
+  type: vless
+  uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
+  servername: deepl.com
+  client-fingerprint: qq
+  network: grpc
+  grpc-opts:
+    grpc-service-name: rex-eb0bf76b710ce763
+- name: 🇨🇾 CY 07 - xiaohe
+  server: 5.253.29.254
+  port: 14430
+  udp: true
+  type: vless
+  uuid: c7c27192-60a5-4ce1-b613-95270d82309d
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 5.253.29.254
+- name: 🇨🇾 CY 08 - xiaohe
+  server: fi1server.rabstvo.shop
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 9yOIR2_QAChKs26rYaiX_aoNnOALd0aU
+  sni: fi1server.rabstvo.shop
+  alpn:
+  - h3
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
@@ -78,6 +113,8 @@ proxy-groups:
   - 🇨🇾 CY 04 - xiaohe
   - 🇨🇾 CY 05 - xiaohe
   - 🇨🇾 CY 06 - xiaohe
+  - 🇨🇾 CY 07 - xiaohe
+  - 🇨🇾 CY 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -89,5 +126,7 @@ proxy-groups:
   - 🇨🇾 CY 04 - xiaohe
   - 🇨🇾 CY 05 - xiaohe
   - 🇨🇾 CY 06 - xiaohe
+  - 🇨🇾 CY 07 - xiaohe
+  - 🇨🇾 CY 08 - xiaohe
 rules:
 - MATCH,PROXIES
