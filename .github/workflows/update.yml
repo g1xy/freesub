@@ -6,9 +6,15 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch: # 支持手动点击运行
 
+# 避免多轮运行并发写同一分支导致 push 冲突
+concurrency:
+  group: update-subscriptions
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 50
     permissions:
       contents: write
 
@@ -19,16 +25,31 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.12'
           cache: 'pip'
+
+      - name: Cache Proxy Cores and GeoLite databases
+        uses: actions/cache@v4
+        with:
+          path: |
+            xray
+            sing-box
+            Country.mmdb
+            ASN.mmdb
+          key: freesub-${{ runner.os }}-core-v4
+          restore-keys: |
+            freesub-${{ runner.os }}-core-
 
       - name: Install Dependencies
         run: |
           pip install -r scripts/requirements.txt
 
+      - name: Run Unit Tests
+        run: python scripts/test_parse.py
+
       - name: Run Real-Prober and Classifier
         run: |
-          python scripts/main.py
+          python scripts/main.py --debug
 
       - name: Commit and Push Results
         run: |
@@ -39,5 +60,10 @@ jobs:
             echo "没有节点变动与内容更新。"
           else
             git commit -m "Auto Update: $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase || true
+              if git push; then echo "推送成功"; break; fi
+              echo "推送失败，第 $i 次重试..."
+              sleep 5
+            done
           fi

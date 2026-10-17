@@ -2,3 +2,23 @@ Country.mmdb
 ASN.mmdb
 __pycache__/
 *.pyc
+.pytest_cache/
+
+# 代理内核与临时配置（Xray 主内核 / sing-box 补充内核）
+xray
+xray.exe
+xray.zip
+sing-box
+sing-box.exe
+xray_tmp_*.json
+xray_batch_*.json
+xray_iso_*.json
+sb_tmp_*.json
+
+# 本地调试残留
+_probe*.py
+_verify*.py
+dbg.json
+t.json
+vtest_*.json
+it_*.json
