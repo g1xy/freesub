@@ -5,40 +5,41 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - xiaohe
+  server: 3.39.4.109
+  port: 13672
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
+  server: 3.39.4.109
+  port: 18967
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
   server: 132.226.226.189
   port: 50160
   udp: true
   type: hysteria2
   password: 1671a252e2a97dc2bda4e515475931da
-  sni: www.bing.com
+  sni: 'off'
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
-  server: 152.70.237.123
-  port: 2053
-  udp: true
-  type: hysteria2
-  password: maintell
-  sni: 152.70.237.123
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
 - name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
   server: 64.176.231.183
   port: 443
@@ -51,66 +52,64 @@ proxies:
   reality-opts:
     public-key: GR_zPAgxF9PZ70Z9UpSmMlcd2STyoAC0fZTSHkTTCGE
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇰🇷 韩国 (South Korea) 05 - xiaohe
-  server: 3.39.4.109
-  port: 18967
+  server: 152.70.237.123
+  port: 2053
+  udp: true
+  type: hysteria2
+  password: maintell
+  sni: 152.70.237.123
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  server: 151.245.106.49
+  port: 2053
   udp: true
   type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
   tls: true
   skip-cert-verify: true
-  flow: xtls-rprx-vision
   reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-  servername: www.apple.com
-  client-fingerprint: edge
-- name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
   server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: google.com
+  sni: www.bing.com
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
-  server: 3.39.4.109
-  port: 13672
-  udp: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-  servername: www.apple.com
-  client-fingerprint: qq
 - name: 🇰🇷 韩国 (South Korea) 08 - xiaohe
-  server: noted-cougar.rooster465.autos
+  server: optimum-snapper.rooster465.autos
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: noted-cougar.rooster465.autos
+  sni: optimum-snapper.rooster465.autos
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 09 - xiaohe
-  server: 3.34.192.47
-  port: 443
+  server: 150-230-252-217.liao.kdns.fr
+  port: 50160
   udp: true
-  type: trojan
-  password: UX82473651
-  sni: central-jawfish.rooster465.autos
+  type: hysteria2
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  sni: 150-230-252-217.liao.kdns.fr
+  alpn:
+  - h3
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 10 - xiaohe
-  server: 3.34.131.153
+  server: 3.36.50.213
   port: 443
   udp: true
   type: trojan
   password: UX82473651
-  sni: pretty-rat.rooster465.autos
+  sni: pure-kodiak.rooster465.autos
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES

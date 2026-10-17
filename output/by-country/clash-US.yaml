@@ -5,112 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 169.197.142.22
-  port: 18000
+  server: 37.19.198.236
+  port: 443
   udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: t12.qifei.app
+  server: 37.19.198.160
   port: 443
   udp: true
-  type: vless
-  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
-  servername: www.amazon.com
-  client-fingerprint: random
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 67.209.184.133
+  server: 198.98.53.130
   port: 443
   udp: true
-  type: vless
-  uuid: 96ebc166-565c-474f-9712-7990b55c368a
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Tp015Ga5LodBwKs4z7Wz4hTvqeh8-4q1EQPZqvZfWR0
-  servername: www.bing.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
 - name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 47.251.108.158
+  server: 37.19.198.244
   port: 443
   udp: true
-  type: vless
-  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 176.122.183.26
-  port: 42346
-  udp: true
-  type: vless
-  uuid: d5bc1380-2afd-4c7e-bacd-54e7833b0140
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: fk0_CYMC_RKIbBDwS-lagle8Jm-hnvkSlV_7P0nBagM
-  servername: www.amazon.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 155.248.209.237
-  port: 33333
-  udp: true
-  type: hysteria2
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 163.192.14.135
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 099830134df5ac3a04a4b21d39b8c395
-  sni: www.bing.com
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 131.143.180.87
+  server: 37.19.198.243
   port: 443
   udp: true
-  type: vless
-  uuid: c7282af7-a52f-4a65-af60-ae5852f2bf36
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZxdYEReKF-M_vIMpZWVMHf7ixDZmzIg-6Xt7IzstgwE
-  servername: www.logitech.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: hy2.123266.xyz
-  port: 33333
-  udp: true
-  type: hysteria2
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 162.159.135.234
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 172.64.150.43
   port: 443
   udp: true
   type: vless
@@ -120,7 +50,61 @@ proxies:
   servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 195.123.235.183
+  port: 443
+  udp: true
+  type: vless
+  uuid: c14ec728-3eca-4750-87fc-fd1e6aeb81d5
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 147.182.212.232
+  port: 56565
+  udp: true
+  type: vless
+  uuid: 7b188eea-b08f-42c2-bac7-d3b0e74218b8
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY
+  servername: www.paypal.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 104.18.43.174
+  port: 443
+  udp: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  skip-cert-verify: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 104.17.148.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /
     headers:
       Host: snip.edgeoneai.cc.cd
 proxy-groups:

@@ -57,184 +57,49 @@
       "tag": "block"
     },
     {
-      "type": "vmess",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "169.197.142.22",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "alter_id": 0,
-      "security": "auto"
+      "server": "37.19.198.236",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "t12.qifei.app",
+      "server": "37.19.198.160",
       "server_port": 443,
-      "uuid": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amazon.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
-          "short_id": "1a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "67.209.184.133",
+      "server": "198.98.53.130",
       "server_port": 443,
-      "uuid": "96ebc166-565c-474f-9712-7990b55c368a",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "Tp015Ga5LodBwKs4z7Wz4hTvqeh8-4q1EQPZqvZfWR0",
-          "short_id": "ad09494d431b2b92"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "method": "chacha20-ietf-poly1305",
+      "password": "eDfN7SODQceIOmIAbtJJtK"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "47.251.108.158",
+      "server": "37.19.198.244",
       "server_port": 443,
-      "uuid": "975fc322-6e38-434b-a53c-d39fed49b9a9",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs",
-          "short_id": "896f52ba2cfca903"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "176.122.183.26",
-      "server_port": 42346,
-      "uuid": "d5bc1380-2afd-4c7e-bacd-54e7833b0140",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amazon.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "fk0_CYMC_RKIbBDwS-lagle8Jm-hnvkSlV_7P0nBagM",
-          "short_id": "3f8ced2bf06b8448"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "155.248.209.237",
-      "server_port": 33333,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "bce6c821-200d-421f-bf3d-7159e5246ea0",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy2.123266.xyz",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "163.192.14.135",
-      "server_port": 50160,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "099830134df5ac3a04a4b21d39b8c395",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "131.143.180.87",
+      "server": "37.19.198.243",
       "server_port": 443,
-      "uuid": "c7282af7-a52f-4a65-af60-ae5852f2bf36",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.logitech.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "ZxdYEReKF-M_vIMpZWVMHf7ixDZmzIg-6Xt7IzstgwE",
-          "short_id": "16e300b06a6a7413"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "hy2.123266.xyz",
-      "server_port": 33333,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "bce6c821-200d-421f-bf3d-7159e5246ea0",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy2.123266.xyz",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "162.159.135.234",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
+      "server": "172.64.150.43",
       "server_port": 443,
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
       "packet_encoding": "xudp",
@@ -243,12 +108,106 @@
         "server_name": "snip.edgeoneai.cc.cd",
         "insecure": true,
         "alpn": [
-          "h3%2Ch2"
+          "h2",
+          "http/1.1"
         ]
       },
       "transport": {
         "type": "ws",
-        "path": "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443fp=chrome",
+        "path": "/",
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "195.123.235.183",
+      "server_port": 443,
+      "uuid": "c14ec728-3eca-4750-87fc-fd1e6aeb81d5",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway.icloud.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY",
+          "short_id": "a0e2a6074c6456b0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "147.182.212.232",
+      "server_port": 56565,
+      "uuid": "7b188eea-b08f-42c2-bac7-d3b0e74218b8",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.paypal.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "104.18.43.174",
+      "server_port": 443,
+      "uuid": "e6df2095-a73c-4043-8693-8d5a03686870",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "lucasjow.us.ci",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "lucasjow.us.ci"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
+      "server": "104.17.148.22",
+      "server_port": 443,
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "insecure": true,
+        "alpn": [
+          "http%2F1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
         "headers": {
           "Host": "snip.edgeoneai.cc.cd"
         }
