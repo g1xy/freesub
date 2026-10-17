@@ -12,7 +12,8 @@
 """
 from __future__ import annotations
 
-from typing import Any, Dict, List, Optional, Tuple
+import math
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 from . import config
 from .logutil import get_logger, record_drop
@@ -20,6 +21,40 @@ from .logutil import get_logger, record_drop
 log = get_logger("quota")
 
 _MISSING_DELAY = 99999
+
+
+class CountryProgress:
+    """测活阶段的配额进度：每国攒够 target*factor 个存活节点即达标。
+
+    只统计 `is_confirmed_exit=True` 的节点（拿不到穿透落地 IP 的节点出口不可信），
+    因此它天然比 classify_and_filter 的最终结果更保守 —— 早停不会导致少给，
+    最坏情况是某国最终略少于上限。
+    """
+
+    def __init__(self, quota: Dict[str, int], factor: Optional[float] = None):
+        self.quota = dict(quota)
+        factor = config.PROBE_EARLY_STOP_FACTOR if factor is None else factor
+        factor = max(1.0, float(factor))
+        self.need = {cc: max(1, math.ceil(n * factor)) for cc, n in self.quota.items()}
+        self.have = {cc: 0 for cc in self.quota}
+        self.satisfied = False
+
+    def feed(self, alive_nodes: Iterable[Any]) -> bool:
+        """喂入本批新增的存活节点，返回 True 表示配额已攒够、可以停测"""
+        from .classifier import exit_country  # 延迟导入，避免模块级循环依赖
+
+        for node in alive_nodes or []:
+            # (link, server, port, proto, exit_ip, delay, is_confirmed_exit)
+            if len(node) < 7 or not node[6]:
+                continue
+            cc = exit_country(node[4])
+            if cc in self.have:
+                self.have[cc] += 1
+        self.satisfied = all(self.have[cc] >= self.need[cc] for cc in self.need)
+        log.info("配额进度: %s%s",
+                 ", ".join(f"{cc} {self.have[cc]}/{self.need[cc]}" for cc in self.need),
+                 " -> 已满足，提前结束测活" if self.satisfied else "")
+        return self.satisfied
 
 
 def _pick_key(item: Dict[str, Any]) -> Tuple[int, int]:

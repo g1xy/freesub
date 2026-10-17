@@ -1024,11 +1024,12 @@ def test_cli_quota_does_not_trip_previous_volume_guard():
     nodes += [_quota_node("US", delay=100 + i, tag=f"us{i}") for i in range(15)]
     nodes += [_quota_node("TW", delay=100 + i, tag=f"tw{i}") for i in range(5)]
     try:
-        with patch("freesub.fetcher.fetch_all_nodes",
-                   return_value=([VLESS, TROJAN], SourceHealth(os.path.join(_TMP, "sh3.json")))), \
+        with patch.object(main, "fetch_all_nodes",
+                          return_value=([VLESS, TROJAN],
+                                        SourceHealth(os.path.join(_TMP, "sh3.json")))), \
              patch("freesub.environment.ensure_xray", return_value="xray"), \
              patch("freesub.environment.ensure_mmdb"), \
-             patch.object(main, "run_real_delay_test_xray", return_value=[]), \
+             patch.object(main, "run_real_delay_test_xray", return_value=[]) as runner, \
              patch.object(main, "classify_and_filter", return_value=nodes), \
              patch.object(main, "count_published_nodes", return_value=820), \
              patch.object(main, "export_subscriptions") as exporter, \
@@ -1039,8 +1040,95 @@ def test_cli_quota_does_not_trip_previous_volume_guard():
             exported = exporter.call_args[0][0]
             assert len(exported) == 20
             assert {n["country"] for n in exported} == {"HK", "US"}
+            callback = runner.call_args[0][1]
+            assert callable(callback), "配额模式下必须把早停回调传给测活"
     finally:
         config.COUNTRY_QUOTA = old
+
+
+# ================================================================ 测活早停
+
+def test_region_hint_detection():
+    """备注地区识别：中文/缩写/emoji 都要认，且不能把 plus/RUS 误判成 US/RU"""
+    import urllib.parse
+
+    from freesub.prefilter import detect_region_hint
+    base = f"vless://{UUID}@1.1.1.1:443"
+    assert detect_region_hint(f"{base}#香港 01") == "HK"
+    assert detect_region_hint(f"{base}#HK-01") == "HK"
+    assert detect_region_hint(f"{base}#" + urllib.parse.quote("🇯🇵 东京 02")) == "JP"
+    assert detect_region_hint(f"{base}#" + urllib.parse.quote("美国 圣何塞 03")) == "US"
+    # 缩写必须独立成词（`HK01` 算，`plus` / `RUS` 不算）
+    assert detect_region_hint(f"{base}#HK01") == "HK"
+    assert detect_region_hint(f"{base}#plus-node") == ""
+    assert detect_region_hint(f"{base}#RUS-02") == ""
+    # 同时命中多个地区 -> 视为不可靠，不参与前置
+    assert detect_region_hint(f"{base}#香港 美国 中转") == ""
+    # vmess 的地区标注在 base64 的 ps 里
+    vmess = "vmess://" + base64.b64encode(json.dumps({
+        "v": "2", "add": "9.9.9.9", "port": "443", "id": UUID, "ps": "韩国 首尔",
+    }).encode()).decode()
+    assert detect_region_hint(vmess) == "KR"
+
+
+def test_rank_candidates_prioritizes_quota_regions():
+    """目标地区候选前置并轮转交错，保证每批都覆盖所有目标地区"""
+    from freesub.prefilter import detect_region_hint, rank_candidates
+    base = f"vless://{UUID}@1.1.1.1:443"
+    tags = ["德国 01", "香港 01", "美国 01", "日本 01", "韩国 01", "香港 02", "美国 02"]
+    cands = [(f"{base}#{t}", "1.1.1.1", 443, "vless") for t in tags]
+
+    ranked = rank_candidates(cands, {"HK": 10, "US": 10, "JP": 10, "KR": 10})
+    regions = [detect_region_hint(x[0]) for x in ranked]
+    assert regions[:4] == ["HK", "US", "JP", "KR"], regions
+    assert regions[4:] == ["HK", "US", "DE"], regions
+    assert len(ranked) == len(cands), "重排不能丢候选"
+    # 无配额时不改动顺序
+    assert rank_candidates(cands, {}) == cands
+
+
+def test_country_progress_stops_when_quota_reached():
+    """配额进度：每国攒够 target*factor 才返回 True，未确认真实出口的不计数"""
+    from freesub.quota import CountryProgress
+    prog = CountryProgress({"HK": 2, "US": 1}, factor=1.5)
+    assert prog.need == {"HK": 3, "US": 2}
+
+    def node(ip, confirmed=True):
+        return ("link", "s", 443, "vless", ip, 100, confirmed)
+
+    with patch("freesub.classifier.exit_country", side_effect=lambda ip: ip):
+        assert prog.feed([node("HK"), node("US")]) is False
+        assert prog.have == {"HK": 1, "US": 1}
+        # 未确认真实出口的节点不算数
+        assert prog.feed([node("HK"), node("HK"), node("HK", confirmed=False)]) is False
+        assert prog.have == {"HK": 3, "US": 1}
+        assert prog.feed([node("US")]) is True
+
+    # 关闭因子约束时不得低于 target
+    assert CountryProgress({"HK": 4}, factor=0.1).need == {"HK": 4}
+
+
+def test_run_probe_stops_early_via_callback():
+    """批次回调返回 True 时必须立即停止后续批次（而不是测完全部候选）"""
+    import freesub.prober as prober_mod
+
+    seen = []
+
+    def on_batch(new_alive):
+        seen.append(len(new_alive))
+        return len(seen) >= 2
+
+    fake_alive = [("link", "s", 443, "vless", "1.1.1.1", 100, True)]
+    cands = [(f"vless://{UUID}@1.1.1.1:443#n{i}", "1.1.1.1", 443, "vless")
+             for i in range(10)]
+    with patch.object(prober_mod, "probe_batch", return_value=fake_alive), \
+         patch.object(prober_mod, "xray_version", return_value="x"), \
+         patch.object(config, "PROBE_BATCH_SIZE", 2), \
+         patch.object(config, "MAX_CANDIDATES", 0):
+        alive = prober_mod.run_probe(cands, on_batch)
+
+    assert len(seen) == 2, "回调返回 True 后不得继续测活"
+    assert len(alive) == 2
 
 
 # ================================================================ CLI / 平台

@@ -52,6 +52,33 @@ def _close_all_readers() -> None:
         _ALL_READERS.clear()
 
 
+_COUNTRY_ONLY_READER: Any = None
+_COUNTRY_ONLY_LOCK = threading.Lock()
+
+
+def exit_country(ip: str) -> str:
+    """轻量「出口 IP -> 国家代码」，只用于测活早停的进度计数。
+
+    与 classify_and_filter 的区别：不做 ASN / 反向 DNS / 家宽判定，
+    因此单次查询是微秒级，可以在每个批次结束时串行跑一遍。
+    单例 reader + 锁：maxminddb 的 Reader 非线程安全（内部 seek 同一句柄）。
+    """
+    global _COUNTRY_ONLY_READER
+    if not ip:
+        return ""
+    try:
+        with _COUNTRY_ONLY_LOCK:
+            if _COUNTRY_ONLY_READER is None:
+                _COUNTRY_ONLY_READER = maxminddb.open_database("Country.mmdb")
+            record = _COUNTRY_ONLY_READER.get(ip)
+    except Exception:  # noqa: BLE001
+        return ""
+    code = ((record or {}).get("country") or {}).get("iso_code")
+    if not isinstance(code, str) or code in ("T1", "A1", "A2"):
+        return ""
+    return code.upper()
+
+
 def _rdns_host(ip: str) -> str:
     """反向 DNS；超时由启动时统一设置的 socket.setdefaulttimeout 控制"""
     try:

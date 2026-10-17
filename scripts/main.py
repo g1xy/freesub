@@ -46,7 +46,8 @@ from freesub.prober import (  # noqa: E402
     validate_config,
 )
 from freesub.parse import is_kernel_probeable  # noqa: E402
-from freesub.quota import apply_country_quota  # noqa: E402
+from freesub.prefilter import rank_candidates  # noqa: E402
+from freesub.quota import CountryProgress, apply_country_quota  # noqa: E402
 from freesub.reporter import (  # noqa: E402
     count_published_nodes, detect_repo_slug, export_subscriptions,
     print_final_report, update_readme, write_meta,
@@ -188,8 +189,22 @@ def main(argv: List[str] | None = None) -> int:
     log.info("候选分流：Xray 批量 %d 个 / sing-box 补充 %d 个",
              len(xray_candidates), len(sb_candidates))
 
+    # 配额模式：目标地区候选前置（依据链接备注的标注）+ 批次早停。
+    # 3000+ 候选里目标国家占比很低（实测 HK 仅约 2%），按源顺序测得跑十几批；
+    # 前置后每批都覆盖目标地区，攒够 target*factor 个存活即停。
+    progress: CountryProgress | None = None
+    if quota_map and xray_candidates:
+        if config.PROBE_EARLY_STOP:
+            xray_candidates = rank_candidates(xray_candidates, quota_map)
+            progress = CountryProgress(quota_map)
+            log.info("测活早停已启用：每国攒够 %s 个存活即停",
+                     ", ".join(f"{cc}={v}" for cc, v in progress.need.items()))
+        else:
+            log.info("测活早停已关闭（PROBE_EARLY_STOP=0），候选全量测活")
+
     t0 = time.time()
-    alive_nodes = run_real_delay_test_xray(xray_candidates) if xray_candidates else []
+    alive_nodes = (run_real_delay_test_xray(
+        xray_candidates, progress.feed if progress else None) if xray_candidates else [])
     stages["probe_xray_sec"] = round(time.time() - t0, 1)
 
     if sb_candidates:

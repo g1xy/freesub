@@ -38,6 +38,13 @@ COUNTRY_QUOTA = os.environ.get("COUNTRY_QUOTA", "HK:10,US:10,JP:10,KR:10")
 QUOTA_PREFER_RESIDENTIAL = os.environ.get(
     "QUOTA_PREFER_RESIDENTIAL", "1") not in ("0", "false", "False")
 
+# ---------------------------------------------------------------- 测活早停
+# 有配额时按「每国攒够 target*factor 个存活」提前结束测活，避免为了凑 40 个
+# 节点把 3000+ 候选全部测一遍（实测 17 批 -> 通常 1~2 批）。
+PROBE_EARLY_STOP = os.environ.get(
+    "PROBE_EARLY_STOP", "1") not in ("0", "false", "False")
+PROBE_EARLY_STOP_FACTOR = float(os.environ.get("PROBE_EARLY_STOP_FACTOR", "1.5"))
+
 # 抓源与分类
 SOURCE_TIMEOUT_SEC = float(os.environ.get("SOURCE_TIMEOUT_SEC", "25"))
 SOURCE_FETCH_WORKERS = int(os.environ.get("SOURCE_FETCH_WORKERS", "10"))
@@ -200,6 +207,35 @@ COUNTRY_NAMES: Dict[str, str] = {
     "TR": "土耳其 (Turkey)",
     "AE": "阿联酋 (UAE)",
     "OTHER": "其他地区 (Other)",
+}
+
+# 链接备注（#remark / vmess 的 ps）里的地区标注 -> 国家代码。
+#
+# 实测（820 个已甄别节点）：目标国家节点的备注标注命中率 100%
+# （HK 8/8、US 143/143、JP 55/55、KR 22/22），且按备注统计的国家分布与
+# meta.json 的真实出口分布逐国完全相同；代码仍按 70~80% 保守预留余量。
+# 因此可用作测活排序的先验，把目标地区候选前置后配合早停。
+# 注意：不能用 server 地址的 GeoIP 代替 —— 实测 server 地区与真实出口国家
+# 仅 22.8% 重合（大量中转/CDN 落地）。
+REGION_HINTS: Dict[str, Tuple[str, ...]] = {
+    "HK": ("香港", "港", "hong kong", "hongkong", "hkg", "hkt", "hk", "🇭🇰"),
+    "US": ("美国", "洛杉矶", "圣何塞", "西雅图", "达拉斯", "硅谷", "纽约", "芝加哥",
+           "united states", "america", "los angeles", "san jose", "seattle",
+           "dallas", "silicon valley", "new york", "chicago", "us", "usa", "🇺🇸"),
+    "JP": ("日本", "东京", "大阪", "tokyo", "osaka", "japan", "jp", "🇯🇵"),
+    "KR": ("韩国", "首尔", "春川", "korea", "seoul", "kr", "🇰🇷"),
+    "SG": ("新加坡", "singapore", "狮城", "sg", "🇸🇬"),
+    "TW": ("台湾", "台北", "新北", "彰化", "taiwan", "taipei", "tw", "🇹🇼"),
+    "GB": ("英国", "伦敦", "united kingdom", "london", "uk", "gb", "🇬🇧"),
+    "DE": ("德国", "法兰克福", "germany", "frankfurt", "de", "🇩🇪"),
+    "NL": ("荷兰", "阿姆斯特丹", "netherlands", "amsterdam", "nl", "🇳🇱"),
+    "RU": ("俄罗斯", "莫斯科", "russia", "moscow", "ru", "🇷🇺"),
+    "CA": ("加拿大", "多伦多", "canada", "toronto", "ca", "🇨🇦"),
+    "AU": ("澳大利亚", "悉尼", "australia", "sydney", "au", "🇦🇺"),
+    "FR": ("法国", "巴黎", "france", "paris", "fr", "🇫🇷"),
+    "TR": ("土耳其", "turkey", "tr", "🇹🇷"),
+    "AE": ("阿联酋", "迪拜", "uae", "dubai", "ae", "🇦🇪"),
+    "IN": ("印度", "孟买", "india", "mumbai", "🇮🇳"),
 }
 
 # Xray 26.x 实际支持的 shadowsocks 加密方式（由真实内核逐项 xray -test 实测）。

@@ -396,8 +396,13 @@ def _try_remove(path: str) -> None:
 
 # ---------------------------------------------------------------- 批次调度
 
-def run_probe(candidates: List[NodeTuple]) -> List[AliveNode]:
-    """按批调度测活，受批次大小、并发数、全局时间预算与候选上限约束"""
+def run_probe(candidates: List[NodeTuple],
+              on_batch_done: Optional[Any] = None) -> List[AliveNode]:
+    """按批调度测活，受批次大小、并发数、全局时间预算与候选上限约束。
+
+    `on_batch_done(new_alive)` 在每批结束后收到该批新增的存活节点；
+    返回 True 表示调用方已攒够（如配额达标），立即停止测活剩余候选。
+    """
     log.info("启动 Xray 真实双向通道测活，候选 %d 个"
              "（每批 %d 个共用一个内核，并发 %d）",
              len(candidates), config.PROBE_BATCH_SIZE, config.PROBE_WORKERS)
@@ -422,12 +427,18 @@ def run_probe(candidates: List[NodeTuple]) -> List[AliveNode]:
         result = probe_batch(batch)
         if result is None:
             log.warning("批量内核启动异常，本批次回退单节点模式")
-            alive.extend(_probe_serial(batch))
+            new_alive = _probe_serial(batch)
         else:
-            alive.extend(result)
+            new_alive = result
+        alive.extend(new_alive)
 
         log.info("批次 %d/%d 完成，累计真实通畅 %d 个（用时 %ds）",
                  idx, total_batches, len(alive), int(time.time() - start))
+
+        if on_batch_done is not None and on_batch_done(new_alive):
+            log.info("配额已满足，跳过剩余 %d 个候选的测活",
+                     max(0, len(candidates) - (offset + len(batch))))
+            break
 
     log.info("测活完成：真实可用落地节点 %d 个（耗时 %ds）", len(alive), int(time.time() - start))
     return alive
