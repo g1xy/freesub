@@ -6,19 +6,6 @@ log-level: info
 proxies:
 - name: 🇺🇦 UA 01 - xiaohe
   type: vless
-  server: 91.196.163.140
-  port: 14430
-  uuid: e86a3662-9b31-4d59-bc80-9e8644749b95
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 91.196.163.140
-- name: 🇺🇦 UA 02 - xiaohe
-  type: vless
   server: 213.111.148.137
   port: 443
   uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
@@ -37,13 +24,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇺🇦 UA 01 - xiaohe
-  - 🇺🇦 UA 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇺🇦 UA 01 - xiaohe
-  - 🇺🇦 UA 02 - xiaohe
 rules:
 - MATCH,PROXIES
