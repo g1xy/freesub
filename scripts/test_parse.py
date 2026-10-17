@@ -1108,14 +1108,40 @@ def test_country_progress_stops_when_quota_reached():
     assert CountryProgress({"HK": 4}, factor=0.1).need == {"HK": 4}
 
 
+def test_country_progress_exhausted_candidates_end_scan():
+    """稀缺国家：标注候选全部测完且已达 target 就收尾，不为一倍缓冲跑满全量"""
+    from freesub.quota import CountryProgress
+
+    def node(ip):
+        return ("link", "s", 443, "vless", ip, 100, True)
+
+    def cand(tag):
+        return (f"vless://{UUID}@1.1.1.1:443#{tag}", "1.1.1.1", 443, "vless")
+
+    hk_cands = [cand(f"香港 0{i}") for i in range(4)]
+
+    # 候选未测完时仍要等缓冲：HK 3 个存活 < need 6
+    prog = CountryProgress({"HK": 3, "US": 1}, factor=2.0)
+    prog.bind_budget({"HK": 10, "US": 10})
+    with patch("freesub.classifier.exit_country", side_effect=lambda ip: ip):
+        assert prog.feed([node("HK")] * 3 + [node("US")] * 2, hk_cands[:2]) is False
+
+    # 标注候选全部测完（4/4）且 HK 存活 3 >= target 3 -> 允许收尾
+    prog2 = CountryProgress({"HK": 3, "US": 1}, factor=2.0)
+    prog2.bind_budget({"HK": 4, "US": 10})
+    with patch("freesub.classifier.exit_country", side_effect=lambda ip: ip):
+        assert prog2.feed([node("HK")] * 3 + [node("US")] * 2, hk_cands) is True
+    assert prog2.tested["HK"] == 4
+
+
 def test_run_probe_stops_early_via_callback():
     """批次回调返回 True 时必须立即停止后续批次（而不是测完全部候选）"""
     import freesub.prober as prober_mod
 
     seen = []
 
-    def on_batch(new_alive):
-        seen.append(len(new_alive))
+    def on_batch(new_alive, tested_batch):
+        seen.append((len(new_alive), len(tested_batch)))
         return len(seen) >= 2
 
     fake_alive = [("link", "s", 443, "vless", "1.1.1.1", 100, True)]
@@ -1129,6 +1155,7 @@ def test_run_probe_stops_early_via_callback():
 
     assert len(seen) == 2, "回调返回 True 后不得继续测活"
     assert len(alive) == 2
+    assert seen[0] == (1, 2), "回调必须拿到本批存活节点与本批候选"
 
 
 # ================================================================ CLI / 平台

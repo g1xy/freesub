@@ -24,11 +24,18 @@ _MISSING_DELAY = 99999
 
 
 class CountryProgress:
-    """测活阶段的配额进度：每国攒够 target*factor 个存活节点即达标。
+    """测活阶段的配额进度：判断"是否已经攒够、可以停测"。
 
-    只统计 `is_confirmed_exit=True` 的节点（拿不到穿透落地 IP 的节点出口不可信），
-    因此它天然比 classify_and_filter 的最终结果更保守 —— 早停不会导致少给，
-    最坏情况是某国最终略少于上限。
+    两个达标条件（满足其一即算该国完成）：
+      A. 该国存活数 >= target * factor（默认 1.5，留出甄别/去重的损耗缓冲）
+      B. 标注为该国的候选**已全部测完**，且存活数 >= target
+
+    条件 B 是必须的：稀缺国家（实测 HK 全轮只有 17 个存活）标注候选就那几十个，
+    死等 A 会导致永远凑不满缓冲、反而跑满全部批次。同时它也不会少给 ——
+    只有"已经拿到 target 个"才允许收尾。
+
+    只统计 `is_confirmed_exit=True` 的节点（拿不到穿透落地 IP 的出口不可信），
+    因此进度天然比 classify_and_filter 的最终结果更保守。
     """
 
     def __init__(self, quota: Dict[str, int], factor: Optional[float] = None):
@@ -37,11 +44,25 @@ class CountryProgress:
         factor = max(1.0, float(factor))
         self.need = {cc: max(1, math.ceil(n * factor)) for cc, n in self.quota.items()}
         self.have = {cc: 0 for cc in self.quota}
+        self.budget: Dict[str, int] = {}
+        self.tested: Dict[str, int] = {cc: 0 for cc in self.quota}
         self.satisfied = False
 
-    def feed(self, alive_nodes: Iterable[Any]) -> bool:
-        """喂入本批新增的存活节点，返回 True 表示配额已攒够、可以停测"""
+    def bind_budget(self, budget: Dict[str, int]) -> None:
+        """告知各国"标注候选总数"，用于条件 B 判定；未绑定时只用条件 A"""
+        self.budget = {cc: int(budget.get(cc, 0)) for cc in self.quota}
+
+    def feed(self, alive_nodes: Iterable[Any],
+             tested_batch: Optional[Iterable[Any]] = None) -> bool:
+        """喂入本批「测过的候选」与「新存活节点」，返回 True 表示可以停测"""
         from .classifier import exit_country  # 延迟导入，避免模块级循环依赖
+
+        if tested_batch:
+            from .prefilter import detect_region_hint
+            for item in tested_batch:
+                cc = detect_region_hint(item[0])
+                if cc in self.tested:
+                    self.tested[cc] += 1
 
         for node in alive_nodes or []:
             # (link, server, port, proto, exit_ip, delay, is_confirmed_exit)
@@ -50,9 +71,21 @@ class CountryProgress:
             cc = exit_country(node[4])
             if cc in self.have:
                 self.have[cc] += 1
-        self.satisfied = all(self.have[cc] >= self.need[cc] for cc in self.need)
-        log.info("配额进度: %s%s",
-                 ", ".join(f"{cc} {self.have[cc]}/{self.need[cc]}" for cc in self.need),
+
+        done: Dict[str, bool] = {}
+        for cc, target in self.quota.items():
+            exhausted = bool(self.budget.get(cc)) and self.tested.get(cc, 0) >= self.budget[cc]
+            done[cc] = self.have[cc] >= self.need[cc] or (exhausted and self.have[cc] >= target)
+        self.satisfied = all(done.values())
+
+        detail = []
+        for cc in self.quota:
+            mark = "✓" if done[cc] else ""
+            scanned = ""
+            if self.budget.get(cc):
+                scanned = f" 候选{self.tested.get(cc, 0)}/{self.budget[cc]}"
+            detail.append(f"{cc} {self.have[cc]}/{self.need[cc]}{scanned}{mark}")
+        log.info("配额进度: %s%s", "; ".join(detail),
                  " -> 已满足，提前结束测活" if self.satisfied else "")
         return self.satisfied
 

@@ -46,7 +46,7 @@ from freesub.prober import (  # noqa: E402
     validate_config,
 )
 from freesub.parse import is_kernel_probeable  # noqa: E402
-from freesub.prefilter import rank_candidates  # noqa: E402
+from freesub.prefilter import detect_region_hint, rank_candidates  # noqa: E402
 from freesub.quota import CountryProgress, apply_country_quota  # noqa: E402
 from freesub.reporter import (  # noqa: E402
     count_published_nodes, detect_repo_slug, export_subscriptions,
@@ -197,6 +197,10 @@ def main(argv: List[str] | None = None) -> int:
         if config.PROBE_EARLY_STOP:
             xray_candidates = rank_candidates(xray_candidates, quota_map)
             progress = CountryProgress(quota_map)
+            # 告知各国「标注候选总数」：某国标注候选全部测完且已够目标即收尾，
+            # 避免稀缺国家（如 HK）死等 1.5 倍缓冲而把剩余批次全跑一遍
+            progress.bind_budget(Counter(
+                detect_region_hint(item[0]) for item in xray_candidates))
             log.info("测活早停已启用：每国攒够 %s 个存活即停",
                      ", ".join(f"{cc}={v}" for cc, v in progress.need.items()))
         else:
