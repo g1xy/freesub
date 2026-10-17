@@ -113,7 +113,8 @@ def _percentiles(values: List[int]) -> Dict[str, int]:
 
 
 def write_meta(nodes: List[Dict[str, Any]], stats: Dict[str, Any],
-               source_health: Optional[Dict[str, Dict[str, Any]]] = None) -> Dict[str, Any]:
+               source_health: Optional[Dict[str, Dict[str, Any]]] = None,
+               quota: Optional[Dict[str, Dict[str, Any]]] = None) -> Dict[str, Any]:
     """输出 meta.json：协议分布 / 国家分布 / 延迟分位 / 丢弃原因 / 各阶段耗时"""
     from datetime import datetime, timezone
 
@@ -133,6 +134,7 @@ def write_meta(nodes: List[Dict[str, Any]], stats: Dict[str, Any],
         "protocols": dict(proto_dist.most_common()),
         "countries": dict(country_dist.most_common()),
         "residential_countries": dict(res_country.most_common()),
+        "quota": quota or {},
         "delay_ms": _percentiles(delays),
         "drop_reasons": dict(sorted(snapshot_drops().items(), key=lambda kv: kv[1], reverse=True)),
         "stages": stats,
@@ -243,6 +245,19 @@ export default {
 ```"""
 
 
+def _quota_line() -> str:
+    """README 顶部的出库配额说明；未配置配额时返回空串"""
+    quota = config.parse_country_quota()
+    if not quota:
+        return ""
+    desc = "、".join(
+        f"{config.get_country_flag(cc)} {config.COUNTRY_NAMES.get(cc, cc)} `{n}`"
+        for cc, n in quota.items())
+    prefer = "家宽优先、" if config.QUOTA_PREFER_RESIDENTIAL else ""
+    return (f"> 🎯 **出库配额**: 仅发布 {desc}，合计上限 `{sum(quota.values())}` 个节点"
+            f"（{prefer}同类按延迟升序）；其他地区及超出配额的节点不导出。  \n")
+
+
 def update_readme() -> Tuple[int, int]:
     """重写 README 中的动态表格，返回 (总节点数, 家宽数)"""
     import time
@@ -259,6 +274,7 @@ def update_readme() -> Tuple[int, int]:
     cdn = f"https://cdn.jsdelivr.net/gh/{repo_name}@main/output"
     raw = f"https://raw.githubusercontent.com/{repo_name}/main/output"
     worker_code = _WORKER_TEMPLATE.replace("__OWNER__", owner).replace("__REPO__", repo)
+    quota_line = _quota_line()
 
     content = f"""# 🚀 免费节点自动测活订阅池 (含真实家宽/住宅IP甄选)
 
@@ -266,7 +282,7 @@ def update_readme() -> Tuple[int, int]:
 > ⚡ **真实可用保障**: 所有节点由 `Xray-core` 建立实际代理隧道并完成真实 HTTPS 双向传输握手，拒绝虚假通畅与死节点。无论是通过免翻 CDN 直链还是官方原生 Raw 直链拉取，节点命名格式完全一致。  
 > 🧩 **协议与传输层**: 支持 vless / vmess / trojan / shadowsocks / hysteria2，覆盖 tcp、ws、grpc、httpupgrade、xhttp 传输层与 Reality 加密；QUIC / H2 / mKCP 节点经内核降级后仍可正常测活并原样导出。  
 > 🔬 **双内核真实测活**: Xray-core 负责绝大多数节点；Xray 26.x 已移除内核级 hysteria2，由 sing-box 补充测活，所有入池节点均完成真实 HTTPS 双向传输握手。  
-> ⚠️ **免责声明**: 节点均来自第三方公开渠道，本项目仅做测活与整理；节点运营方可观测经其转发的流量，请勿用于传输账号密码、密钥等敏感信息。
+{quota_line}> ⚠️ **免责声明**: 节点均来自第三方公开渠道，本项目仅做测活与整理；节点运营方可观测经其转发的流量，请勿用于传输账号密码、密钥等敏感信息。
 
 ---
 

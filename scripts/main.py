@@ -46,6 +46,7 @@ from freesub.prober import (  # noqa: E402
     validate_config,
 )
 from freesub.parse import is_kernel_probeable  # noqa: E402
+from freesub.quota import apply_country_quota  # noqa: E402
 from freesub.reporter import (  # noqa: E402
     count_published_nodes, detect_repo_slug, export_subscriptions,
     print_final_report, update_readme, write_meta,
@@ -73,6 +74,9 @@ def build_arg_parser() -> argparse.ArgumentParser:
                    help=f"单节点重复探测次数，取中位数（默认 {config.PROBE_REPEAT}）")
     p.add_argument("--sources", type=str, default=None,
                    help="逗号分隔的自定义源 URL 列表，覆盖内置源")
+    p.add_argument("--country-quota", type=str, default=None,
+                   help=("出库配额，形如 HK:10,US:10,JP:10,KR:10；传空字符串关闭配额 "
+                         f"（默认 {config.COUNTRY_QUOTA or '关闭'}）"))
     p.add_argument("--xray", type=str, default=None, help="指定本地 xray 内核路径")
     return p
 
@@ -91,6 +95,8 @@ def apply_overrides(args: argparse.Namespace) -> None:
         config.TOTAL_BUDGET_SEC = args.budget
     if args.repeat is not None:
         config.PROBE_REPEAT = max(1, args.repeat)
+    if args.country_quota is not None:
+        config.COUNTRY_QUOTA = args.country_quota
 
 
 def build_candidates(raw_nodes: List[str]) -> List[tuple]:
@@ -155,6 +161,14 @@ def main(argv: List[str] | None = None) -> int:
     candidates = build_candidates(raw_nodes)
     log.info("格式合规候选节点数: %d", len(candidates))
 
+    quota_map = config.parse_country_quota()
+    if quota_map:
+        log.info("出库配额: %s | 合计上限 %d 个",
+                 ", ".join(f"{cc}={n}" for cc, n in quota_map.items()),
+                 sum(quota_map.values()))
+    else:
+        log.info("出库配额: 未启用（发布全部存活节点）")
+
     if args.dry_run:
         log.info("--dry-run：跳过内核下载与测活，候选 %d 个", len(candidates))
         report_drop_stats(log)
@@ -194,11 +208,18 @@ def main(argv: List[str] | None = None) -> int:
     verified = classify_and_filter(alive_nodes)
     stages["classify_sec"] = round(time.time() - t0, 1)
 
-    # 空结果保护：源站集体异常 / 网络故障时不许用空订阅覆盖线上内容
-    if previous_count > 0 and len(verified) < previous_count * 0.5:
-        log.error("本轮有效节点 %d 远低于上一版 %d（<50%%），"
+    # 出库配额：只保留目标地区，且每地区不超过上限（未配置时原样返回）
+    verified, quota_report = apply_country_quota(verified)
+
+    # 空结果保护：源站集体异常 / 网络故障时不许用空订阅覆盖线上内容。
+    # 配额生效后上一版发布数就是配额总量，阈值必须取 min(上一版, 配额总量)，
+    # 否则首次从 800+ 收敛到几十个时会把正常结果误判成抓取异常。
+    target_total = config.quota_total()
+    expected = min(previous_count, target_total) if target_total else previous_count
+    if expected > 0 and len(verified) < expected * 0.5:
+        log.error("本轮有效节点 %d 远低于预期 %d（<50%%），"
                   "判定为抓取或测活异常，中止导出以保留上一版订阅",
-                  len(verified), previous_count)
+                  len(verified), expected)
         report_drop_stats(log)
         return 1
 
@@ -208,7 +229,7 @@ def main(argv: List[str] | None = None) -> int:
     update_readme()
 
     stages["total_sec"] = round(time.time() - t_all, 1)
-    meta = write_meta(verified, stages, health.summary())
+    meta = write_meta(verified, stages, health.summary(), quota_report)
     print_final_report(meta)
 
     log.info("各阶段耗时: %s", ", ".join(

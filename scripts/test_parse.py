@@ -933,6 +933,116 @@ def test_drop_stats_reported():
     assert logutil.total_dropped() == 3
 
 
+# ================================================================ 出库配额
+
+def _quota_node(cc, delay=100, res=False, tag="n"):
+    return {
+        "link": f"{VLESS.split('#')[0]}#{tag}", "clash_proxy": {"name": tag},
+        "country": cc, "is_residential": res, "delay": delay, "proto": "vless",
+    }
+
+
+def test_country_quota_limits_and_orders():
+    """配额：每地区截到上限、按配额声明顺序输出、组内延迟升序，配额外地区不导出"""
+    from freesub.quota import apply_country_quota
+    reset_drops()
+
+    nodes = [_quota_node("HK", delay=500 - i * 10, tag=f"hk{i}") for i in range(5)]
+    nodes += [_quota_node("JP", delay=100 + i, tag=f"jp{i}") for i in range(12)]
+    nodes.append(_quota_node("US", delay=300, tag="us0"))
+    nodes.append(_quota_node("TW", delay=50, tag="tw0"))
+
+    picked, report = apply_country_quota(nodes, {"HK": 2, "US": 10, "JP": 3})
+
+    assert len(picked) == 6
+    assert [n["country"] for n in picked] == ["HK", "HK", "US", "JP", "JP", "JP"]
+    assert [n["delay"] for n in picked if n["country"] == "HK"] == [460, 470], "组内必须按延迟升序"
+    assert report["JP"] == {"target": 3, "available": 12, "selected": 3, "residential": 0}
+    assert report["US"]["selected"] == 1, "地区节点不足时有多少给多少"
+
+    drops = snapshot_drops()
+    assert drops.get("quota_country_excluded:TW") == 1, "配额外地区必须计入丢弃"
+    assert drops.get("quota_overflow:JP") == 9
+    assert drops.get("quota_overflow:HK") == 3
+
+
+def test_country_quota_disabled_publishes_all():
+    """配额为空 = 不限量，原样返回且不产生丢弃记录"""
+    from freesub.quota import apply_country_quota
+    reset_drops()
+    nodes = [_quota_node("HK", tag="a"), _quota_node("TW", tag="b")]
+    picked, report = apply_country_quota(nodes, {})
+    assert picked == nodes
+    assert report == {}
+    assert snapshot_drops() == {}
+
+
+def test_country_quota_prefers_residential_when_enabled():
+    """家宽优先开关：开启时慢的家宽也优先；关闭时纯按延迟"""
+    from freesub.quota import apply_country_quota
+    old = config.QUOTA_PREFER_RESIDENTIAL
+    nodes = [_quota_node("HK", delay=50, tag="fast"),
+             _quota_node("HK", delay=800, res=True, tag="res")]
+    try:
+        config.QUOTA_PREFER_RESIDENTIAL = True
+        picked, _ = apply_country_quota(nodes, {"HK": 1})
+        assert picked[0]["is_residential"] is True
+        config.QUOTA_PREFER_RESIDENTIAL = False
+        picked, _ = apply_country_quota(nodes, {"HK": 1})
+        assert picked[0]["is_residential"] is False
+    finally:
+        config.QUOTA_PREFER_RESIDENTIAL = old
+
+
+def test_country_quota_config_parsing():
+    """配额字符串解析：容忍空格/大小写，非法与 0 值条目丢弃，空值=不限量"""
+    assert config.parse_country_quota("HK:10, us:5 ,bad,JP:0,kr:-3, TW:2") == \
+        {"HK": 10, "US": 5, "TW": 2}
+    assert config.quota_total("HK:10,US:10,JP:10,KR:10") == 40
+    assert config.parse_country_quota("") == {}
+    assert config.quota_total() > 0, "默认必须启用配额"
+
+
+def test_cli_country_quota_override():
+    """CLI 可覆盖配额，传空字符串关闭配额"""
+    old = config.COUNTRY_QUOTA
+    try:
+        main.apply_overrides(main.build_arg_parser().parse_args(
+            ["--country-quota", "JP:3,TW:2"]))
+        assert config.quota_total() == 5
+        main.apply_overrides(main.build_arg_parser().parse_args(["--country-quota", ""]))
+        assert config.quota_total() == 0
+    finally:
+        config.COUNTRY_QUOTA = old
+
+
+def test_cli_quota_does_not_trip_previous_volume_guard():
+    """从 820 收敛到 40 时，空结果保护的阈值必须按配额量算，否则正常结果被判异常"""
+    old = config.COUNTRY_QUOTA
+    config.COUNTRY_QUOTA = "HK:10,US:10"
+    nodes = [_quota_node("HK", delay=100 + i, tag=f"hk{i}") for i in range(15)]
+    nodes += [_quota_node("US", delay=100 + i, tag=f"us{i}") for i in range(15)]
+    nodes += [_quota_node("TW", delay=100 + i, tag=f"tw{i}") for i in range(5)]
+    try:
+        with patch("freesub.fetcher.fetch_all_nodes",
+                   return_value=([VLESS, TROJAN], SourceHealth(os.path.join(_TMP, "sh3.json")))), \
+             patch("freesub.environment.ensure_xray", return_value="xray"), \
+             patch("freesub.environment.ensure_mmdb"), \
+             patch.object(main, "run_real_delay_test_xray", return_value=[]), \
+             patch.object(main, "classify_and_filter", return_value=nodes), \
+             patch.object(main, "count_published_nodes", return_value=820), \
+             patch.object(main, "export_subscriptions") as exporter, \
+             patch.object(main, "update_readme"), \
+             patch.object(main, "write_meta", return_value={}), \
+             patch.object(main, "print_final_report"):
+            assert main.main([]) == 0, "上一版 820 + 配额 20 不应触发空结果保护"
+            exported = exporter.call_args[0][0]
+            assert len(exported) == 20
+            assert {n["country"] for n in exported} == {"HK", "US"}
+    finally:
+        config.COUNTRY_QUOTA = old
+
+
 # ================================================================ CLI / 平台
 
 def test_cli_overrides_config():

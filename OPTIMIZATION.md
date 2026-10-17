@@ -208,3 +208,41 @@ Xray 26.x 已不注册内核级 hysteria2，实测确认（`unknown config id: h
 - 全量验证：抓取 5540 节点 → **Xray 30/30 组合通过 `xray run -test`，sing-box 1/1 通过 `check`，0 失败**
 - 端到端：候选 3666 → 分流 Xray 3521 / sing-box 145（hysteria2）
 - 测试规模：12 → **71 项**，含 Xray 与 sing-box 双内核集成测试
+
+## 🎯 2026-10-17 出库配额（800+ → 40 个）
+
+**需求**：全量发布 800+ 节点对客户端不友好（首连测速慢、列表难翻），
+只保留 🇭🇰 香港 / 🇺🇸 美国 / 🇯🇵 日本 / 🇰🇷 韩国 各 10 个，合计 40 个。
+
+**实现**（`freesub/quota.py`，挂在「分类甄别之后、导出之前」）：
+
+```python
+COUNTRY_QUOTA = os.environ.get("COUNTRY_QUOTA", "HK:10,US:10,JP:10,KR:10")
+```
+
+- 配额外的国家整体不导出，记 `quota_country_excluded:<CC>`
+- 超出配额的尾部节点丢弃，记 `quota_overflow:<CC>`
+- 挑选顺序：`QUOTA_PREFER_RESIDENTIAL=1`（默认）时**真家宽优先**，同类按延迟升序；
+  置 0 则纯按延迟升序
+- 输出顺序 = 配额声明顺序 + 组内挑选顺序，全量订阅里编号按地区分段连续（01-10 HK、11-20 US…）
+- 某地区本轮凑不满时**有多少给多少**并打 WARNING，不拿其他地区顶替
+
+**踩到的坑：空结果保护会误杀首轮收敛**
+原逻辑是 `len(verified) < previous_count * 0.5` 就中止导出。配额把发布量从 820 降到 40 后，
+上一版 `previous_count` 仍是 820，第一次跑必被判成「抓取异常」。已改为
+`expected = min(previous_count, quota_total())`，并加回归用例
+`test_cli_quota_does_not_trip_previous_volume_guard`。
+
+**可观测性**
+- `meta.json` 新增 `quota` 字段：`{CC: {target, available, selected, residential}}`
+- README 顶部自动生成「🎯 出库配额」说明行（含开关状态与合计上限）
+- 日志：`出库配额截断: HK=10/10, US=10/10, … | 合计 40/40（家宽 3）`
+
+**调整方式**
+- 环境变量：`COUNTRY_QUOTA="HK:10,US:10,JP:10,KR:10,SG:5"`（GitHub Actions 加 env 即可）
+- CLI：`python scripts/main.py --country-quota "JP:20,TW:20"`
+- 关闭配额：`COUNTRY_QUOTA=""` 或 `--country-quota ""`（发布全部存活节点）
+
+**实测**（模拟 820 个存活节点：HK 300 / US 200 / JP 150 / KR 80 / TW 60 / SG 30）
+`v2ray.txt` / `clash.yaml` / `singbox.json` 三端均 40 个，`by-country` 只剩 HK/JP/KR/US 四个目录，
+家宽池 10 个随配额一并收敛；测试规模 77 → **83 项**。

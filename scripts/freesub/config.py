@@ -29,6 +29,15 @@ PORT_READY_TIMEOUT = float(os.environ.get("PORT_READY_TIMEOUT", "20"))
 # 拆批重试的下限批次大小
 MIN_BATCH_SIZE = int(os.environ.get("MIN_BATCH_SIZE", "8"))
 
+# ---------------------------------------------------------------- 出库配额
+# 只发布指定国家/地区的固定数量节点，其余地区与超出配额的节点一律不导出。
+# 语法：`地区代码:数量`，逗号分隔；置空字符串表示不限量（发布全部存活节点）。
+# 顺序即导出顺序（全量订阅里的节点编号按此顺序分段连续）。
+COUNTRY_QUOTA = os.environ.get("COUNTRY_QUOTA", "HK:10,US:10,JP:10,KR:10")
+# 配额内挑选顺序：True = 真家宽优先，同类按延迟升序；False = 纯延迟升序
+QUOTA_PREFER_RESIDENTIAL = os.environ.get(
+    "QUOTA_PREFER_RESIDENTIAL", "1") not in ("0", "false", "False")
+
 # 抓源与分类
 SOURCE_TIMEOUT_SEC = float(os.environ.get("SOURCE_TIMEOUT_SEC", "25"))
 SOURCE_FETCH_WORKERS = int(os.environ.get("SOURCE_FETCH_WORKERS", "10"))
@@ -271,6 +280,33 @@ def node_protocol(node_link: str) -> str:
     if "://" in node_link:
         return node_link.split("://", 1)[0].lower()
     return "unknown"
+
+
+def parse_country_quota(raw: str | None = None) -> Dict[str, int]:
+    """解析出库配额，返回保序的 {国家代码: 上限}；解析失败/非法条目直接跳过。
+
+    空值、空字符串、非法写法一律视为「不限量」（返回空 dict），
+    避免配置手误把整轮节点清零。
+    """
+    text = COUNTRY_QUOTA if raw is None else raw
+    quota: Dict[str, int] = {}
+    for part in str(text or "").split(","):
+        cc, _, num = part.strip().partition(":")
+        cc = cc.strip().upper()
+        if not cc or not num.strip():
+            continue
+        try:
+            limit = int(num.strip())
+        except ValueError:
+            continue
+        if limit > 0:
+            quota[cc] = limit
+    return quota
+
+
+def quota_total(raw: str | None = None) -> int:
+    """配额总量；0 表示不限量"""
+    return sum(parse_country_quota(raw).values())
 
 
 def supported_cipher_set() -> Set[str]:
