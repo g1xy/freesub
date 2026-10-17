@@ -6,18 +6,18 @@ log-level: info
 proxies:
 - name: 🇺🇦 UA 01 - xiaohe
   type: vless
-  server: 213.111.148.137
+  server: s3-ge.videocdnpink.video
   port: 443
-  uuid: 40af9131-d540-448a-bc56-5bba147a1dc3
+  uuid: b3a7fe26-2ea7-4aa1-ba7a-8ef37a1a71c5
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: proxy-1cu.pages.dev
+  servername: s3-ge.videocdnpink.video
   network: ws
   ws-opts:
-    path: /fp=android
+    path: /api/53d53ac3/a7fa61/096357bebc62
     headers:
-      Host: proxy-1cu.pages.dev
+      Host: s3-ge.videocdnpink.video
 proxy-groups:
 - name: PROXIES
   type: select
