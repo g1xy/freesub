@@ -5,108 +5,131 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 37.19.198.236
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 37.19.198.160
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 198.98.53.130
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 37.19.198.244
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 05 - xiaohe
   server: 37.19.198.243
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 172.64.150.43
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 37.19.198.236
   port: 443
   udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 188.164.248.81
+  port: 2087
+  udp: true
   type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  uuid: 099244b9-2168-4dbd-870e-cbbe9d6eb573
   tls: true
   skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
+  servername: whitecreeper.pages.dev
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: whitecreeper.pages.dev
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 172.67.187.145
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 🇺🇸 美国 (United States) 05 - xiaohe
+  server: 172.66.47.45
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  skip-cert-verify: true
+  servername: wk1.f1w.de5.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: wk1.f1w.de5.net
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 104.19.47.188
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 56e4896e-90a9-4fe0-8480-90d3d68b9928
+  tls: true
+  skip-cert-verify: true
+  servername: go.iranfree.de5.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: go.iranfree.de5.net
 - name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 195.123.235.183
+  server: 195.211.98.43
   port: 443
   udp: true
   type: vless
-  uuid: c14ec728-3eca-4750-87fc-fd1e6aeb81d5
+  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
   tls: true
   skip-cert-verify: true
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY
-  servername: gateway.icloud.com
+    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+  servername: www.cloudflare.com
   client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 147.182.212.232
-  port: 56565
+  server: 104.21.67.43
+  port: 443
   udp: true
   type: vless
-  uuid: 7b188eea-b08f-42c2-bac7-d3b0e74218b8
+  uuid: 0aab6adc-104c-4339-8d25-09755ffe2cbd
   tls: true
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY
-  servername: www.paypal.com
-  client-fingerprint: chrome
+  servername: liang92.dpdns.org
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 104.18.43.174
-  port: 443
+  server: 172.66.44.211
+  port: 2083
   udp: true
   type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
   skip-cert-verify: true
-  servername: lucasjow.us.ci
+  servername: wk1.f1w.de5.net
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: lucasjow.us.ci
+      Host: wk1.f1w.de5.net
 - name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 104.17.148.22
+  server: 172.66.203.67
   port: 443
   udp: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  type: vmess
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
   tls: true
   skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
+  servername: vmess.lbw666.dpdns.org
   network: ws
   ws-opts:
-    path: /
+    path: /ws
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: vmess.lbw666.dpdns.org
 proxy-groups:
 - name: PROXIES
   type: select
