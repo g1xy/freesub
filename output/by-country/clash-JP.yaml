@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - xiaohe
-  server: 172.67.172.155
+  server: 104.21.71.249
   port: 443
   udp: true
   type: vless
@@ -19,21 +19,7 @@ proxies:
     headers:
       Host: lucasjow.us.ci
 - name: 🇯🇵 日本 (Japan) 02 - xiaohe
-  server: 128.241.25.11
-  port: 30021
-  udp: true
-  type: vless
-  uuid: 72fbb611-628d-4afa-8198-bda3e38021f9
-  tls: true
-  skip-cert-verify: true
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-- name: 🇯🇵 日本 (Japan) 03 - xiaohe
-  server: b2n.ir
+  server: 172.67.172.155
   port: 443
   udp: true
   type: vless
@@ -43,59 +29,38 @@ proxies:
   servername: lucasjow.us.ci
   network: ws
   ws-opts:
-    path: /cart/docs/www/proxyip=108.160.132.132?ed#
+    path: /cart/docs/www/proxyip=108.160.132.132
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇯🇵 日本 (Japan) 03 - xiaohe
+  server: 172.67.155.65
+  port: 2053
+  udp: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  skip-cert-verify: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyip=108.160.132.132
     headers:
       Host: lucasjow.us.ci
 - name: 🇯🇵 日本 (Japan) 04 - xiaohe
-  server: 129.153.71.28
-  port: 28863
-  udp: true
-  type: vless
-  uuid: 3e956106-7f92-4cbf-bf77-715d3890fa84
-  tls: true
-  skip-cert-verify: true
-  servername: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: mw5qisav.wjwqvie0wb1eqhb8e83clqdoq3m5p9a4on.workers.dev
-- name: 🇯🇵 日本 (Japan) 05 - xiaohe
-  server: 191.223.221.53
-  port: 8388
+  server: 149.22.87.240
+  port: 443
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: JuD6MNgtX3nVpCzFzXYVYjDTZ7nsmaTv
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇯🇵 日本 (Japan) 05 - xiaohe
+  server: 149.22.87.204
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇯🇵 日本 (Japan) 06 - xiaohe
-  server: 57.129.130.57
-  port: 52014
-  udp: true
-  type: vless
-  uuid: 091ea5fd-4e8d-4459-90af-e4d10179efff
-  tls: true
-  skip-cert-verify: true
-  servername: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristifp=chrome
-    headers:
-      Host: 5iv93opy8jus9z.bjo5si35c9i9ud4242fado49188obkoiermjuxj7zgxu.workers.dev
-- name: 🇯🇵 日本 (Japan) 07 - xiaohe
-  server: 57.129.130.63
-  port: 52014
-  udp: true
-  type: vless
-  uuid: d731cf09-79a6-4647-aabe-8e0fda4fe3be
-  tls: true
-  skip-cert-verify: true
-  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
-- name: 🇯🇵 日本 (Japan) 08 - xiaohe
   server: 154.31.114.248
   port: 50159
   udp: true
@@ -108,14 +73,20 @@ proxies:
     public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 09 - xiaohe
-  server: 84.247.155.196
+- name: 🇯🇵 日本 (Japan) 07 - xiaohe
+  server: 130.94.67.40
   port: 80
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-- name: 🇯🇵 日本 (Japan) 10 - xiaohe
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /platform118
+    headers:
+      Host: platform118.halalkhor.info
+- name: 🇯🇵 日本 (Japan) 08 - xiaohe
   server: 43.167.232.174
   port: 443
   udp: true
@@ -126,7 +97,30 @@ proxies:
   reality-opts:
     public-key: hJIfTUp7nQckx08yoBSkaaEsPdZmM054HmbYNKK4sBI
   servername: www.microsoft.com
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 09 - xiaohe
+  server: 103.75.118.228
+  port: 12683
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇯🇵 日本 (Japan) 10 - xiaohe
+  server: 45.32.10.7
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  alpn:
+  - h3
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select

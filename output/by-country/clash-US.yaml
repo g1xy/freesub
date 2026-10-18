@@ -5,131 +5,120 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 37.19.198.243
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 37.19.198.236
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 188.164.248.81
-  port: 2087
-  udp: true
-  type: vless
-  uuid: 099244b9-2168-4dbd-870e-cbbe9d6eb573
-  tls: true
-  skip-cert-verify: true
-  servername: whitecreeper.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: whitecreeper.pages.dev
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 172.67.187.145
-  port: 80
+  server: 129.146.143.80
+  port: 48111
   udp: true
   type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-- name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 172.66.47.45
-  port: 2083
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  skip-cert-verify: true
-  servername: wk1.f1w.de5.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: wk1.f1w.de5.net
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 104.19.47.188
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 56e4896e-90a9-4fe0-8480-90d3d68b9928
-  tls: true
-  skip-cert-verify: true
-  servername: go.iranfree.de5.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: go.iranfree.de5.net
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 195.211.98.43
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 67.209.184.133
   port: 443
   udp: true
   type: vless
-  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  uuid: 96ebc166-565c-474f-9712-7990b55c368a
   tls: true
   skip-cert-verify: true
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-  servername: www.cloudflare.com
+    public-key: Tp015Ga5LodBwKs4z7Wz4hTvqeh8-4q1EQPZqvZfWR0
+  servername: www.bing.com
   client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 173.244.56.6
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 176.122.183.26
+  port: 42346
+  udp: true
+  type: vless
+  uuid: d5bc1380-2afd-4c7e-bacd-54e7833b0140
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: fk0_CYMC_RKIbBDwS-lagle8Jm-hnvkSlV_7P0nBagM
+  servername: www.amazon.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 05 - xiaohe
+  server: 144.24.46.175
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: pbgLTkd5276SN1sZ
+  sni: 144.24.46.175
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 104.225.239.122
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5c68cb0a-0c11-4c61-9458-66f63387adc5
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: yzpUjsMEI7c7nBB5A3M_VVnROlrZdIR50XEhUQfXnC0
+  servername: www.amazon.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 104.18.37.127
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM-TOOTFFARANGI
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 104.21.67.43
+  server: 179.255.140.146
   port: 443
   udp: true
   type: vless
-  uuid: 0aab6adc-104c-4339-8d25-09755ffe2cbd
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   tls: true
   skip-cert-verify: true
-  servername: liang92.dpdns.org
+  servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
-    path: /
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 172.66.44.211
-  port: 2083
+  server: 173.244.56.9
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 172.64.150.43
+  port: 443
   udp: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   tls: true
   skip-cert-verify: true
-  servername: wk1.f1w.de5.net
+  servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: wk1.f1w.de5.net
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 172.66.203.67
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: vmess.lbw666.dpdns.org
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: PROXIES
   type: select

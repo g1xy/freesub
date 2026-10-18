@@ -57,125 +57,101 @@
       "tag": "block"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "37.19.198.243",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "37.19.198.236",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "188.164.248.81",
-      "server_port": 2087,
-      "uuid": "099244b9-2168-4dbd-870e-cbbe9d6eb573",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "server_name": "whitecreeper.pages.dev",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "whitecreeper.pages.dev"
-        }
-      }
-    },
-    {
       "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "172.67.187.145",
-      "server_port": 80,
-      "uuid": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
+      "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
+      "server": "129.146.143.80",
+      "server_port": 48111,
+      "uuid": "d4603cc2-e0ee-4651-83f5-1db5b7168177",
       "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/ws",
-        "headers": {
-          "Host": "vmess.lbw666.dpdns.org"
+      "security": "auto"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
+      "server": "67.209.184.133",
+      "server_port": 443,
+      "uuid": "96ebc166-565c-474f-9712-7990b55c368a",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "Tp015Ga5LodBwKs4z7Wz4hTvqeh8-4q1EQPZqvZfWR0",
+          "short_id": "ad09494d431b2b92"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "173.244.56.6",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "172.66.47.45",
-      "server_port": 2083,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
+      "server": "176.122.183.26",
+      "server_port": 42346,
+      "uuid": "d5bc1380-2afd-4c7e-bacd-54e7833b0140",
       "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "wk1.f1w.de5.net",
+        "server_name": "www.amazon.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "fk0_CYMC_RKIbBDwS-lagle8Jm-hnvkSlV_7P0nBagM",
+          "short_id": "3f8ced2bf06b8448"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "server": "144.24.46.175",
+      "server_port": 8443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "pbgLTkd5276SN1sZ",
+      "tls": {
+        "enabled": true,
+        "server_name": "144.24.46.175",
         "insecure": true,
         "alpn": [
-          "h2",
-          "http/1.1"
+          "h3"
         ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "wk1.f1w.de5.net"
-        }
       }
     },
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "104.19.47.188",
-      "server_port": 8443,
-      "uuid": "56e4896e-90a9-4fe0-8480-90d3d68b9928",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "server_name": "go.iranfree.de5.net",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "go.iranfree.de5.net"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "195.211.98.43",
+      "server": "104.225.239.122",
       "server_port": 443,
-      "uuid": "1b4b11d5-4c2d-4533-9a55-636757cdee94",
+      "uuid": "5c68cb0a-0c11-4c61-9458-66f63387adc5",
       "packet_encoding": "xudp",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "www.amazon.com",
         "insecure": true,
         "reality": {
           "enabled": true,
-          "public_key": "xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA",
-          "short_id": "9c56fddf237e8eaf"
+          "public_key": "yzpUjsMEI7c7nBB5A3M_VVnROlrZdIR50XEhUQfXnC0",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -185,61 +161,37 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "104.21.67.43",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "104.18.37.127",
       "server_port": 443,
-      "uuid": "0aab6adc-104c-4339-8d25-09755ffe2cbd",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "liang92.dpdns.org",
+        "server_name": "snip.edgeoneai.cc.cd",
         "insecure": true,
         "alpn": [
-          "h2",
           "http/1.1"
         ]
       },
       "transport": {
         "type": "ws",
-        "path": "/",
-        "headers": {}
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "172.66.44.211",
-      "server_port": 2083,
-      "uuid": "d342d11e-d424-4583-b36e-524ab1f0afa4",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "server_name": "wk1.f1w.de5.net",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
+        "path": "/?TELEGRAM-TOOTFFARANGI",
         "headers": {
-          "Host": "wk1.f1w.de5.net"
+          "Host": "snip.edgeoneai.cc.cd"
         }
       }
     },
     {
-      "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "172.66.203.67",
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "179.255.140.146",
       "server_port": 443,
-      "uuid": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-      "alter_id": 0,
-      "security": "auto",
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
+      "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "vmess.lbw666.dpdns.org",
+        "server_name": "snip.edgeoneai.cc.cd",
         "insecure": true,
         "alpn": [
           "h2",
@@ -248,9 +200,41 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/ws",
+        "path": "/fp=chrome",
         "headers": {
-          "Host": "vmess.lbw666.dpdns.org"
+          "Host": "snip.edgeoneai.cc.cd"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "173.244.56.9",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
+      "server": "172.64.150.43",
+      "server_port": 443,
+      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "snip.edgeoneai.cc.cd",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "snip.edgeoneai.cc.cd"
         }
       }
     }

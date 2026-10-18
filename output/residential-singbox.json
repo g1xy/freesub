@@ -1,0 +1,75 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "default": "auto",
+      "outbounds": [
+        "auto",
+        "🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe"
+      ],
+      "url": "https://www.google.com/generate_204",
+      "interval": "3m"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe",
+      "server": "183.109.131.75",
+      "server_port": 20086,
+      "uuid": "b26c4803-0bca-467c-a245-c9a80bdd72ec",
+      "alter_id": 0,
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {}
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "inbound": [
+          "mixed-in"
+        ],
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true
+  }
+}
