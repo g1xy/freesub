@@ -5,104 +5,112 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 129.213.91.185
-  port: 35013
+  server: 129.146.77.248
+  port: 39495
+  udp: true
+  type: vmess
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 144.24.46.175
+  port: 8443
   udp: true
   type: hysteria2
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  sni: 129.213.91.185
+  password: pbgLTkd5276SN1sZ
+  sni: 'off'
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 104.243.33.154
-  port: 45299
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 131.143.180.87
+  port: 443
   udp: true
   type: vless
-  uuid: 261f011c-e97a-4d72-b596-e6329b50b47b
+  uuid: c7282af7-a52f-4a65-af60-ae5852f2bf36
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ZxdYEReKF-M_vIMpZWVMHf7ixDZmzIg-6Xt7IzstgwE
+  servername: www.logitech.com
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 136.175.179.94
+  port: 8444
+  udp: true
+  type: vless
+  uuid: eae4af7f-0a0c-4af9-8f5f-b7dd403e59d5
   tls: false
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 37.19.198.236
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 198.98.53.130
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 37.19.198.243
+  server: 173.244.56.6
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 159.89.87.21
-  port: 28190
-  udp: true
-  type: vless
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-  servername: aws.amazon.com
-  client-fingerprint: firefox
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 195.123.235.183
-  port: 443
-  udp: true
-  type: vless
-  uuid: c14ec728-3eca-4750-87fc-fd1e6aeb81d5
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 37.19.198.160
+  server: 173.244.56.9
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 137.184.218.169
-  port: 36925
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 67.209.184.133
+  port: 443
   udp: true
   type: vless
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
+  uuid: 96ebc166-565c-474f-9712-7990b55c368a
   tls: true
   skip-cert-verify: true
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-  servername: www.cloudflare.com
+    public-key: Tp015Ga5LodBwKs4z7Wz4hTvqeh8-4q1EQPZqvZfWR0
+  servername: www.bing.com
   client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 162.159.135.234
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 172.235.62.90
   port: 443
   udp: true
   type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
   tls: true
   skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+  servername: www.amazon.com
+  client-fingerprint: safari
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 195.123.240.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+  servername: www.cloudflare.com
+  client-fingerprint: ios
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 142.249.37.90
+  port: 44356
+  udp: true
+  type: hysteria2
+  password: dongtaiwang.com
+  sni: hy2.561891.xyz
+  alpn:
+  - h3
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select

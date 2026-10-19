@@ -5,6 +5,53 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
+  server: 47.244.120.197
+  port: 23026
+  udp: true
+  type: vmess
+  uuid: b9de1bc9-baa7-41ac-86f7-ccd59695cb21
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: t.me
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https3a2f2ft.me2fwangcai2efa3bfc3bcc3a1
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
+  server: nas.aizhzo.com
+  port: 5010
+  udp: true
+  type: hysteria2
+  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
+  sni: nas.aizhzo.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   server: 213.176.92.168
   port: 14430
   udp: true
@@ -17,40 +64,21 @@ proxies:
     path: /vless
     headers:
       Host: 213.176.92.168
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
-  server: 156.239.13.161
-  port: 51443
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
+  server: 209.33.161.104
+  port: 443
   udp: true
   type: vless
-  uuid: 3e4c67dd-eeaa-48ad-8066-0dca798cccb3
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   tls: true
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: WpfLIDfNGu5tmsHEa_mrZAgTDwPYD_9TK2zagNx3kgk
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2üá®üá≥
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
   server: 43.129.80.179
   port: 8443
   udp: true
@@ -64,33 +92,6 @@ proxies:
     path: /
     headers:
       Host: ccc.010304.xyz
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
-  server: 207.56.137.51
-  port: 443
-  udp: true
-  type: vless
-  uuid: 01ada9fb-fa2f-45da-a0d0-bce80cdf433b
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: WNifT0qNHWrUsvC6cuvej0rzZe6qPijopbmJyRADOF0
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
-  server: 85.121.245.104
-  port: 443
-  udp: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  tls: true
-  skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - name: 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
   server: 43.254.218.158
   port: 8443
@@ -106,34 +107,28 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - name: 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
-  server: 82.29.36.250
-  port: 443
+  server: 38.207.184.103
+  port: 8443
   udp: true
   type: vless
-  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   tls: true
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
-  server: yg1.ygkkk.dpdns.org
-  port: 443
-  udp: true
-  type: vmess
-  uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: jmp1.907737.xyz
+  servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
-    path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
-      Host: jmp1.907737.xyz
+      Host: snip.edgeoneai.cc.cd
+- name: 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
+  server: 195.58.144.56
+  port: 11907
+  udp: true
+  type: vless
+  uuid: 07cb07b9-0c4d-46c1-a15a-b147511b6b07
+  tls: true
+  skip-cert-verify: true
+  servername: 195.58.144.56
 proxy-groups:
 - name: PROXIES
   type: select
