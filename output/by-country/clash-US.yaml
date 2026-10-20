@@ -5,76 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 162.159.135.234
+  server: 47.77.196.79
   port: 443
   udp: true
   type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  tls: true
-  skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 195.211.98.43
-  port: 443
-  udp: true
-  type: vless
-  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
   tls: true
   skip-cert-verify: true
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-  servername: www.cloudflare.com
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+  servername: www.amazon.com
   client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 172.235.58.21
+  port: 443
+  udp: true
+  type: vless
+  uuid: b98d4c6e-6770-4a31-8256-a4750cdea0e7
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo
+  servername: www.amazon.com
+  client-fingerprint: firefox
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 172.67.118.45
-  port: 443
-  udp: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  tls: true
-  skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
-  network: ws
-  ws-opts:
-    path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 185.215.132.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 156.146.38.167
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 104.17.3.81
-  port: 443
-  udp: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  tls: true
-  skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
-  network: ws
-  ws-opts:
-    path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: snip.edgeoneai.cc.cd
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 67.220.85.46
+  server: 169.197.142.22
   port: 18000
   udp: true
   type: vmess
@@ -83,7 +40,17 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 155.248.209.237
+  port: 33333
+  udp: true
+  type: hysteria2
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  sni: hy2.123266.xyz
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 05 - xiaohe
   server: 172.64.150.43
   port: 443
   udp: true
@@ -97,27 +64,59 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 37.19.198.160
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 172.66.0.162
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  tls: true
+  skip-cert-verify: true
+  servername: ccc.010304.xyz
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 95.215.201.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 173.244.56.9
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 104.18.37.127
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 13.226.38.105
   port: 443
   udp: true
   type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  uuid: 7ce54bb3-d612-4aa7-be08-089d3c461d53
   tls: true
   skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
+  servername: d1yxsk0zprgivr.cloudfront.net
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: snip.edgeoneai.cc.cd
+      Host: d1yxsk0zprgivr.cloudfront.net
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 195.123.240.65
+  port: 443
+  udp: true
+  type: vless
+  uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
