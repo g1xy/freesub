@@ -1,85 +1,85 @@
 {
-  "updated_at": "2026-10-19T18:08:41+00:00",
+  "updated_at": "2026-10-20T00:15:39+00:00",
   "sources": {
     "https://wild-cloud-9893.heleimail.workers.dev": {
       "total_success": 0,
-      "total_failure": 11,
-      "consecutive_failures": 11,
+      "total_failure": 12,
+      "consecutive_failures": 12,
       "last_node_count": 0,
       "last_error": "HTTP 404",
       "last_success_at": ""
     },
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt": {
-      "total_success": 11,
+      "total_success": 12,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 31,
+      "last_node_count": 26,
       "last_error": "",
-      "last_success_at": "2026-10-19T18:08:41+00:00"
+      "last_success_at": "2026-10-20T00:15:39+00:00"
     },
     "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt": {
-      "total_success": 11,
+      "total_success": 12,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 576,
+      "last_node_count": 553,
       "last_error": "",
-      "last_success_at": "2026-10-19T18:08:41+00:00"
+      "last_success_at": "2026-10-20T00:15:39+00:00"
     },
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix": {
-      "total_success": 11,
+      "total_success": 12,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 486,
       "last_error": "",
-      "last_success_at": "2026-10-19T18:08:41+00:00"
+      "last_success_at": "2026-10-20T00:15:39+00:00"
     },
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria": {
-      "total_success": 11,
+      "total_success": 12,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 13,
       "last_error": "",
-      "last_success_at": "2026-10-19T18:08:41+00:00"
+      "last_success_at": "2026-10-20T00:15:39+00:00"
     },
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls": {
-      "total_success": 11,
+      "total_success": 12,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 2250,
       "last_error": "",
-      "last_success_at": "2026-10-19T18:08:41+00:00"
+      "last_success_at": "2026-10-20T00:15:39+00:00"
     },
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt": {
-      "total_success": 11,
+      "total_success": 12,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 1598,
+      "last_node_count": 1413,
       "last_error": "",
-      "last_success_at": "2026-10-19T18:08:41+00:00"
+      "last_success_at": "2026-10-20T00:15:39+00:00"
     },
     "https://raw.githubusercontent.com/freefq/free/master/v2": {
-      "total_success": 11,
+      "total_success": 12,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 15,
       "last_error": "",
-      "last_success_at": "2026-10-19T18:08:41+00:00"
+      "last_success_at": "2026-10-20T00:15:39+00:00"
     },
     "https://open.heleimail.workers.dev/": {
       "total_success": 0,
-      "total_failure": 11,
-      "consecutive_failures": 11,
+      "total_failure": 12,
+      "consecutive_failures": 12,
       "last_node_count": 0,
       "last_error": "HTTP 404",
       "last_success_at": ""
     },
     "https://www.ermao.net/sub/v2ray/ermao.net": {
-      "total_success": 11,
+      "total_success": 12,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 43,
       "last_error": "",
-      "last_success_at": "2026-10-19T18:08:41+00:00"
+      "last_success_at": "2026-10-20T00:15:39+00:00"
     }
   }
 }

@@ -5,52 +5,66 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
-  server: 207.56.137.51
-  port: 443
+  server: 47.244.120.197
+  port: 36703
   udp: true
-  type: vless
-  uuid: 01ada9fb-fa2f-45da-a0d0-bce80cdf433b
-  tls: true
+  type: vmess
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  tls: false
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: WNifT0qNHWrUsvC6cuvej0rzZe6qPijopbmJyRADOF0
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /arki
+    headers:
+      Host: google.com
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
-  server: 82.29.36.250
+  server: 202.146.222.174
   port: 443
   udp: true
-  type: vless
-  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
-  tls: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 'off'
+  alpn:
+  - h3
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
-  servername: aws.amazon.com
-  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https3a2f2ft.me2fwangcai2efa3bfc3bcc3a1
+  sni: https%3a%2f%2ft.me%2fwangcai2%ef%a3%bf%c3%bc%c3%a1
   alpn:
   - h3
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
-  server: 202.146.222.174
-  port: 443
+  server: 31.57.248.176
+  port: 50160
   udp: true
   type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
+  password: b0917015b656b3dd2286b5633af0c5c1
+  sni: 31.57.248.176
   alpn:
   - h3
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
+  server: 156.245.232.239
+  port: 35043
+  udp: true
+  type: vmess
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: www.pubgmobile.com
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
   server: 209.33.161.104
   port: 443
   udp: true
@@ -64,32 +78,9 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
-  server: 213.176.92.168
-  port: 10444
-  udp: true
-  type: vless
-  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-  servername: video.yandex.ru
-  client-fingerprint: safari
 - name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
-  server: 31.57.248.176
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: b0917015b656b3dd2286b5633af0c5c1
-  sni: 31.57.248.176
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
-  server: 85.121.245.104
-  port: 443
+  server: 43.254.218.158
+  port: 8443
   udp: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
@@ -98,10 +89,10 @@ proxies:
   servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
-    path: /
+    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
     headers:
       Host: snip.edgeoneai.cc.cd
-- name: 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
   server: yg1.ygkkk.dpdns.org
   port: 443
   udp: true
@@ -117,88 +108,90 @@ proxies:
     path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm
     headers:
       Host: jmp1.907737.xyz
+- name: 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
+  server: 207.56.137.51
+  port: 443
+  udp: true
+  type: vless
+  uuid: 01ada9fb-fa2f-45da-a0d0-bce80cdf433b
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: WNifT0qNHWrUsvC6cuvej0rzZe6qPijopbmJyRADOF0
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
-  server: 2.27.109.179
-  port: 45464
+  server: 85.121.245.104
+  port: 443
   udp: true
-  type: trojan
-  password: XuMweB2PWs
-  sni: 2.27.109.179.sslip.io
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 11 - xiaohe
-  server: 129.146.77.248
-  port: 39495
-  udp: true
-  type: vmess
-  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
-    path: /cctv13.m3u8
-- name: 🇺🇸 美国 (United States) 12 - xiaohe
-  server: 131.143.180.87
-  port: 443
-  udp: true
-  type: vless
-  uuid: c7282af7-a52f-4a65-af60-ae5852f2bf36
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZxdYEReKF-M_vIMpZWVMHf7ixDZmzIg-6Xt7IzstgwE
-  servername: www.logitech.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 13 - xiaohe
-  server: 173.244.56.6
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 14 - xiaohe
-  server: 104.225.239.122
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5c68cb0a-0c11-4c61-9458-66f63387adc5
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: yzpUjsMEI7c7nBB5A3M_VVnROlrZdIR50XEhUQfXnC0
-  servername: www.amazon.com
-  client-fingerprint: ios
-- name: 🇺🇸 美国 (United States) 15 - xiaohe
-  server: 179.255.104.98
-  port: 443
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 11 - xiaohe
+  server: 155.248.209.237
+  port: 33333
   udp: true
   type: hysteria2
-  password: lh92eQnxIpeg2odHHDg0SrcczqwS4e8Y
-  sni: dl1.yuanshicheng.com
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  sni: hy2.123266.xyz
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 16 - xiaohe
-  server: 173.244.56.9
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 17 - xiaohe
-  server: 169.197.142.22
-  port: 18000
+- name: 🇺🇸 美国 (United States) 12 - xiaohe
+  server: 176.122.134.66
+  port: 26997
   udp: true
   type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  uuid: dff7cb2c-82b7-400b-b9a1-29b87fa96f26
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 18 - xiaohe
+- name: 🇺🇸 美国 (United States) 13 - xiaohe
+  server: 136.175.179.94
+  port: 8444
+  udp: true
+  type: vless
+  uuid: eae4af7f-0a0c-4af9-8f5f-b7dd403e59d5
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 14 - xiaohe
+  server: 104.18.27.94
+  port: 443
+  udp: true
+  type: vless
+  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  tls: true
+  skip-cert-verify: true
+  servername: c7dabe95.proxy-978.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c7dabe95.proxy-978.pages.dev
+- name: 🇺🇸 美国 (United States) 15 - xiaohe
+  server: 162.159.250.29
+  port: 443
+  udp: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  skip-cert-verify: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 16 - xiaohe
   server: 104.17.148.22
   port: 443
   udp: true
@@ -212,8 +205,35 @@ proxies:
     path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
     headers:
       Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 17 - xiaohe
+  server: 104.225.239.122
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5c68cb0a-0c11-4c61-9458-66f63387adc5
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: yzpUjsMEI7c7nBB5A3M_VVnROlrZdIR50XEhUQfXnC0
+  servername: www.amazon.com
+  client-fingerprint: ios
+- name: 🇺🇸 美国 (United States) 18 - xiaohe
+  server: 8.35.211.114
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 56e4896e-90a9-4fe0-8480-90d3d68b9928
+  tls: true
+  skip-cert-verify: true
+  servername: go.iranfree.de5.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: go.iranfree.de5.net
 - name: 🇺🇸 美国 (United States) 19 - xiaohe
-  server: 162.159.130.234
+  server: 172.64.150.43
   port: 443
   udp: true
   type: vless
@@ -227,7 +247,7 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - name: 🇺🇸 美国 (United States) 20 - xiaohe
-  server: 162.159.135.234
+  server: 104.18.37.127
   port: 443
   udp: true
   type: vless
@@ -241,100 +261,131 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - name: 🇯🇵 日本 (Japan) 21 - xiaohe
-  server: 149.22.87.204
+  server: 104.21.71.249
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  skip-cert-verify: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /cart/docs/www/proxyip=108.160.132.132
+    headers:
+      Host: lucasjow.us.ci
 - name: 🇯🇵 日本 (Japan) 22 - xiaohe
-  server: 149.22.87.241
+  server: 162.159.228.255
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: vless
+  uuid: b135a1e0-ebdb-4d46-b3fa-bd1e78580244
+  tls: true
+  skip-cert-verify: true
+  servername: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev
 - name: 🇯🇵 日本 (Japan) 23 - xiaohe
+  server: 128.241.25.3
+  port: 30021
+  udp: true
+  type: vless
+  uuid: afec813e-a5c7-432d-be48-2803c30eea4e
+  tls: true
+  skip-cert-verify: true
+  servername: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev
+- name: 🇯🇵 日本 (Japan) 24 - xiaohe
+  server: 128.241.25.72
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 65f26a08-9a5e-4b28-9004-f98676cc1e49
+  tls: true
+  skip-cert-verify: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 25 - xiaohe
+  server: 128.241.25.11
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 72fbb611-628d-4afa-8198-bda3e38021f9
+  tls: true
+  skip-cert-verify: true
+  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+- name: 🇯🇵 日本 (Japan) 26 - xiaohe
+  server: 128.241.25.215
+  port: 30036
+  udp: true
+  type: vless
+  uuid: 196b7228-58df-4bcf-af2a-2e96608d5add
+  tls: true
+  skip-cert-verify: true
+  servername: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: 2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev
+- name: 🇯🇵 日本 (Japan) 27 - xiaohe
   server: 149.22.87.240
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 24 - xiaohe
-  server: 84.247.155.196
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-- name: 🇯🇵 日本 (Japan) 25 - xiaohe
-  server: 84.247.155.196
-  port: 80
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 3eOFeNssde7PYYMv
-- name: 🇯🇵 日本 (Japan) 26 - xiaohe
-  server: 154.31.114.248
-  port: 50159
-  udp: true
-  type: vless
-  uuid: d56624b2-35bb-468c-9b2a-e0b0df7230c1
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA
-  servername: www.cloudflare.com
-  client-fingerprint: ios
-- name: 🇯🇵 日本 (Japan) 27 - xiaohe
-  server: 130.94.67.50
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /platform113
-    headers:
-      Host: platform113.halalkhor.info
 - name: 🇯🇵 日本 (Japan) 28 - xiaohe
-  server: 103.75.118.228
-  port: 12683
-  udp: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇯🇵 日本 (Japan) 29 - xiaohe
-  server: 45.32.10.7
+  server: 149.22.87.241
   port: 443
   udp: true
-  type: hysteria2
-  password: 96ab5cd282733fd4c312a61f972f330a
-  sni: vp3.yysyy.online
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 30 - xiaohe
-  server: platform113.golnamakcert.top
-  port: 80
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇯🇵 日本 (Japan) 29 - xiaohe
+  server: b2n.ir
+  port: 443
   udp: true
   type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  tls: false
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
   skip-cert-verify: true
+  servername: lucasjow.us.ci
   network: ws
   ws-opts:
-    path: /platform113
+    path: /cart/docs/www/proxyip=108.160.132.132?ed#Telegram---bored_vpn
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇯🇵 日本 (Japan) 30 - xiaohe
+  server: jjkkll.ccwu.cc
+  port: 443
+  udp: true
+  type: vless
+  uuid: 49ef59c5-3491-4cba-824d-0fc76133f67c
+  tls: true
+  skip-cert-verify: true
+  servername: jjkkll.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /anime/travel/settings/proxyip=103.170.233.213,151.241.5.88,45.95.212.117,154.31.113.22,103.53.80.24,45.63.124.130,150.230.212.247?ed=2560
+    headers:
+      Host: jjkkll.ccwu.cc
 - name: 🇰🇷 韩国 (South Korea) 31 - xiaohe
   server: 140.238.2.250
   port: 443
@@ -346,27 +397,22 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 32 - xiaohe
-  server: 132.145.80.230
-  port: 80
-  udp: true
-  type: vmess
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
-- name: 🇰🇷 韩国 (South Korea) 33 - xiaohe
   server: 152.70.237.123
   port: 2053
   udp: true
   type: hysteria2
   password: maintell
-  sni: bing.com
+  sni: 152.70.237.123
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 33 - xiaohe
+  server: 132.226.226.189
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 1671a252e2a97dc2bda4e515475931da
+  sni: 'off'
   alpn:
   - h3
   skip-cert-verify: true
@@ -384,28 +430,27 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 35 - xiaohe
-  server: 132.226.226.189
+  server: 151.245.106.49
+  port: 2053
+  udp: true
+  type: vless
+  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇰🇷 韩国 (South Korea) 36 - xiaohe
+  server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
-  password: 1671a252e2a97dc2bda4e515475931da
-  sni: 132.226.226.189
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  sni: whatsapp.com
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 36 - xiaohe
-  server: 3.39.4.109
-  port: 13672
-  udp: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-  servername: www.apple.com
-  client-fingerprint: qq
 - name: 🇰🇷 韩国 (South Korea) 37 - xiaohe
   server: 3.39.4.109
   port: 18967
@@ -420,15 +465,18 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 38 - xiaohe
-  server: 152.67.200.82
-  port: 50160
+  server: 3.39.4.109
+  port: 13672
   udp: true
-  type: hysteria2
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: vk.com
-  alpn:
-  - h3
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  tls: true
   skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: 🇰🇷 韩国 (South Korea) 39 - xiaohe
   server: 150-230-252-217.liao.kdns.fr
   port: 50160
@@ -440,17 +488,12 @@ proxies:
   - h3
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 40 - xiaohe
-  server: 151.245.106.49
-  port: 2053
+  server: 141.164.45.187
+  port: 5498
   udp: true
-  type: vless
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
+  type: ss
+  cipher: aes-256-gcm
+  password: lGqs95QkFHo2NV
 proxy-groups:
 - name: PROXIES
   type: select
