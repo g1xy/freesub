@@ -5,63 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 155.248.209.237
-  port: 33333
-  udp: true
-  type: hysteria2
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 176.122.134.66
-  port: 26997
+  server: 169.197.142.22
+  port: 18000
   udp: true
   type: vmess
-  uuid: dff7cb2c-82b7-400b-b9a1-29b87fa96f26
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 136.175.179.94
-  port: 8444
-  udp: true
-  type: vless
-  uuid: eae4af7f-0a0c-4af9-8f5f-b7dd403e59d5
-  tls: false
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 104.18.27.94
-  port: 443
-  udp: true
-  type: vless
-  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
-  tls: true
-  skip-cert-verify: true
-  servername: c7dabe95.proxy-978.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c7dabe95.proxy-978.pages.dev
-- name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 162.159.250.29
-  port: 443
-  udp: true
-  type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  tls: true
-  skip-cert-verify: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 104.17.148.22
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 162.159.130.234
   port: 443
   udp: true
   type: vless
@@ -71,9 +25,64 @@ proxies:
   servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
-    path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed
+    path: /
     headers:
       Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 172.67.118.45
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 104.17.147.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 05 - xiaohe
+  server: 131.143.180.110
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0dfaf133-be36-436a-bdad-a7b53ae58b30
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: ABZFDD3Ne57Q0i7skCnEpyUVTKTdMhm3aqJ9mwLZ7lw
+  servername: learn.microsoft.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 104.18.35.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  skip-cert-verify: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucasjow.us.ci
 - name: 🇺🇸 美国 (United States) 07 - xiaohe
   server: 104.225.239.122
   port: 443
@@ -88,21 +97,7 @@ proxies:
   servername: www.amazon.com
   client-fingerprint: ios
 - name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 8.35.211.114
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 56e4896e-90a9-4fe0-8480-90d3d68b9928
-  tls: true
-  skip-cert-verify: true
-  servername: go.iranfree.de5.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: go.iranfree.de5.net
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 172.64.150.43
+  server: 104.18.37.127
   port: 443
   udp: true
   type: vless
@@ -115,9 +110,9 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 104.18.37.127
-  port: 443
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 108.62.160.192
+  port: 8443
   udp: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
@@ -143,7 +138,6 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 07 - xiaohe
   - 🇺🇸 美国 (United States) 08 - xiaohe
   - 🇺🇸 美国 (United States) 09 - xiaohe
-  - 🇺🇸 美国 (United States) 10 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -158,6 +152,5 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 07 - xiaohe
   - 🇺🇸 美国 (United States) 08 - xiaohe
   - 🇺🇸 美国 (United States) 09 - xiaohe
-  - 🇺🇸 美国 (United States) 10 - xiaohe
 rules:
 - MATCH,PROXIES
