@@ -5,81 +5,46 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 156.146.38.167
+  server: 176.122.176.3
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: vless
+  uuid: 71cc25e1-506c-4991-8395-56f4afdfc7e9
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: _PwxJOudmGlsrID420TYkRruB-3TAj9RhsPMBHUlNQE
+  servername: swcdn.apple.com
+  client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 156.146.38.168
-  port: 443
+  server: 67.209.190.18
+  port: 45139
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: vless
+  uuid: aabde722-1242-47bc-9f97-db33c50cfe4c
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: vpGRfDDlfXFOmWifIIGmKh6pQOTZeTAE8bmJZQE6MQ0
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 15.204.246.132
-  port: 7307
+  server: 154.40.55.185
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
+  type: vless
+  uuid: 52919204-4ed9-42c8-97a0-0f01d007f898
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M
+  servername: www.oracle.com
+  client-fingerprint: random
 - name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 67.220.85.46
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 37.19.198.236
+  server: 172.64.144.82
   port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 185.215.132.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 104.24.31.89
-  port: 443
-  udp: true
-  type: vless
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  tls: true
-  skip-cert-verify: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 172.67.142.169
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4c0b7280-76bb-495c-9c8b-f05712ebf805
-  tls: true
-  skip-cert-verify: true
-  servername: youxuanku.kdns.fr
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: youxuanku.kdns.fr
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 188.114.97.6
-  port: 2053
   udp: true
   type: vless
   uuid: e6df2095-a73c-4043-8693-8d5a03686870
@@ -88,23 +53,93 @@ proxies:
   servername: lucasjow.us.ci
   network: ws
   ws-opts:
-    path: /?---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---@Fear_Config---fp=chrome
+    path: /
     headers:
       Host: lucasjow.us.ci
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 104.20.47.114
-  port: 8443
+- name: 🇺🇸 美国 (United States) 05 - xiaohe
+  server: 104.21.91.244
+  port: 443
   udp: true
   type: vless
-  uuid: 767b6340-96dc-4aa0-8013-a8af7513d920
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
   tls: true
   skip-cert-verify: true
-  servername: c7dabe95.proxy-978.pages.dev
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /?DailyConfigs---DailyConfigs---DailyConfigs?ed=2056
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 162.159.250.29
+  port: 443
+  udp: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  skip-cert-verify: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: ?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 104.18.43.174
+  port: 443
+  udp: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  skip-cert-verify: true
+  servername: lucasjow.us.ci
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: c7dabe95.proxy-978.pages.dev
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 172.64.150.43
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 104.18.35.15
+  port: 443
+  udp: true
+  type: vless
+  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  tls: true
+  skip-cert-verify: true
+  servername: lucasjow.us.ci
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: lucasjow.us.ci
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 104.18.37.127
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 proxy-groups:
 - name: PROXIES
   type: select
