@@ -26,8 +26,7 @@
         "🇺🇸 美国 (United States) 06 - xiaohe",
         "🇺🇸 美国 (United States) 07 - xiaohe",
         "🇺🇸 美国 (United States) 08 - xiaohe",
-        "🇺🇸 美国 (United States) 09 - xiaohe",
-        "🇺🇸 美国 (United States) 10 - xiaohe"
+        "🇺🇸 美国 (United States) 09 - xiaohe"
       ]
     },
     {
@@ -42,8 +41,7 @@
         "🇺🇸 美国 (United States) 06 - xiaohe",
         "🇺🇸 美国 (United States) 07 - xiaohe",
         "🇺🇸 美国 (United States) 08 - xiaohe",
-        "🇺🇸 美国 (United States) 09 - xiaohe",
-        "🇺🇸 美国 (United States) 10 - xiaohe"
+        "🇺🇸 美国 (United States) 09 - xiaohe"
       ],
       "url": "https://www.google.com/generate_204",
       "interval": "3m"
@@ -57,31 +55,56 @@
       "tag": "block"
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "47.77.196.79",
+      "server": "173.244.56.9",
       "server_port": 443,
-      "uuid": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
+      "server": "23.27.47.67",
+      "server_port": 26781,
+      "uuid": "c8e76bdc-374f-48b0-dc49-1c6cd138ea06",
+      "alter_id": 0,
+      "security": "auto"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "144.24.46.175",
+      "server_port": 8443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "pbgLTkd5276SN1sZ",
       "tls": {
         "enabled": true,
-        "server_name": "www.amazon.com",
+        "server_name": "144.24.46.175",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo",
-          "short_id": "1a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
+      "server": "129.146.77.248",
+      "server_port": 39495,
+      "uuid": "f836c736-87fc-4fde-aabc-00857ecdff3e",
+      "alter_id": 0,
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/cctv13.m3u8",
+        "headers": {}
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
       "server": "172.235.58.21",
       "server_port": 443,
       "uuid": "b98d4c6e-6770-4a31-8256-a4750cdea0e7",
@@ -104,7 +127,7 @@
     },
     {
       "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
       "server": "169.197.142.22",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
@@ -112,26 +135,9 @@
       "security": "auto"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "155.248.209.237",
-      "server_port": 33333,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "bce6c821-200d-421f-bf3d-7159e5246ea0",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy2.123266.xyz",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "172.64.150.43",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "162.159.130.234",
       "server_port": 443,
       "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
       "packet_encoding": "xudp",
@@ -154,52 +160,14 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "172.66.0.162",
-      "server_port": 443,
-      "uuid": "d342d11e-d224-4463-b982-532309285094",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "server_name": "ccc.010304.xyz",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "95.215.201.18",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "173.244.56.9",
+      "server": "104.24.30.89",
       "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "13.226.38.105",
-      "server_port": 443,
-      "uuid": "7ce54bb3-d612-4aa7-be08-089d3c461d53",
+      "uuid": "aebe5a70-0ca3-46ce-8208-8b5bab1346ce",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "d1yxsk0zprgivr.cloudfront.net",
+        "server_name": "rAyAn-007.nAsTaRaN.DpDnS.OrG",
         "insecure": true,
         "alpn": [
           "h2",
@@ -210,30 +178,31 @@
         "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "d1yxsk0zprgivr.cloudfront.net"
+          "Host": "rayan-007.nastaran.dpdns.org"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "195.123.240.65",
-      "server_port": 443,
-      "uuid": "ce18d0eb-5c71-41f9-96e5-1632e22456e4",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "8.35.211.87",
+      "server_port": 2096,
+      "uuid": "56e4896e-90a9-4fe0-8480-90d3d68b9928",
       "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "go.iranfree.de5.net",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE",
-          "short_id": "19296c9f1bf9c7b1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "go.iranfree.de5.net"
         }
       }
     }
