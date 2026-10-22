@@ -59,7 +59,7 @@
     {
       "type": "vless",
       "tag": "🇯🇵 日本 (Japan) 01 - xiaohe",
-      "server": "104.21.93.182",
+      "server": "104.18.41.190",
       "server_port": 443,
       "uuid": "e6df2095-a73c-4043-8693-8d5a03686870",
       "packet_encoding": "xudp",
@@ -68,12 +68,13 @@
         "server_name": "lucasjow.us.ci",
         "insecure": true,
         "alpn": [
-          "http%2F1.1"
+          "h2",
+          "http/1.1"
         ]
       },
       "transport": {
         "type": "ws",
-        "path": "/cart/docs/www/proxyip=108.160.132.132?ed#Telegram---MTMVPN---MTMVPN---MTMVPN---MTMVPN",
+        "path": "%2Fcart%2Fdocs%2Fwww%2Fproxyip%3D108.160.132.132",
         "headers": {
           "Host": "lucasjow.us.ci"
         }
@@ -82,6 +83,150 @@
     {
       "type": "vless",
       "tag": "🇯🇵 日本 (Japan) 02 - xiaohe",
+      "server": "172.64.152.241",
+      "server_port": 443,
+      "uuid": "e6df2095-a73c-4043-8693-8d5a03686870",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "lucasjow.us.ci",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cart/docs/www/proxyip=108.160.132.132",
+        "headers": {
+          "Host": "lucasjow.us.ci"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 03 - xiaohe",
+      "server": "162.159.228.255",
+      "server_port": 443,
+      "uuid": "b135a1e0-ebdb-4d46-b3fa-bd1e78580244",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "wjwkhoaftdgrt8qus.mp8pmwdgwf3sdapasouszjobjr57nrxxgtx9n.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
+      "server": "128.241.25.72",
+      "server_port": 30021,
+      "uuid": "65f26a08-9a5e-4b28-9004-f98676cc1e49",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
+      "server": "128.241.25.3",
+      "server_port": 30021,
+      "uuid": "afec813e-a5c7-432d-be48-2803c30eea4e",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "wkytah9k8oggj60.qzfi0skkopy875xhtc0l9pwds.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
+      "server": "128.241.25.215",
+      "server_port": 30036,
+      "uuid": "196b7228-58df-4bcf-af2a-2e96608d5add",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "2-gys60wmzb6bqzd.qpsjn114hh3vlph9z60sesz0agjawpwroneg.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
+      "server": "172.67.172.155",
+      "server_port": 443,
+      "uuid": "e6df2095-a73c-4043-8693-8d5a03686870",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "lucasjow.us.ci",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cart/docs/www/proxyip=108.160.132.132",
+        "headers": {
+          "Host": "lucasjow.us.ci"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 08 - xiaohe",
       "server": "104.21.71.249",
       "server_port": 443,
       "uuid": "e6df2095-a73c-4043-8693-8d5a03686870",
@@ -104,124 +249,35 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "e6df2095-a73c-4043-8693-8d5a03686870",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "lucasjow.us.ci",
+        "insecure": true,
+        "alpn": [
+          "http%2F1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/cart/docs/www/proxyip=108.160.132.132?ed#",
+        "headers": {
+          "Host": "lucasjow.us.ci"
+        }
+      }
+    },
+    {
       "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 03 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 10 - xiaohe",
       "server": "149.22.87.241",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
-      "server": "149.22.87.204",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
-      "server": "45.32.10.7",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "96ab5cd282733fd4c312a61f972f330a",
-      "tls": {
-        "enabled": true,
-        "server_name": "vp3.yysyy.online",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
-      "server": "142.91.108.25",
-      "server_port": 443,
-      "uuid": "ee18d188-14cc-417e-beb1-70e4add6d023",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "jp3.nztvpn.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM",
-          "short_id": "ea36c03d86f91287"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
-      "server": "168.138.43.75",
-      "server_port": 80,
-      "uuid": "11c3627f-31e8-4695-dfbd-34076e2f1f5d",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/cctv13.m3u8",
-        "headers": {
-          "Host": "none"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 08 - xiaohe",
-      "server": "vp3.yysyy.online",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "96ab5cd282733fd4c312a61f972f330a",
-      "tls": {
-        "enabled": true,
-        "server_name": "vp3.yysyy.online",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
-      "server": "8.211.175.236",
-      "server_port": 8443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 10 - xiaohe",
-      "server": "206.190.237.167",
-      "server_port": 17577,
-      "uuid": "3ceb8486-fb82-462c-e989-89182fe660a5",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/3ceb8486",
-        "headers": {}
-      }
     }
   ],
   "route": {

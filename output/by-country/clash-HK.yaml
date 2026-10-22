@@ -18,26 +18,36 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
+  server: 191.223.209.245
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: r5uI9R8L6vw5vhtXT4EU9O5XCbHWePj1
+  sni: www.microsoft.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
   server: 202.146.222.174
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3
+  sni: 202.146.222.174
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2рҹү
+  sni: https%3a%2f%2ft.me%2fwangcai2%d1%80%d2%b9%d2%af%d1%91%d1%80%d2%b9%d2%af%d1%96
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   server: 151.242.85.236
   port: 443
   udp: true
@@ -49,8 +59,8 @@ proxies:
   reality-opts:
     public-key: gUu1n11Ef_GEoatNQzJJucvIjGTt4qxOWdxMzjoHwDM
   servername: addons.mozilla.org
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
+  client-fingerprint: firefox
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
   server: 209.33.161.104
   port: 443
   udp: true
@@ -64,20 +74,17 @@ proxies:
     path: /fp=chrome
     headers:
       Host: snip.edgeoneai.cc.cd
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
-  server: 82.29.36.250
-  port: 443
-  udp: true
-  type: vless
-  uuid: 41a7af38-0bb1-4493-aa8d-634af0c2548b
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 09XPceP705hC-5sEDXDSLeL2eMOrF-mFISK8JaJ7q2g
-  servername: aws.amazon.com
-  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
+  server: 31.57.248.176
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: b0917015b656b3dd2286b5633af0c5c1
+  sni: www.bing.com#馃嚟馃嚢|hk|@wxgqlfx|147
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
   server: 68.64.179.129
   port: 443
   udp: true
@@ -91,41 +98,31 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
-- name: 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
-  server: 526.150333.xyz
-  port: 21003
-  udp: true
-  type: vless
-  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
-  server: 526.150333.xyz
-  port: 21002
+  server: 43.254.218.158
+  port: 8443
   udp: true
   type: vless
-  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
   tls: true
   skip-cert-verify: true
-  reality-opts:
-    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - name: 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
-  server: 526.150333.xyz
-  port: 21001
+  server: 47.238.210.5
+  port: 13779
   udp: true
   type: vless
-  uuid: 52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
   tls: true
   skip-cert-verify: true
   reality-opts:
-    public-key: EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo
-  servername: www.cloudflare.com
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+  servername: tesla.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
