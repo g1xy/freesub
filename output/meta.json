@@ -1,16 +1,17 @@
 {
-  "generated_at": "2026-10-22T00:20:44+00:00",
+  "generated_at": "2026-10-22T06:16:31+00:00",
   "counts": {
     "alive": 40,
     "residential": 0,
     "countries": 4,
-    "dropped_total": 5246
+    "dropped_total": 5264
   },
   "protocols": {
-    "vless": 20,
+    "vless": 21,
     "hysteria2": 9,
-    "ss": 9,
-    "vmess": 2
+    "ss": 8,
+    "trojan": 1,
+    "vmess": 1
   },
   "countries": {
     "HK": 10,
@@ -22,197 +23,194 @@
   "quota": {
     "HK": {
       "target": 10,
-      "available": 17,
+      "available": 11,
       "selected": 10,
       "residential": 0
     },
     "US": {
       "target": 10,
-      "available": 200,
+      "available": 146,
       "selected": 10,
       "residential": 0
     },
     "JP": {
       "target": 10,
-      "available": 83,
+      "available": 61,
       "selected": 10,
       "residential": 0
     },
     "KR": {
       "target": 10,
-      "available": 14,
+      "available": 15,
       "selected": 10,
       "residential": 0
     }
   },
   "delay_ms": {
-    "min": 83,
-    "p50": 719,
-    "p90": 962,
-    "max": 1210
+    "min": 43,
+    "p50": 787,
+    "p90": 1066,
+    "max": 3337
   },
   "drop_reasons": {
-    "candidate_duplicated": 1886,
-    "probe_failed:ConnectionError": 1319,
-    "probe_failed:SSLError": 396,
-    "probe_failed:ReadTimeout": 297,
-    "classify_datacenter_asn": 289,
-    "quota_overflow:US": 190,
-    "quota_country_excluded:NL": 156,
-    "probe_no_confirmed_exit_ip": 82,
-    "classify_unconfirmed_exit": 82,
-    "quota_overflow:JP": 73,
+    "candidate_duplicated": 1920,
+    "probe_failed:ConnectionError": 1451,
+    "probe_failed:SSLError": 404,
+    "probe_failed:ReadTimeout": 294,
+    "classify_datacenter_asn": 233,
+    "quota_overflow:US": 136,
+    "quota_country_excluded:NL": 134,
+    "probe_no_confirmed_exit_ip": 90,
+    "classify_unconfirmed_exit": 90,
     "sb_probe_failed:ConnectTimeout": 59,
-    "quota_country_excluded:DE": 53,
-    "candidate_rejected:ss": 49,
-    "quota_country_excluded:SG": 33,
-    "quota_country_excluded:FR": 29,
-    "quota_country_excluded:OTHER": 29,
-    "ss_unsupported_cipher:rc4-md5": 22,
+    "quota_overflow:JP": 51,
+    "quota_country_excluded:DE": 48,
+    "candidate_rejected:ss": 44,
+    "quota_country_excluded:OTHER": 35,
+    "quota_country_excluded:SG": 31,
+    "quota_country_excluded:FR": 28,
+    "sb_probe_failed:ConnectionError": 23,
+    "ss_unsupported_cipher:rc4-md5": 19,
     "ss_cipher_unresolvable": 17,
-    "sb_probe_failed:ConnectionError": 15,
-    "quota_country_excluded:GB": 15,
-    "quota_country_excluded:CA": 11,
-    "quota_country_excluded:PL": 9,
-    "candidate_rejected:vless": 8,
-    "vless_invalid_uuid": 7,
-    "quota_country_excluded:TW": 7,
-    "quota_country_excluded:IT": 7,
-    "quota_overflow:HK": 7,
-    "quota_country_excluded:AE": 6,
-    "quota_country_excluded:RU": 6,
-    "quota_country_excluded:FI": 6,
-    "quota_country_excluded:CH": 5,
-    "quota_country_excluded:SE": 4,
+    "quota_country_excluded:GB": 13,
+    "quota_country_excluded:IT": 13,
+    "quota_country_excluded:CA": 8,
+    "candidate_rejected:vless": 7,
+    "quota_country_excluded:AE": 7,
+    "quota_country_excluded:CY": 7,
+    "quota_country_excluded:PL": 7,
+    "vless_invalid_uuid": 6,
+    "probe_delay_out_of_range": 6,
+    "quota_country_excluded:TW": 6,
+    "quota_country_excluded:FI": 5,
+    "quota_overflow:KR": 5,
+    "quota_country_excluded:VN": 4,
+    "quota_country_excluded:MD": 4,
     "quota_country_excluded:IN": 4,
     "quota_country_excluded:RO": 4,
-    "quota_country_excluded:MD": 4,
-    "quota_overflow:KR": 4,
     "vmess_missing_address_or_id": 3,
     "candidate_rejected:vmess": 3,
-    "quota_country_excluded:AU": 3,
-    "quota_country_excluded:BG": 3,
-    "ss_unsupported_cipher:aes-256-cfb": 2,
+    "quota_country_excluded:CH": 3,
+    "quota_country_excluded:ZA": 3,
+    "quota_country_excluded:RU": 3,
     "ss_unsupported_cipher:2022-blake3-aes-128-gcm": 2,
+    "quota_country_excluded:TR": 2,
+    "quota_country_excluded:BG": 2,
     "quota_country_excluded:SC": 2,
     "quota_country_excluded:LV": 2,
-    "quota_country_excluded:TR": 2,
-    "quota_country_excluded:IL": 2,
-    "quota_country_excluded:ES": 2,
-    "quota_country_excluded:IE": 2,
-    "quota_country_excluded:CY": 2,
-    "quota_country_excluded:ZA": 2,
-    "quota_country_excluded:VN": 2,
-    "quota_country_excluded:AT": 2,
+    "quota_country_excluded:CZ": 2,
     "quota_country_excluded:RS": 2,
-    "ss_unsupported_cipher:2022-blake3-aes-256-gcm": 1,
-    "ss_unsupported_cipher:soonteam%20": 1,
-    "ss_unsupported_cipher:aes-128-cfb": 1,
+    "quota_country_excluded:AT": 2,
     "ss_unsupported_cipher:ywvzlteyoc1ny206c2hhzg93c29ja3m": 1,
+    "ss_unsupported_cipher:soonteam%20": 1,
+    "ss_unsupported_cipher:aes-256-cfb": 1,
+    "ss_unsupported_cipher:2022-blake3-aes-256-gcm": 1,
     "ss_unsupported_cipher:chacha20-poly1305": 1,
     "ss_bad_structure": 1,
     "vless_bad_structure": 1,
-    "classify_duplicate_residential_ip": 1,
-    "quota_country_excluded:CZ": 1,
+    "quota_country_excluded:AU": 1,
+    "quota_country_excluded:DO": 1,
+    "quota_country_excluded:ES": 1,
     "quota_country_excluded:CN": 1,
+    "quota_country_excluded:IL": 1,
+    "quota_country_excluded:LT": 1,
+    "quota_country_excluded:SE": 1,
+    "quota_country_excluded:BR": 1,
     "quota_country_excluded:TH": 1,
-    "quota_country_excluded:PT": 1,
-    "quota_country_excluded:UZ": 1,
-    "quota_country_excluded:NO": 1,
-    "quota_country_excluded:IQ": 1,
     "quota_country_excluded:EE": 1,
-    "quota_country_excluded:IS": 1,
-    "quota_country_excluded:AZ": 1
+    "quota_country_excluded:KG": 1,
+    "quota_country_excluded:IE": 1,
+    "quota_overflow:HK": 1
   },
   "stages": {
-    "fetch_sec": 0.6,
+    "fetch_sec": 0.5,
     "setup_sec": 0.0,
-    "probe_xray_sec": 344.9,
-    "probe_singbox_sec": 15.1,
-    "classify_sec": 12.0,
+    "probe_xray_sec": 348.9,
+    "probe_singbox_sec": 16.2,
+    "classify_sec": 11.1,
     "export_sec": 0.0,
-    "total_sec": 373.1
+    "total_sec": 377.6
   },
   "sources": {
     "https://wild-cloud-9893.heleimail.workers.dev": {
       "total_success": 0,
-      "total_failure": 20,
-      "consecutive_failures": 20,
+      "total_failure": 21,
+      "consecutive_failures": 21,
       "last_node_count": 0,
       "last_error": "HTTP 404",
       "last_success_at": ""
     },
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt": {
-      "total_success": 20,
+      "total_success": 21,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 36,
+      "last_node_count": 38,
       "last_error": "",
-      "last_success_at": "2026-10-22T00:14:31+00:00"
+      "last_success_at": "2026-10-22T06:10:13+00:00"
     },
     "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt": {
-      "total_success": 20,
+      "total_success": 21,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 622,
+      "last_node_count": 683,
       "last_error": "",
-      "last_success_at": "2026-10-22T00:14:31+00:00"
+      "last_success_at": "2026-10-22T06:10:13+00:00"
     },
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix": {
-      "total_success": 20,
+      "total_success": 21,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 541,
       "last_error": "",
-      "last_success_at": "2026-10-22T00:14:31+00:00"
+      "last_success_at": "2026-10-22T06:10:13+00:00"
     },
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria": {
-      "total_success": 20,
+      "total_success": 21,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 13,
       "last_error": "",
-      "last_success_at": "2026-10-22T00:14:31+00:00"
+      "last_success_at": "2026-10-22T06:10:13+00:00"
     },
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls": {
-      "total_success": 20,
+      "total_success": 21,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 2206,
       "last_error": "",
-      "last_success_at": "2026-10-22T00:14:31+00:00"
+      "last_success_at": "2026-10-22T06:10:13+00:00"
     },
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt": {
-      "total_success": 20,
+      "total_success": 21,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 1603,
+      "last_node_count": 1630,
       "last_error": "",
-      "last_success_at": "2026-10-22T00:14:31+00:00"
+      "last_success_at": "2026-10-22T06:10:13+00:00"
     },
     "https://raw.githubusercontent.com/freefq/free/master/v2": {
-      "total_success": 20,
+      "total_success": 21,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 15,
       "last_error": "",
-      "last_success_at": "2026-10-22T00:14:31+00:00"
+      "last_success_at": "2026-10-22T06:10:13+00:00"
     },
     "https://open.heleimail.workers.dev/": {
       "total_success": 0,
-      "total_failure": 20,
-      "consecutive_failures": 20,
+      "total_failure": 21,
+      "consecutive_failures": 21,
       "last_node_count": 0,
       "last_error": "HTTP 404",
       "last_success_at": ""
     },
     "https://www.ermao.net/sub/v2ray/ermao.net": {
-      "total_success": 20,
+      "total_success": 21,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 68,
+      "last_node_count": 74,
       "last_error": "",
-      "last_success_at": "2026-10-22T00:14:31+00:00"
+      "last_success_at": "2026-10-22T06:10:14+00:00"
     }
   }
 }
