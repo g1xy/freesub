@@ -5,20 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 156.146.38.167
+  server: 104.17.187.57
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 37.19.198.244
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
   server: 104.19.49.138
   port: 443
   udp: true
@@ -32,8 +32,18 @@ proxies:
     path: /
     headers:
       Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 169.197.142.22
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 188.114.96.6
+  server: 172.64.157.161
   port: 443
   udp: true
   type: vless
@@ -47,20 +57,58 @@ proxies:
     headers:
       Host: snip.edgeoneai.cc.cd
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 37.19.198.236
+  server: 104.16.137.145
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 64.42.181.102
-  port: 12996
+  server: 104.18.37.127
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: a7be96a98392ef40dab7693317a81cc0
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
 - name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 104.18.43.114
+  port: 443
+  udp: true
+  type: vless
+  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+  tls: true
+  skip-cert-verify: true
+  servername: snip.edgeoneai.cc.cd
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: snip.edgeoneai.cc.cd
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 163.192.14.135
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 099830134df5ac3a04a4b21d39b8c395
+  sni: 163.192.14.135
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
   server: 172.67.118.45
   port: 443
   udp: true
@@ -71,25 +119,11 @@ proxies:
   servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
-    path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560
+    path: /fdip
     headers:
       Host: snip.edgeoneai.cc.cd
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 156.146.38.168
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 185.215.132.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 104.17.158.34
+  server: 172.64.156.45
   port: 443
   udp: true
   type: vless

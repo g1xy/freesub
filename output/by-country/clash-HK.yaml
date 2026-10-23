@@ -18,22 +18,25 @@ proxies:
   servername: gateway.icloud.com
   client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
-  server: 202.146.222.174
-  port: 443
+  server: 50.7.44.28
+  port: 2091
   udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  alpn:
-  - h3
+  type: vless
+  uuid: 76b6a658-ce80-4500-b24d-404c94639ac6
+  tls: true
   skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: 1N6AW5YuEwBoYcZK5KuugDzBHsa0NKZMT8QI-EmyL0k
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
-  server: 202.146.222.29
-  port: 443
+  server: 31.57.248.176
+  port: 50160
   udp: true
   type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.29
+  password: b0917015b656b3dd2286b5633af0c5c1
+  sni: 31.57.248.176
   alpn:
   - h3
   skip-cert-verify: true
@@ -49,40 +52,30 @@ proxies:
   reality-opts:
     public-key: gUu1n11Ef_GEoatNQzJJucvIjGTt4qxOWdxMzjoHwDM
   servername: addons.mozilla.org
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
-  server: 47.243.153.153
+  server: 202.146.222.29
   port: 443
   udp: true
-  type: vmess
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  alterId: 0
-  cipher: auto
-  tls: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: httpst.mewangcai2
+  alpn:
+  - h3
   skip-cert-verify: true
-  servername: i2psm3knof5qjjix.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: i2psm3knof5qjjix.v.3dns.vip
 - name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
-  server: 209.33.161.104
+  server: 202.146.222.174
   port: 443
   udp: true
-  type: vless
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  tls: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https%3a%2f%2ft.me%2fwangcai2
+  alpn:
+  - h3
   skip-cert-verify: true
-  servername: snip.edgeoneai.cc.cd
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: snip.edgeoneai.cc.cd
 - name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
-  server: 191.223.209.159
-  port: 443
+  server: 43.254.218.158
+  port: 8443
   udp: true
   type: vless
   uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
@@ -91,7 +84,7 @@ proxies:
   servername: snip.edgeoneai.cc.cd
   network: ws
   ws-opts:
-    path: /
+    path: /fdip#TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=512
     headers:
       Host: snip.edgeoneai.cc.cd
 - name: 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
