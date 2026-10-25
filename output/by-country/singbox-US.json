@@ -57,71 +57,31 @@
       "tag": "block"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "156.146.38.167",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "156.146.38.169",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "156.146.38.170",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "156.146.38.168",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "37.19.198.243",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "162.159.135.234",
+      "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
+      "server": "195.211.98.43",
       "server_port": 443,
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
+      "uuid": "1b4b11d5-4c2d-4533-9a55-636757cdee94",
       "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "snip.edgeoneai.cc.cd",
+        "server_name": "www.cloudflare.com",
         "insecure": true,
-        "alpn": [
-          "h3%2Ch2"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
+        "reality": {
+          "enabled": true,
+          "public_key": "xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA",
+          "short_id": "9c56fddf237e8eaf"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
       "server": "37.19.198.236",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -129,22 +89,62 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "193.151.163.18",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "37.19.198.244",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "104.18.36.29",
+      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
+      "server": "47.253.226.114",
       "server_port": 443,
-      "uuid": "495c7195-85b8-498a-bf20-2ea9ce9175b5",
+      "uuid": "055a1ce8-2a16-4a0d-a2c2-22826c9b2413",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "server": "67.220.85.46",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "alter_id": 0,
+      "security": "auto"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
+      "server": "156.146.38.167",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "104.18.1.1",
+      "server_port": 2083,
+      "uuid": "a1de0630-5786-48a0-84f6-dc6f2de10d6d",
       "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "snip.edgeoneai.cc.cd",
+        "server_name": "vlsovip.1d.mom",
         "insecure": true,
         "alpn": [
           "http/1.1"
@@ -152,28 +152,50 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NETfp=chromefp=unsafe",
+        "path": "/",
         "headers": {
-          "Host": "snip.edgeoneai.cc.cd"
+          "Host": "vlsovip.1d.mom"
         }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "129.213.91.185",
-      "server_port": 35013,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "4291c983-c520-46ac-82cc-48f14bef573f",
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "195.123.235.183",
+      "server_port": 443,
+      "uuid": "c14ec728-3eca-4750-87fc-fd1e6aeb81d5",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "129.213.91.185",
+        "server_name": "gateway.icloud.com",
         "insecure": true,
-        "alpn": [
-          "h3"
-        ]
+        "reality": {
+          "enabled": true,
+          "public_key": "H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY",
+          "short_id": "a0e2a6074c6456b0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "193.151.163.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
+      "server": "185.230.230.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     }
   ],
   "route": {
