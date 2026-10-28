@@ -59,7 +59,7 @@
     {
       "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 01 - xiaohe",
-      "server": "149.22.87.240",
+      "server": "149.22.87.204",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
@@ -73,110 +73,24 @@
       "password": "shadowsocks"
     },
     {
-      "type": "hysteria2",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 03 - xiaohe",
-      "server": "31.77.29.78",
-      "server_port": 4444,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "10be1dad-9952-4c5e-aa30-db435f69b727",
-      "tls": {
-        "enabled": true,
-        "server_name": "jap2.nexfile.net",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "server": "84.247.155.196",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
     },
     {
-      "type": "hysteria2",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
-      "server": "138.3.208.26",
-      "server_port": 50160,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "184cdec28da5a09450803c8debcd2cc9",
-      "tls": {
-        "enabled": true,
-        "server_name": "1",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "server": "154.36.158.197",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "BeaUf9c0AEWH40Pu"
     },
     {
       "type": "hysteria2",
       "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
-      "server": "45.32.10.7",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "96ab5cd282733fd4c312a61f972f330a",
-      "tls": {
-        "enabled": true,
-        "server_name": "vp3.yysyy.online",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
-      "server": "8.209.247.109",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "usqmqUKJFIlCmvkCNSY64L3k",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
-      "server": "8.211.175.236",
-      "server_port": 8443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
-      "tls": {
-        "enabled": true,
-        "server_name": "8.211.175.236",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 08 - xiaohe",
-      "server": "31.77.29.74",
-      "server_port": 4444,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "10be1dad-9952-4c5e-aa30-db435f69b727",
-      "tls": {
-        "enabled": true,
-        "server_name": "jap2.nexfile.net",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
       "server": "31.77.29.75",
       "server_port": 4444,
       "up_mbps": 100,
@@ -193,7 +107,24 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 10 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
+      "server": "31.77.29.74",
+      "server_port": 4444,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "10be1dad-9952-4c5e-aa30-db435f69b727",
+      "tls": {
+        "enabled": true,
+        "server_name": "jap2.nexfile.net",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
       "server": "vp3.yysyy.online",
       "server_port": 443,
       "up_mbps": 100,
@@ -202,6 +133,57 @@
       "tls": {
         "enabled": true,
         "server_name": "vp3.yysyy.online",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 08 - xiaohe",
+      "server": "138.3.208.26",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "184cdec28da5a09450803c8debcd2cc9",
+      "tls": {
+        "enabled": true,
+        "server_name": "off",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
+      "server": "jap2.nexfile.net",
+      "server_port": 4444,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "10be1dad-9952-4c5e-aa30-db435f69b727",
+      "tls": {
+        "enabled": true,
+        "server_name": "jap2.nexfile.net",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 10 - xiaohe",
+      "server": "8.211.175.236",
+      "server_port": 8443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
+      "tls": {
+        "enabled": true,
+        "server_name": "8.211.175.236",
         "insecure": true,
         "alpn": [
           "h3"
