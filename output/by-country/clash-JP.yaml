@@ -5,48 +5,48 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - xiaohe
-  server: 149.22.87.240
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 02 - xiaohe
   server: 149.22.87.204
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 03 - xiaohe
-  server: 149.22.87.241
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇯🇵 日本 (Japan) 04 - xiaohe
+- name: 🇯🇵 日本 (Japan) 02 - xiaohe
   server: 84.247.155.196
   port: 443
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
-- name: 🇯🇵 日本 (Japan) 05 - xiaohe
-  server: 31.76.91.70
+- name: 🇯🇵 日本 (Japan) 03 - xiaohe
+  server: 149.22.87.240
   port: 443
   udp: true
-  type: vless
-  uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
-  tls: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇯🇵 日本 (Japan) 04 - xiaohe
+  server: 31.77.29.74
+  port: 4444
+  udp: true
+  type: hysteria2
+  password: 10be1dad-9952-4c5e-aa30-db435f69b727
+  sni: jap2.nexfile.net
+  alpn:
+  - h3
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
-  servername: fuji.etherhub.cc
-  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 05 - xiaohe
+  server: jap2.nexfile.net
+  port: 4444
+  udp: true
+  type: hysteria2
+  password: 10be1dad-9952-4c5e-aa30-db435f69b727
+  sni: jap2.nexfile.net
+  alpn:
+  - h3
+  skip-cert-verify: true
 - name: 🇯🇵 日本 (Japan) 06 - xiaohe
-  server: 31.76.91.98
+  server: 31.76.91.70
   port: 443
   udp: true
   type: vless
@@ -64,27 +64,24 @@ proxies:
   udp: true
   type: hysteria2
   password: 184cdec28da5a09450803c8debcd2cc9
-  sni: 'off'
+  sni: '1'
   alpn:
   - h3
   skip-cert-verify: true
 - name: 🇯🇵 日本 (Japan) 08 - xiaohe
-  server: 31.77.29.74
-  port: 4444
+  server: 84.247.155.196
+  port: 80
   udp: true
-  type: hysteria2
-  password: 10be1dad-9952-4c5e-aa30-db435f69b727
-  sni: jap2.nexfile.net
-  alpn:
-  - h3
-  skip-cert-verify: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
 - name: 🇯🇵 日本 (Japan) 09 - xiaohe
-  server: 8.211.175.236
-  port: 8443
+  server: 8.209.247.109
+  port: 443
   udp: true
   type: hysteria2
-  password: u63SxILNwtrQZ7Y1ZrFaZfsA
-  sni: 8.211.175.236
+  password: usqmqUKJFIlCmvkCNSY64L3k
+  sni: 8.209.247.109
   alpn:
   - h3
   skip-cert-verify: true
