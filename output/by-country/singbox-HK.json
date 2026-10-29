@@ -57,17 +57,8 @@
       "tag": "block"
     },
     {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 01 - xiaohe",
-      "server": "206.237.11.17",
-      "server_port": 50376,
-      "uuid": "9091fd64-7e8e-4b7a-8ae7-84474f234926",
-      "alter_id": 0,
-      "security": "auto"
-    },
-    {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - xiaohe",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 01 - xiaohe",
       "server": "165.154.63.139",
       "server_port": 443,
       "uuid": "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
@@ -90,15 +81,32 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - xiaohe",
-      "server": "202.146.222.89",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - xiaohe",
+      "server": "202.146.222.174",
       "server_port": 443,
       "up_mbps": 100,
       "down_mbps": 100,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/clashv8🇨🇳",
+        "server_name": "https%3a%2f%2ft.me%2foneclickvpnkeys",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - xiaohe",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/wangcai2≡ƒç¿≡ƒç│",
         "insecure": true,
         "alpn": [
           "h3"
@@ -108,31 +116,14 @@
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 04 - xiaohe",
-      "server": "202.146.222.174",
+      "server": "202.146.222.89",
       "server_port": 443,
       "up_mbps": 100,
       "down_mbps": 100,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https%3a%2f%2ft.me%2fwangcai2",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 05 - xiaohe",
-      "server": "202.146.222.29",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "202.146.222.29",
+        "server_name": "202.146.222.89",
         "insecure": true,
         "alpn": [
           "h3"
@@ -141,7 +132,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 06 - xiaohe",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 - xiaohe",
       "server": "38.22.88.248",
       "server_port": 27509,
       "uuid": "29d23018-3265-494c-b9fe-e320b619b1e2",
@@ -158,30 +149,35 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 - xiaohe",
+      "server": "103.238.227.211",
+      "server_port": 21004,
+      "uuid": "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo",
+          "short_id": "2f34703f16523c80"
+        },
+        "utls": {
+          "enabled": true,
           "fingerprint": "chrome"
         }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
-      "server": "31.57.248.176",
-      "server_port": 50160,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "b0917015b656b3dd2286b5633af0c5c1",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com#馃嚟馃嚢|hk|@wxgqlfx|147",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
       "server": "103.238.227.211",
       "server_port": 21003,
       "uuid": "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a",
@@ -203,9 +199,9 @@
     },
     {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
       "server": "103.238.227.211",
-      "server_port": 21004,
+      "server_port": 21001,
       "uuid": "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a",
       "packet_encoding": "xudp",
       "tls": {
@@ -215,7 +211,7 @@
         "reality": {
           "enabled": true,
           "public_key": "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo",
-          "short_id": "2f34703f16523c80"
+          "short_id": "b6dfd5c750351c57"
         },
         "utls": {
           "enabled": true,
@@ -225,15 +221,15 @@
     },
     {
       "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 10 - xiaohe",
-      "server": "8.217.13.103",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe",
+      "server": "euu1yalfmcqvljex.v.3dns.vip",
       "server_port": 443,
-      "uuid": "f23bb427-c1f9-4373-876c-2f43e9f790f3",
+      "uuid": "d237ab38-1974-4b36-94a3-0665ce8587b9",
       "alter_id": 0,
       "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "qtkdr8jxe3wefxjm.v.3dns.vip",
+        "server_name": "euu1yalfmcqvljex.v.3dns.vip",
         "insecure": true,
         "alpn": [
           "h2",
@@ -244,7 +240,29 @@
         "type": "ws",
         "path": "/ws-vmess",
         "headers": {
-          "Host": "qtkdr8jxe3wefxjm.v.3dns.vip"
+          "Host": "euu1yalfmcqvljex.v.3dns.vip"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 10 - xiaohe",
+      "server": "526.150333.xyz",
+      "server_port": 21003,
+      "uuid": "52d2187c-34e1-40fd-a6f5-0a74ff7d3e9a",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "EXU8eOS1kf_ROqC68NO-zbzRFGx7U5zE6WvjxRzYeTo",
+          "short_id": "eb9539689690d35c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
