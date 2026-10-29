@@ -59,7 +59,7 @@
     {
       "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 01 - xiaohe",
-      "server": "149.22.87.241",
+      "server": "149.22.87.204",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
@@ -73,8 +73,16 @@
       "password": "shadowsocks"
     },
     {
-      "type": "hysteria2",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 03 - xiaohe",
+      "server": "149.22.87.241",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
       "server": "45.32.10.7",
       "server_port": 443,
       "up_mbps": 100,
@@ -90,31 +98,25 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
-      "server": "103.75.118.228",
-      "server_port": 12683,
-      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
+      "server": "138.3.208.26",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "184cdec28da5a09450803c8debcd2cc9",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.bing.com",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
-          "short_id": "48050fab"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "alpn": [
+          "h3"
+        ]
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
       "server": "freedom.chenlan.top",
       "server_port": 12765,
       "up_mbps": 100,
@@ -131,32 +133,15 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
-      "server": "rb.mangshe.xyz",
-      "server_port": 2060,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "5d0a6445-a30d-4522-bb1f-94f1d3ad63be",
-      "tls": {
-        "enabled": true,
-        "server_name": "rb.mangshe.xyz",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
       "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
-      "server": "vp3.yysyy.online",
+      "server": "8.209.247.109",
       "server_port": 443,
       "up_mbps": 100,
       "down_mbps": 100,
-      "password": "96ab5cd282733fd4c312a61f972f330a",
+      "password": "usqmqUKJFIlCmvkCNSY64L3k",
       "tls": {
         "enabled": true,
-        "server_name": "vp3.yysyy.online",
+        "server_name": "bing.com",
         "insecure": true,
         "alpn": [
           "h3"
@@ -164,51 +149,57 @@
       }
     },
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇯🇵 日本 (Japan) 08 - xiaohe",
-      "server": "89.125.244.225",
-      "server_port": 2060,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "5d0a6445-a30d-4522-bb1f-94f1d3ad63be",
+      "server": "3.114.220.22",
+      "server_port": 18007,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "rb.mangshe.xyz",
+        "server_name": "www.apple.com",
         "insecure": true,
-        "alpn": [
-          "h3"
-        ]
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     },
     {
-      "type": "vmess",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
-      "server": "168.138.43.75",
+      "server": "84.247.155.196",
       "server_port": 80,
-      "uuid": "11c3627f-31e8-4695-dfbd-34076e2f1f5d",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/cctv13.m3u8",
-        "headers": {}
-      }
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
     },
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇯🇵 日本 (Japan) 10 - xiaohe",
-      "server": "138.3.208.26",
-      "server_port": 50160,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "184cdec28da5a09450803c8debcd2cc9",
+      "server": "3.114.220.22",
+      "server_port": 10583,
+      "uuid": "814bd064-544d-4255-a070-5705c03f6da9",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "138.3.208.26",
+        "server_name": "www.apple.com",
         "insecure": true,
-        "alpn": [
-          "h3"
-        ]
+        "reality": {
+          "enabled": true,
+          "public_key": "k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0",
+          "short_id": "48050fab"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
