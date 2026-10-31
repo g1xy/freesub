@@ -59,12 +59,12 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "216.152.155.23",
+      "server": "216.152.155.131",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "courses.nextjobopportunityandclaimyouridealrole.com",
+        "server_name": "www.nextjobopportunityandclaimyouridealrole.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -73,20 +73,11 @@
       }
     },
     {
-      "type": "shadowsocks",
+      "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "156.146.38.169",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
       "server": "us007.zestapp778.com",
-      "server_port": 18580,
-      "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
-      "packet_encoding": "xudp",
+      "server_port": 42314,
+      "password": "5t6i121em5lkmsmk",
       "tls": {
         "enabled": true,
         "server_name": "us007.zestapp778.com",
@@ -99,6 +90,14 @@
     },
     {
       "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "156.146.38.169",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
       "server": "37.19.198.243",
       "server_port": 443,
@@ -106,30 +105,30 @@
       "password": "shadowsocks"
     },
     {
-      "type": "vmess",
+      "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "172.67.187.145",
-      "server_port": 80,
-      "uuid": "0cf6d970-3f1d-4aae-a989-92a8f76ae3db",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/ws?ed=2048",
-        "headers": {
-          "Host": "vmess.lbw666.dpdns.org"
-        }
+      "server": "216.152.155.54",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.nextjobopportunityandclaimyouridealrole.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
       }
     },
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "66.163.114.126",
+      "server": "66.163.114.106",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "resources.findconnectwithemployersandbuildprofessionalnetwork.com",
+        "server_name": "www.findconnectwithemployersandbuildprofessionalnetwork.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -140,44 +139,12 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "66.163.114.132",
+      "server": "216.152.156.65",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "courses.findconnectwithemployersandbuildprofessionalnetwork.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "66.163.114.45",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.findconnectwithemployersandbuildprofessionalnetwork.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "170.101.101.211",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.explorecreativejobsandenhanceyourcareerportfolio.com",
+        "server_name": "learn.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -187,7 +154,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
       "server": "129.213.91.185",
       "server_port": 35013,
       "up_mbps": 100,
@@ -201,6 +168,22 @@
           "h3"
         ]
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "156.146.38.168",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
+      "server": "193.151.163.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     }
   ],
   "route": {
