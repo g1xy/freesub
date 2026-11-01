@@ -59,12 +59,108 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "us001.zestapp778.com",
-      "server_port": 57277,
-      "password": "5t6i121em5lkmsmk",
+      "server": "66.163.112.242",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "us001.zestapp778.com",
+        "server_name": "resources.unlockyourfuturefindyourperfectcareer.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
+      "server": "66.163.112.171",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.unlockyourfuturefindyourperfectcareer.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "156.146.38.169",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
+      "server": "47.251.25.74",
+      "server_port": 443,
+      "uuid": "18805ff3-b420-45de-af18-93be14024ae8",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amazon.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "server": "167.88.61.85",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "resources.browseseniorrolesandenhanceyourcareertoday.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
+      "server": "156.146.38.167",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "43.130.35.53",
+      "server_port": 10087,
+      "uuid": "8e93b009-f1af-448a-b8ef-b110849a35f0",
+      "alter_id": 0,
+      "security": "auto"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "167.88.61.20",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.browseseniorrolesandenhanceyourcareertoday.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -74,15 +170,15 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "129.213.91.185",
-      "server_port": 35013,
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "163.192.14.135",
+      "server_port": 50160,
       "up_mbps": 100,
       "down_mbps": 100,
-      "password": "4291c983-c520-46ac-82cc-48f14bef573f",
+      "password": "099830134df5ac3a04a4b21d39b8c395",
       "tls": {
         "enabled": true,
-        "server_name": "129.213.91.185",
+        "server_name": "google.com",
         "insecure": true,
         "alpn": [
           "h3"
@@ -90,158 +186,19 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "37.19.198.236",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "169.40.42.104",
-      "server_port": 443,
-      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yahoo.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "short_id": "c39cc7310a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "169.40.42.89",
-      "server_port": 443,
-      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yahoo.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "short_id": "c39cc7310a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "66.163.122.113",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.searchnationwidecareerchangehelperandguidancetoday.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "167.17.69.171",
-      "server_port": 443,
-      "uuid": "00144519-7e0d-476b-8d28-435576af9262",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk",
-          "short_id": "0990d22f"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "66.163.122.25",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.searchnationwidecareerchangehelperandguidancetoday.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "195.123.235.177",
-      "server_port": 443,
-      "uuid": "729dd5f2-f5ff-4070-8c10-863eceded0b1",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "gateway.icloud.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI",
-          "short_id": "c85d029f5e8eb393"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "195.211.98.43",
+      "server": "167.88.61.193",
       "server_port": 443,
-      "uuid": "1b4b11d5-4c2d-4533-9a55-636757cdee94",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "browseseniorrolesandenhanceyourcareertoday.com",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA",
-          "short_id": "9c56fddf237e8eaf"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
       }
     }
   ],

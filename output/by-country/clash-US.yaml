@@ -5,111 +5,92 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: us001.zestapp778.com
-  port: 57277
+  server: 66.163.112.242
+  port: 443
   udp: true
   type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: us001.zestapp778.com
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.unlockyourfuturefindyourperfectcareer.com
   skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 129.213.91.185
-  port: 35013
+  server: 66.163.112.171
+  port: 443
   udp: true
-  type: hysteria2
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  sni: 129.213.91.185
-  alpn:
-  - h3
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.unlockyourfuturefindyourperfectcareer.com
   skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 37.19.198.236
+  server: 156.146.38.169
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 169.40.42.104
+  server: 47.251.25.74
   port: 443
   udp: true
   type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  uuid: 18805ff3-b420-45de-af18-93be14024ae8
   tls: true
   skip-cert-verify: true
   flow: xtls-rprx-vision
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-  servername: yahoo.com
+    public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
+  servername: www.amazon.com
   client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 169.40.42.89
+  server: 167.88.61.85
   port: 443
   udp: true
-  type: vless
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  tls: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.browseseniorrolesandenhanceyourcareertoday.com
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-  servername: yahoo.com
-  client-fingerprint: firefox
 - name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 66.163.122.113
+  server: 156.146.38.167
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.searchnationwidecareerchangehelperandguidancetoday.com
-  skip-cert-verify: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 167.17.69.171
-  port: 443
+  server: 43.130.35.53
+  port: 10087
   udp: true
-  type: vless
-  uuid: 00144519-7e0d-476b-8d28-435576af9262
-  tls: true
+  type: vmess
+  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
+  alterId: 0
+  cipher: auto
+  tls: false
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 66.163.122.25
+  server: 167.88.61.20
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.searchnationwidecareerchangehelperandguidancetoday.com
+  sni: api.browseseniorrolesandenhanceyourcareertoday.com
   skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 195.123.235.177
-  port: 443
+  server: 163.192.14.135
+  port: 50160
   udp: true
-  type: vless
-  uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
-  tls: true
+  type: hysteria2
+  password: 099830134df5ac3a04a4b21d39b8c395
+  sni: google.com
+  alpn:
+  - h3
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 195.211.98.43
+  server: 167.88.61.193
   port: 443
   udp: true
-  type: vless
-  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
-  tls: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: browseseniorrolesandenhanceyourcareertoday.com
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

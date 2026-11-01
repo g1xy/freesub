@@ -59,7 +59,7 @@
     {
       "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 01 - xiaohe",
-      "server": "149.22.87.240",
+      "server": "149.22.87.241",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
@@ -73,62 +73,25 @@
       "password": "shadowsocks"
     },
     {
-      "type": "shadowsocks",
+      "type": "hysteria2",
       "tag": "🇯🇵 日本 (Japan) 03 - xiaohe",
-      "server": "149.22.87.241",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
-      "server": "31.76.91.238",
-      "server_port": 443,
-      "uuid": "a6be8b6d-3033-4a99-b9bd-75e2ab12cfd0",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
+      "server": "138.3.208.26",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "184cdec28da5a09450803c8debcd2cc9",
       "tls": {
         "enabled": true,
-        "server_name": "japan.selfsteal.com",
+        "server_name": "1",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "OnFi4-dm6Pf7o5CboFwfhbIA539vVtsd7ZYlPnWJVxo",
-          "short_id": "f336420d3cd15950"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
-      "server": "ga1data.xyy123.bid",
-      "server_port": 443,
-      "uuid": "81f686e2-0700-4e7d-b3aa-2f7fc544bcc3",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.amzn.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk",
-          "short_id": "00b0389a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "alpn": [
+          "h3"
+        ]
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
       "server": "45.32.10.7",
       "server_port": 443,
       "up_mbps": 100,
@@ -145,7 +108,24 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
+      "server": "freedom.chenlan.top",
+      "server_port": 12765,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "STYyftThFn",
+      "tls": {
+        "enabled": true,
+        "server_name": "freedom.chenlan.top",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
       "server": "8.211.175.236",
       "server_port": 8443,
       "up_mbps": 100,
@@ -161,25 +141,16 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 08 - xiaohe",
-      "server": "8.209.247.109",
+      "type": "shadowsocks",
+      "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
+      "server": "149.22.87.240",
       "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "usqmqUKJFIlCmvkCNSY64L3k",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 08 - xiaohe",
       "server": "vp3.yysyy.online",
       "server_port": 443,
       "up_mbps": 100,
@@ -195,21 +166,20 @@
       }
     },
     {
-      "type": "hysteria2",
+      "type": "shadowsocks",
+      "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
+      "server": "154.36.158.197",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "BeaUf9c0AEWH40Pu"
+    },
+    {
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 10 - xiaohe",
-      "server": "freedom.chenlan.top",
-      "server_port": 12765,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "STYyftThFn",
-      "tls": {
-        "enabled": true,
-        "server_name": "freedom.chenlan.top",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "server": "84.247.155.196",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
     }
   ],
   "route": {
