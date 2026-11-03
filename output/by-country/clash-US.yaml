@@ -5,12 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 156.146.38.168
-  port: 443
+  server: 129.213.91.185
+  port: 35013
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: hysteria2
+  password: 4291c983-c520-46ac-82cc-48f14bef573f
+  sni: 129.213.91.185
+  alpn:
+  - h3
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 02 - xiaohe
   server: 37.19.198.160
   port: 443
@@ -19,14 +22,6 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 130.94.19.95
-  port: 57277
-  udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: us001.zestapp778.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
   server: 47.253.226.114
   port: 443
   udp: true
@@ -39,54 +34,75 @@ proxies:
     public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 185.230.230.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 66.163.114.45
+  server: 37.19.198.244
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.findconnectwithemployersandbuildprofessionalnetwork.com
-  skip-cert-verify: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 173.244.56.9
+  server: 37.19.198.243
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 129.213.91.185
-  port: 35013
+  server: 169.40.42.202
+  port: 443
   udp: true
-  type: hysteria2
-  password: 4291c983-c520-46ac-82cc-48f14bef573f
-  sni: 129.213.91.185
-  alpn:
-  - h3
+  type: vless
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  tls: true
   skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+  servername: yahoo.com
+  client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 104.19.56.112
+  port: 443
+  udp: true
+  type: vless
+  uuid: 56e4896e-90a9-4fe0-8480-90d3d68b9928
+  tls: true
+  skip-cert-verify: true
+  servername: go.iranfree.de5.net
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: go.iranfree.de5.net
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
   server: 45.86.51.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 66.163.114.166
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
-  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 66.163.114.245
-  port: 443
+  server: 104.18.1.1
+  port: 2083
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: findconnectwithemployersandbuildprofessionalnetwork.com
+  type: vless
+  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
+  tls: true
   skip-cert-verify: true
+  servername: vlsovip.1d.mom
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vlsovip.1d.mom
 proxy-groups:
 - name: PROXIES
   type: select

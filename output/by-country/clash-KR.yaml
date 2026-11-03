@@ -15,14 +15,17 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
-  server: 141.164.45.187
-  port: 5498
+  server: 132.226.226.189
+  port: 50160
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
+  type: hysteria2
+  password: 1671a252e2a97dc2bda4e515475931da
+  sni: 'off'
+  alpn:
+  - h3
+  skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  server: 158.247.255.150
+  server: kr002.zestapp778.com
   port: 48851
   udp: true
   type: trojan
@@ -40,13 +43,18 @@ proxies:
   - h3
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 05 - xiaohe
-  server: kr002.zestapp778.com
-  port: 48851
+  server: 3.39.4.109
+  port: 13672
   udp: true
-  type: trojan
-  password: 5t6i121em5lkmsmk
-  sni: kr002.zestapp778.com
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  tls: true
   skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+  servername: www.apple.com
+  client-fingerprint: firefox
 - name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
   server: 152.69.231.175
   port: 50160
@@ -63,34 +71,11 @@ proxies:
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: www.bing.com
+  sni: google.com
   alpn:
   - h3
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 08 - xiaohe
-  server: 132.226.226.189
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 1671a252e2a97dc2bda4e515475931da
-  sni: 132.226.226.189
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 09 - xiaohe
-  server: 3.39.4.109
-  port: 13672
-  udp: true
-  type: vless
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇰🇷 韩国 (South Korea) 10 - xiaohe
   server: 151.245.106.49
   port: 2053
   udp: true
@@ -101,7 +86,27 @@ proxies:
   reality-opts:
     public-key: F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo
   servername: www.cloudflare.com
-  client-fingerprint: firefox
+  client-fingerprint: random
+- name: 🇰🇷 韩国 (South Korea) 09 - xiaohe
+  server: 141.164.45.187
+  port: 9090
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇰🇷 韩国 (South Korea) 10 - xiaohe
+  server: 3.39.4.109
+  port: 18967
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+  servername: www.apple.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
