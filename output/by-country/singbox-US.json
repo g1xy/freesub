@@ -57,62 +57,46 @@
       "tag": "block"
     },
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "66.163.112.121",
+      "server": "156.146.38.170",
       "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.unlockyourfuturefindyourperfectcareer.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
+      "server": "156.146.38.167",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "66.163.112.242",
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "66.163.114.126",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "resources.unlockyourfuturefindyourperfectcareer.com",
+        "server_name": "resources.findconnectwithemployersandbuildprofessionalnetwork.com",
         "insecure": true,
         "alpn": [
           "h2",
           "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "85.155.179.206",
-      "server_port": 443,
-      "uuid": "86a83d11-d751-4b60-aa4e-1dca5cff7028",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "server_name": "us3.shtil.io",
-        "insecure": true,
-        "alpn": [
-          "h2%2Chttp%2F1.1"
         ]
       }
     },
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "66.163.112.171",
+      "server": "66.163.114.106",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "learn.unlockyourfuturefindyourperfectcareer.com",
+        "server_name": "www.findconnectwithemployersandbuildprofessionalnetwork.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -123,12 +107,12 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "66.163.112.31",
+      "server": "216.152.155.176",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "unlockyourfuturefindyourperfectcareer.com",
+        "server_name": "blog.nextjobopportunityandclaimyouridealrole.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -139,17 +123,50 @@
     {
       "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "156.146.38.167",
+      "server": "95.215.201.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "216.152.155.158",
       "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "resources.nextjobopportunityandclaimyouridealrole.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "88.216.195.188",
+      "server_port": 443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "63e1b9462d708b56d5d5a0267cffecdc",
+      "tls": {
+        "enabled": true,
+        "server_name": "promo3.goonars.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "198.2.251.107",
-      "server_port": 45197,
-      "uuid": "9d979dd1-1760-4c76-8881-b05a09b4d795",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "47.251.25.74",
+      "server_port": 443,
+      "uuid": "18805ff3-b420-45de-af18-93be14024ae8",
       "packet_encoding": "xudp",
       "flow": "xtls-rprx-vision",
       "tls": {
@@ -158,7 +175,7 @@
         "insecure": true,
         "reality": {
           "enabled": true,
-          "public_key": "LqXTJ-JXo1CgjUQT8trI3OEhY2qOr1YAin2YLuLZFx0",
+          "public_key": "H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8",
           "short_id": ""
         },
         "utls": {
@@ -168,44 +185,21 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "167.88.61.20",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.browseseniorrolesandenhanceyourcareertoday.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "167.88.61.198",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.browseseniorrolesandenhanceyourcareertoday.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "shadowsocks",
+      "type": "hysteria2",
       "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "156.146.38.169",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
+      "server": "155.248.209.237",
+      "server_port": 33333,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "bce6c821-200d-421f-bf3d-7159e5246ea0",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2.123266.xyz",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
     }
   ],
   "route": {
