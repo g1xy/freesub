@@ -59,99 +59,44 @@
     {
       "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "37.19.198.243",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "216.152.155.54",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "learn.nextjobopportunityandclaimyouridealrole.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "216.152.155.59",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.nextjobopportunityandclaimyouridealrole.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "37.19.198.236",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "15.204.247.206",
-      "server_port": 4444,
-      "method": "aes-256-gcm",
-      "password": "pKEW8JPByTVTLtM"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
       "server": "156.146.38.170",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
     },
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "159.89.87.21",
-      "server_port": 28190,
-      "uuid": "14c80e0e-f7ce-4991-94fc-99a1db4a9b1e",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "aws.amazon.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
+      "server": "156.146.38.169",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "156.146.38.167",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
+      "server": "185.215.132.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
       "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "170.101.101.112",
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "server": "66.163.112.31",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "resources.explorecreativejobsandenhanceyourcareerportfolio.com",
+        "server_name": "unlockyourfuturefindyourperfectcareer.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -160,50 +105,60 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "47.253.226.114",
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
+      "server": "95.215.201.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "216.152.156.49",
       "server_port": 443,
-      "uuid": "055a1ce8-2a16-4a0d-a2c2-22826c9b2413",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
       }
     },
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "195.123.235.183",
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "49.51.39.148",
       "server_port": 443,
-      "uuid": "c14ec728-3eca-4750-87fc-fd1e6aeb81d5",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
+      "method": "chacha20-ietf-poly1305",
+      "password": "LCvps-199-168-136-193-bak8443"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "66.163.112.121",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "gateway.icloud.com",
+        "server_name": "www.unlockyourfuturefindyourperfectcareer.com",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY",
-          "short_id": "a0e2a6074c6456b0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
+      "server": "37.19.198.243",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     }
   ],
   "route": {
