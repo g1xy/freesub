@@ -26,7 +26,8 @@
         "🇭🇰 中国香港 (Hong Kong) 06 - xiaohe",
         "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
         "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe"
+        "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe",
+        "🇭🇰 中国香港 (Hong Kong) 10 - xiaohe"
       ]
     },
     {
@@ -41,7 +42,8 @@
         "🇭🇰 中国香港 (Hong Kong) 06 - xiaohe",
         "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
         "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe"
+        "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe",
+        "🇭🇰 中国香港 (Hong Kong) 10 - xiaohe"
       ],
       "url": "https://www.google.com/generate_204",
       "interval": "3m"
@@ -55,24 +57,17 @@
       "tag": "block"
     },
     {
-      "type": "hysteria2",
+      "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - xiaohe",
-      "server": "152.32.254.68",
-      "server_port": 5010,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
-      "tls": {
-        "enabled": true,
-        "server_name": "nas.aizhzo.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
+      "server": "47.244.120.197",
+      "server_port": 36703,
+      "uuid": "45b83519-9c4f-4052-a11b-02e017b636d4",
+      "alter_id": 0,
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/arki",
+        "headers": {}
       }
     },
     {
@@ -85,7 +80,7 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/oneclickvpnkeys",
+        "server_name": "https://t.me/wangcai2",
         "insecure": true,
         "alpn": [
           "h3"
@@ -110,72 +105,8 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 04 - xiaohe",
-      "server": "202.146.222.29",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "https://t.me/wangcai2ôøωôøωôøωôøω",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 05 - xiaohe",
-      "server": "31.57.248.176",
-      "server_port": 50160,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "b0917015b656b3dd2286b5633af0c5c1",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 06 - xiaohe",
-      "server": "47.244.120.197",
-      "server_port": 36703,
-      "uuid": "45b83519-9c4f-4052-a11b-02e017b636d4",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/arki",
-        "headers": {}
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
-      "server": "47.244.120.197",
-      "server_port": 23026,
-      "uuid": "b9de1bc9-baa7-41ac-86f7-ccd59695cb21",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/arki",
-        "headers": {
-          "Host": "47.244.120.197"
-        }
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 - xiaohe",
       "server": "152.175.6.229",
       "server_port": 31884,
       "uuid": "e9a8144e-5237-488a-afb1-9ca3d8d54c80",
@@ -192,7 +123,23 @@
     },
     {
       "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 - xiaohe",
+      "server": "47.244.120.197",
+      "server_port": 23026,
+      "uuid": "b9de1bc9-baa7-41ac-86f7-ccd59695cb21",
+      "alter_id": 0,
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/arki",
+        "headers": {
+          "Host": "47.244.120.197"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 - xiaohe",
       "server": "156.245.232.239",
       "server_port": 35043,
       "uuid": "b15e481d-17e4-41a8-84c2-23d4f0514d9a",
@@ -202,6 +149,84 @@
         "type": "ws",
         "path": "/",
         "headers": {}
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/wangcai2рҹү",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
+      "server": "152.32.254.68",
+      "server_port": 5010,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
+      "tls": {
+        "enabled": true,
+        "server_name": "nas.aizhzo.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe",
+      "server": "31.57.248.176",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "b0917015b656b3dd2286b5633af0c5c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 10 - xiaohe",
+      "server": "165.154.63.139",
+      "server_port": 443,
+      "uuid": "91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amazon.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "AE81BrwMc8-kwGEIA1LhzaL03er0Qwt2V-fFy76F5jQ",
+          "short_id": "ca4aedd4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
       }
     }
   ],
