@@ -1,85 +1,85 @@
 {
-  "updated_at": "2026-11-11T12:06:31+00:00",
+  "updated_at": "2026-11-11T18:04:45+00:00",
   "sources": {
     "https://wild-cloud-9893.heleimail.workers.dev": {
       "total_success": 0,
-      "total_failure": 102,
-      "consecutive_failures": 102,
+      "total_failure": 103,
+      "consecutive_failures": 103,
       "last_node_count": 0,
       "last_error": "HTTP 404",
       "last_success_at": ""
     },
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt": {
-      "total_success": 101,
+      "total_success": 102,
       "total_failure": 1,
       "consecutive_failures": 0,
       "last_node_count": 29,
       "last_error": "ConnectionError: HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt (Caused by ReadTimeoutEr",
-      "last_success_at": "2026-11-11T12:06:31+00:00"
+      "last_success_at": "2026-11-11T18:04:45+00:00"
     },
     "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt": {
-      "total_success": 102,
+      "total_success": 103,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 532,
       "last_error": "",
-      "last_success_at": "2026-11-11T12:06:31+00:00"
+      "last_success_at": "2026-11-11T18:04:45+00:00"
     },
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix": {
-      "total_success": 102,
+      "total_success": 103,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 593,
       "last_error": "",
-      "last_success_at": "2026-11-11T12:06:31+00:00"
+      "last_success_at": "2026-11-11T18:04:45+00:00"
     },
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria": {
-      "total_success": 102,
+      "total_success": 103,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 13,
       "last_error": "",
-      "last_success_at": "2026-11-11T12:06:31+00:00"
+      "last_success_at": "2026-11-11T18:04:45+00:00"
     },
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls": {
-      "total_success": 102,
+      "total_success": 103,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 2279,
       "last_error": "",
-      "last_success_at": "2026-11-11T12:06:31+00:00"
+      "last_success_at": "2026-11-11T18:04:45+00:00"
     },
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt": {
-      "total_success": 101,
+      "total_success": 102,
       "total_failure": 1,
       "consecutive_failures": 0,
       "last_node_count": 1751,
       "last_error": "ConnectionError: HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt (Caused by ReadTimeoutError(\"HTTPSConn",
-      "last_success_at": "2026-11-11T12:06:31+00:00"
+      "last_success_at": "2026-11-11T18:04:45+00:00"
     },
     "https://raw.githubusercontent.com/freefq/free/master/v2": {
-      "total_success": 102,
+      "total_success": 103,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 15,
       "last_error": "",
-      "last_success_at": "2026-11-11T12:06:31+00:00"
+      "last_success_at": "2026-11-11T18:04:45+00:00"
     },
     "https://open.heleimail.workers.dev/": {
       "total_success": 0,
-      "total_failure": 102,
-      "consecutive_failures": 102,
+      "total_failure": 103,
+      "consecutive_failures": 103,
       "last_node_count": 0,
       "last_error": "HTTP 404",
       "last_success_at": ""
     },
     "https://www.ermao.net/sub/v2ray/ermao.net": {
-      "total_success": 102,
+      "total_success": 103,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 502,
+      "last_node_count": 514,
       "last_error": "",
-      "last_success_at": "2026-11-11T12:06:31+00:00"
+      "last_success_at": "2026-11-11T18:04:45+00:00"
     }
   }
 }
