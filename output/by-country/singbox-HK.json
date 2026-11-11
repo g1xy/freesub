@@ -57,27 +57,6 @@
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - xiaohe",
-      "server": "152.32.254.68",
-      "server_port": 5010,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
-      "tls": {
-        "enabled": true,
-        "server_name": "nas.aizhzo.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - xiaohe",
       "server": "202.146.222.174",
       "server_port": 443,
       "up_mbps": 100,
@@ -85,7 +64,24 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2",
+        "server_name": "https://t.me/wangcai2🇨🇳",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - xiaohe",
+      "server": "202.146.222.29",
+      "server_port": 443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/wangcai2ðð",
         "insecure": true,
         "alpn": [
           "h3"
@@ -110,20 +106,26 @@
       }
     },
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇭🇰 中国香港 (Hong Kong) 04 - xiaohe",
-      "server": "202.146.222.29",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "server": "39.109.111.23",
+      "server_port": 28675,
+      "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2ð¨ð³",
+        "server_name": "www.lamer.com.hk",
         "insecure": true,
-        "alpn": [
-          "h3"
-        ]
+        "reality": {
+          "enabled": true,
+          "public_key": "jgtiLXdCnQ9WRWMuu2gsuGQOQTCRZQpspnn228kjTSA",
+          "short_id": "9a79807253c040"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -176,7 +178,7 @@
     {
       "type": "trojan",
       "tag": "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
-      "server": "sclass-c1.catcat321.com",
+      "server": "16.106.7.232",
       "server_port": 20086,
       "password": "d9064589-74af-432a-9390-5d8a9da281bf",
       "tls": {
@@ -190,26 +192,17 @@
       }
     },
     {
-      "type": "vless",
+      "type": "vmess",
       "tag": "🇭🇰 中国香港 (Hong Kong) 09 - xiaohe",
-      "server": "154.21.203.106",
-      "server_port": 51279,
-      "uuid": "57beeeb0-03fc-4fc9-94da-7604488a7134",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.tesla.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "f6Tj8-uvWsLv3V-lGLuPciArp5oKqUImBg-U7-WJ-0A",
-          "short_id": "bb82c8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
+      "server": "47.244.120.197",
+      "server_port": 44867,
+      "uuid": "845e6b08-2919-4290-ade0-5dc7dcea59ca",
+      "alter_id": 0,
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/arki",
+        "headers": {}
       }
     }
   ],

@@ -90,7 +90,7 @@
       "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
       "tls": {
         "enabled": true,
-        "server_name": "152.67.200.82",
+        "server_name": "152-67-200-82.liao.kdns.fr",
         "insecure": true,
         "alpn": [
           "h3"
@@ -98,24 +98,8 @@
       }
     },
     {
-      "type": "trojan",
-      "tag": "🇰🇷 韩国 (South Korea) 04 - xiaohe",
-      "server": "kr002.zestapp778.com",
-      "server_port": 48851,
-      "password": "5t6i121em5lkmsmk",
-      "tls": {
-        "enabled": true,
-        "server_name": "kr002.zestapp778.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 05 - xiaohe",
+      "tag": "🇰🇷 韩国 (South Korea) 04 - xiaohe",
       "server": "152.69.231.175",
       "server_port": 50160,
       "up_mbps": 100,
@@ -128,6 +112,28 @@
         "alpn": [
           "h3"
         ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 05 - xiaohe",
+      "server": "151.245.106.49",
+      "server_port": 2053,
+      "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo",
+          "short_id": "429499c03d4cc8a0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],
