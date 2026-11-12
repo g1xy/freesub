@@ -67,14 +67,14 @@
     {
       "type": "hysteria2",
       "tag": "🇰🇷 韩国 (South Korea) 02 - xiaohe",
-      "server": "152.67.200.82",
+      "server": "132.226.226.189",
       "server_port": 50160,
       "up_mbps": 100,
       "down_mbps": 100,
-      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
+      "password": "1671a252e2a97dc2bda4e515475931da",
       "tls": {
         "enabled": true,
-        "server_name": "google.com",
+        "server_name": "132.226.226.189",
         "insecure": true,
         "alpn": [
           "h3"
@@ -84,23 +84,6 @@
     {
       "type": "hysteria2",
       "tag": "🇰🇷 韩国 (South Korea) 03 - xiaohe",
-      "server": "132.226.226.189",
-      "server_port": 50160,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "1671a252e2a97dc2bda4e515475931da",
-      "tls": {
-        "enabled": true,
-        "server_name": "off",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 04 - xiaohe",
       "server": "152.70.237.123",
       "server_port": 2053,
       "up_mbps": 100,
@@ -113,6 +96,28 @@
         "alpn": [
           "h3"
         ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 04 - xiaohe",
+      "server": "151.245.106.49",
+      "server_port": 2053,
+      "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c",
+      "packet_encoding": "xudp",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo",
+          "short_id": "429499c03d4cc8a0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     },
     {
@@ -133,25 +138,20 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇰🇷 韩国 (South Korea) 06 - xiaohe",
-      "server": "151.245.106.49",
-      "server_port": 2053,
-      "uuid": "a2de9567-9646-45a9-a410-7303a43bdb6c",
-      "packet_encoding": "xudp",
+      "server": "152.67.200.82",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
+        "server_name": "google.com",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "F6C33iIbfmt1mUsuLTarIC8ygdHKMqsaGvrSQltyxUo",
-          "short_id": "429499c03d4cc8a0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
+        "alpn": [
+          "h3"
+        ]
       }
     }
   ],
