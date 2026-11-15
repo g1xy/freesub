@@ -24,8 +24,7 @@
         "🇰🇷 韩国 (South Korea) 04 - xiaohe",
         "🇰🇷 韩国 (South Korea) 05 - xiaohe",
         "🇰🇷 韩国 (South Korea) 06 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 07 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 08 - xiaohe"
+        "🇰🇷 韩国 (South Korea) 07 - xiaohe"
       ]
     },
     {
@@ -38,8 +37,7 @@
         "🇰🇷 韩国 (South Korea) 04 - xiaohe",
         "🇰🇷 韩国 (South Korea) 05 - xiaohe",
         "🇰🇷 韩国 (South Korea) 06 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 07 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 08 - xiaohe"
+        "🇰🇷 韩国 (South Korea) 07 - xiaohe"
       ],
       "url": "https://www.google.com/generate_204",
       "interval": "3m"
@@ -62,24 +60,8 @@
       "security": "auto"
     },
     {
-      "type": "trojan",
-      "tag": "🇰🇷 韩国 (South Korea) 02 - xiaohe",
-      "server": "158.247.253.243",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "connectgraduateswithjobopeningsandgrowprofessionally.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 03 - xiaohe",
+      "tag": "🇰🇷 韩国 (South Korea) 02 - xiaohe",
       "server": "152.70.237.123",
       "server_port": 2053,
       "up_mbps": 100,
@@ -96,7 +78,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 04 - xiaohe",
+      "tag": "🇰🇷 韩国 (South Korea) 03 - xiaohe",
       "server": "132.226.226.189",
       "server_port": 50160,
       "up_mbps": 100,
@@ -104,7 +86,7 @@
       "password": "1671a252e2a97dc2bda4e515475931da",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "off",
         "insecure": true,
         "alpn": [
           "h3"
@@ -113,7 +95,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 05 - xiaohe",
+      "tag": "🇰🇷 韩国 (South Korea) 04 - xiaohe",
       "server": "152.69.231.175",
       "server_port": 50160,
       "up_mbps": 100,
@@ -125,6 +107,22 @@
         "insecure": true,
         "alpn": [
           "h3"
+        ]
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇰🇷 韩国 (South Korea) 05 - xiaohe",
+      "server": "158.247.253.243",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "connectgraduateswithjobopeningsandgrowprofessionally.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
         ]
       }
     },
@@ -160,25 +158,11 @@
       "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
       "tls": {
         "enabled": true,
-        "server_name": "152.67.200.82",
+        "server_name": "www.bing.com",
         "insecure": true,
         "alpn": [
           "h3"
         ]
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇰🇷 韩国 (South Korea) 08 - xiaohe",
-      "server": "217.142.138.61",
-      "server_port": 80,
-      "uuid": "ac1b933d-afff-4487-93ef-f57130a55dff",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "http",
-        "host": [],
-        "path": "/"
       }
     }
   ],
