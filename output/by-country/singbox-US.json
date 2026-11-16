@@ -55,85 +55,144 @@
       "tag": "block"
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "156.146.38.170",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "156.146.38.167",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "156.146.38.169",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "216.106.178.169",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "38.91.100.39",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "15.204.247.206",
-      "server_port": 4444,
-      "method": "aes-256-gcm",
-      "password": "pKEW8JPByTVTLtM"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "198.98.53.130",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "eDfN7SODQceIOmIAbtJJtK"
-    },
-    {
       "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "67.220.85.46",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
+      "server": "129.146.77.248",
+      "server_port": 39495,
+      "uuid": "f836c736-87fc-4fde-aabc-00857ecdff3e",
       "alter_id": 0,
-      "security": "auto"
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/cctv13.m3u8",
+        "headers": {}
+      }
     },
     {
       "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "170.101.101.237",
+      "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
+      "server": "66.163.112.31",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "cdn.explorecreativejobsandenhanceyourcareerportfolio.com",
+        "server_name": "unlockyourfuturefindyourperfectcareer.com",
         "insecure": true,
         "alpn": [
           "h2",
           "http/1.1"
         ]
       }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
+      "server": "104.168.109.213",
+      "server_port": 443,
+      "uuid": "74b86103-0a6e-4a0e-8430-2aa84af805fc",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "rU4-ii54LkmEWBaliTQHvi3jc0fDTlSmutVtzedMNRM",
+          "short_id": "6ba7b8"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
+      "server": "66.163.112.142",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.unlockyourfuturefindyourperfectcareer.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "server": "195.123.240.65",
+      "server_port": 443,
+      "uuid": "ce18d0eb-5c71-41f9-96e5-1632e22456e4",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE",
+          "short_id": "19296c9f1bf9c7b1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
+      "server": "95.215.201.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "34.94.152.229",
+      "server_port": 443,
+      "password": "123456",
+      "tls": {
+        "enabled": true,
+        "server_name": "us.ctt25.uk",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "66.163.112.147",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "courses.unlockyourfuturefindyourperfectcareer.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "156.146.38.169",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     }
   ],
   "route": {
