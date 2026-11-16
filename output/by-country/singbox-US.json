@@ -55,131 +55,85 @@
       "tag": "block"
     },
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "66.163.112.76",
+      "server": "156.146.38.170",
       "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "api.unlockyourfuturefindyourperfectcareer.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
-      "type": "trojan",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "66.163.112.31",
+      "server": "156.146.38.167",
       "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "unlockyourfuturefindyourperfectcareer.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
-      "type": "vmess",
+      "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "129.146.77.248",
-      "server_port": 39495,
-      "uuid": "f836c736-87fc-4fde-aabc-00857ecdff3e",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/cctv13.m3u8",
-        "headers": {}
-      }
+      "server": "156.146.38.169",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
       "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "216.105.168.18",
+      "server": "216.106.178.169",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "server": "38.91.100.39",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
+      "server": "15.204.247.206",
+      "server_port": 4444,
+      "method": "aes-256-gcm",
+      "password": "pKEW8JPByTVTLtM"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "198.98.53.130",
       "server_port": 443,
       "method": "chacha20-ietf-poly1305",
-      "password": "bQZl7HDxSabr1FurTYQHFU"
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "66.163.112.147",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "courses.unlockyourfuturefindyourperfectcareer.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "66.163.112.121",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.unlockyourfuturefindyourperfectcareer.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "66.163.112.171",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "learn.unlockyourfuturefindyourperfectcareer.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "66.163.112.142",
-      "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdn.unlockyourfuturefindyourperfectcareer.com",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      }
+      "password": "eDfN7SODQceIOmIAbtJJtK"
     },
     {
       "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "169.197.142.22",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "67.220.85.46",
       "server_port": 18000,
       "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
       "alter_id": 0,
       "security": "auto"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "170.101.101.237",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.explorecreativejobsandenhanceyourcareerportfolio.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
     }
   ],
   "route": {

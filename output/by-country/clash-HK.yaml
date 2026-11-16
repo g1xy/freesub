@@ -5,12 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
-  server: 213.176.92.148
-  port: 40647
+  server: 206.237.11.17
+  port: 50376
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+  type: vmess
+  uuid: 9091fd64-7e8e-4b7a-8ae7-84474f234926
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
   server: 152.32.254.68
   port: 5010
@@ -29,34 +32,41 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 202.146.222.89
+  sni: https://t.me/clashv8
   alpn:
   - h3
   skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
+  server: 202.146.222.29
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: t.me
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   server: 202.146.222.174
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2
+  sni: https://t.me/wangcai2🇨🇳
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
-  server: 8.217.1.203
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 8b17beac-b143-447d-aa68-14cbb121a602
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38
-  servername: www.apple.com
-  client-fingerprint: chrome
 - name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
+  server: 31.57.248.176
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: b0917015b656b3dd2286b5633af0c5c1
+  sni: www.bing.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
   server: 156.245.232.239
   port: 35043
   udp: true
@@ -69,25 +79,28 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vk.com
-  alpn:
-  - h3
-  skip-cert-verify: true
 - name: 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
-  server: 31.57.248.176
-  port: 50160
+  server: 213.176.92.148
+  port: 40647
   udp: true
-  type: hysteria2
-  password: b0917015b656b3dd2286b5633af0c5c1
-  sni: www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147
-  alpn:
-  - h3
+  type: ss
+  cipher: aes-256-gcm
+  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+- name: 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
+  server: 16.106.7.232
+  port: 20086
+  udp: true
+  type: trojan
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  sni: hk.catxstar.com
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
+  server: 16.106.7.232
+  port: 20123
+  udp: true
+  type: trojan
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  sni: hk.catxstar.com
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
@@ -102,6 +115,8 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -115,5 +130,7 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
 rules:
 - MATCH,PROXIES
