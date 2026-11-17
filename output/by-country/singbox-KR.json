@@ -23,7 +23,8 @@
         "🇰🇷 韩国 (South Korea) 03 - xiaohe",
         "🇰🇷 韩国 (South Korea) 04 - xiaohe",
         "🇰🇷 韩国 (South Korea) 05 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 06 - xiaohe"
+        "🇰🇷 韩国 (South Korea) 06 - xiaohe",
+        "🇰🇷 韩国 (South Korea) 07 - xiaohe"
       ]
     },
     {
@@ -35,7 +36,8 @@
         "🇰🇷 韩国 (South Korea) 03 - xiaohe",
         "🇰🇷 韩国 (South Korea) 04 - xiaohe",
         "🇰🇷 韩国 (South Korea) 05 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 06 - xiaohe"
+        "🇰🇷 韩国 (South Korea) 06 - xiaohe",
+        "🇰🇷 韩国 (South Korea) 07 - xiaohe"
       ],
       "url": "https://www.google.com/generate_204",
       "interval": "3m"
@@ -83,7 +85,7 @@
       "password": "maintell",
       "tls": {
         "enabled": true,
-        "server_name": "bing.com",
+        "server_name": "152.70.237.123",
         "insecure": true,
         "alpn": [
           "h3"
@@ -93,6 +95,23 @@
     {
       "type": "hysteria2",
       "tag": "🇰🇷 韩国 (South Korea) 04 - xiaohe",
+      "server": "152.69.231.175",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "1beb216e3f60aea9555dae60d219a5ca",
+      "tls": {
+        "enabled": true,
+        "server_name": "152.69.231.175",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 05 - xiaohe",
       "server": "132.226.226.189",
       "server_port": 50160,
       "up_mbps": 100,
@@ -109,7 +128,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 05 - xiaohe",
+      "tag": "🇰🇷 韩国 (South Korea) 06 - xiaohe",
       "server": "152.67.200.82",
       "server_port": 50160,
       "up_mbps": 100,
@@ -117,7 +136,7 @@
       "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
       "tls": {
         "enabled": true,
-        "server_name": "google.com",
+        "server_name": "css.rbxcdn.com",
         "insecure": true,
         "alpn": [
           "h3"
@@ -125,21 +144,12 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 06 - xiaohe",
-      "server": "152.69.231.175",
-      "server_port": 50160,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "1beb216e3f60aea9555dae60d219a5ca",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 07 - xiaohe",
+      "server": "115.161.136.145",
+      "server_port": 10099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "12242"
     }
   ],
   "route": {

@@ -28,11 +28,21 @@ proxies:
   udp: true
   type: hysteria2
   password: maintell
-  sni: bing.com
+  sni: 152.70.237.123
   alpn:
   - h3
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
+  server: 152.69.231.175
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 1beb216e3f60aea9555dae60d219a5ca
+  sni: 152.69.231.175
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 05 - xiaohe
   server: 132.226.226.189
   port: 50160
   udp: true
@@ -42,26 +52,23 @@ proxies:
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 05 - xiaohe
+- name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
   server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: google.com
+  sni: css.rbxcdn.com
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
-  server: 152.69.231.175
-  port: 50160
+- name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  server: 115.161.136.145
+  port: 10099
   udp: true
-  type: hysteria2
-  password: 1beb216e3f60aea9555dae60d219a5ca
-  sni: 127.0.0.1
-  alpn:
-  - h3
-  skip-cert-verify: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: '12242'
 proxy-groups:
 - name: PROXIES
   type: select
@@ -73,6 +80,7 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 04 - xiaohe
   - 🇰🇷 韩国 (South Korea) 05 - xiaohe
   - 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -84,5 +92,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 04 - xiaohe
   - 🇰🇷 韩国 (South Korea) 05 - xiaohe
   - 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 07 - xiaohe
 rules:
 - MATCH,PROXIES
