@@ -5,84 +5,88 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 15.204.246.111
-  port: 5498
+  server: 216.152.155.54
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 156.146.38.169
+  server: 216.152.155.158
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: resources.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 156.146.38.170
+  server: 216.152.155.50
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 38.91.100.39
-  port: 19999
+  server: 195.211.98.43
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: vless
+  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
+  server: 216.152.155.131
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 216.152.155.59
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 216.152.155.23
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 216.152.155.176
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
   server: 15.204.246.108
   port: 8881
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 67.220.85.46
-  port: 18000
-  udp: true
-  type: vmess
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 37.19.198.160
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 193.151.163.18
-  port: 19999
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 15.204.246.111
+  port: 5498
   udp: true
   type: ss
   cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 198.98.53.130
-  port: 443
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 172.233.201.244
-  port: 61635
-  udp: true
-  type: vless
-  uuid: 5cbc4b74-5352-4e64-af65-bcbabf46a18a
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  password: lGqs95QkFHo2NV
 proxy-groups:
 - name: PROXIES
   type: select
