@@ -25,7 +25,7 @@
         "🇭🇰 中国香港 (Hong Kong) 05 - xiaohe",
         "🇭🇰 中国香港 (Hong Kong) 06 - xiaohe",
         "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
+        "🇺🇸 美国 (United States) 08 - xiaohe",
         "🇺🇸 美国 (United States) 09 - xiaohe",
         "🇺🇸 美国 (United States) 10 - xiaohe",
         "🇺🇸 美国 (United States) 11 - xiaohe",
@@ -35,7 +35,7 @@
         "🇺🇸 美国 (United States) 15 - xiaohe",
         "🇺🇸 美国 (United States) 16 - xiaohe",
         "🇺🇸 美国 (United States) 17 - xiaohe",
-        "🇺🇸 美国 (United States) 18 - xiaohe",
+        "🇯🇵 日本 (Japan) 18 - xiaohe",
         "🇯🇵 日本 (Japan) 19 - xiaohe",
         "🇯🇵 日本 (Japan) 20 - xiaohe",
         "🇯🇵 日本 (Japan) 21 - xiaohe",
@@ -45,13 +45,14 @@
         "🇯🇵 日本 (Japan) 25 - xiaohe",
         "🇯🇵 日本 (Japan) 26 - xiaohe",
         "🇯🇵 日本 (Japan) 27 - xiaohe",
-        "🇯🇵 日本 (Japan) 28 - xiaohe",
+        "🇰🇷 韩国 (South Korea) 28 - xiaohe",
         "🇰🇷 韩国 (South Korea) 29 - xiaohe",
         "🇰🇷 韩国 (South Korea) 30 - xiaohe",
         "🇰🇷 韩国 (South Korea) 31 - xiaohe",
         "🇰🇷 韩国 (South Korea) 32 - xiaohe",
         "🇰🇷 韩国 (South Korea) 33 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 34 - xiaohe"
+        "🇰🇷 韩国 (South Korea) 34 - xiaohe",
+        "🇰🇷 韩国 (South Korea) 35 - xiaohe"
       ]
     },
     {
@@ -65,7 +66,7 @@
         "🇭🇰 中国香港 (Hong Kong) 05 - xiaohe",
         "🇭🇰 中国香港 (Hong Kong) 06 - xiaohe",
         "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
+        "🇺🇸 美国 (United States) 08 - xiaohe",
         "🇺🇸 美国 (United States) 09 - xiaohe",
         "🇺🇸 美国 (United States) 10 - xiaohe",
         "🇺🇸 美国 (United States) 11 - xiaohe",
@@ -75,7 +76,7 @@
         "🇺🇸 美国 (United States) 15 - xiaohe",
         "🇺🇸 美国 (United States) 16 - xiaohe",
         "🇺🇸 美国 (United States) 17 - xiaohe",
-        "🇺🇸 美国 (United States) 18 - xiaohe",
+        "🇯🇵 日本 (Japan) 18 - xiaohe",
         "🇯🇵 日本 (Japan) 19 - xiaohe",
         "🇯🇵 日本 (Japan) 20 - xiaohe",
         "🇯🇵 日本 (Japan) 21 - xiaohe",
@@ -85,13 +86,14 @@
         "🇯🇵 日本 (Japan) 25 - xiaohe",
         "🇯🇵 日本 (Japan) 26 - xiaohe",
         "🇯🇵 日本 (Japan) 27 - xiaohe",
-        "🇯🇵 日本 (Japan) 28 - xiaohe",
+        "🇰🇷 韩国 (South Korea) 28 - xiaohe",
         "🇰🇷 韩国 (South Korea) 29 - xiaohe",
         "🇰🇷 韩国 (South Korea) 30 - xiaohe",
         "🇰🇷 韩国 (South Korea) 31 - xiaohe",
         "🇰🇷 韩国 (South Korea) 32 - xiaohe",
         "🇰🇷 韩国 (South Korea) 33 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 34 - xiaohe"
+        "🇰🇷 韩国 (South Korea) 34 - xiaohe",
+        "🇰🇷 韩国 (South Korea) 35 - xiaohe"
       ],
       "url": "https://www.google.com/generate_204",
       "interval": "3m"
@@ -105,50 +107,8 @@
       "tag": "block"
     },
     {
-      "type": "shadowsocks",
+      "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 - xiaohe",
-      "server": "213.176.92.148",
-      "server_port": 40647,
-      "method": "aes-256-gcm",
-      "password": "DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY="
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - xiaohe",
-      "server": "202.146.222.29",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "202.146.222.29",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - xiaohe",
-      "server": "202.146.222.89",
-      "server_port": 443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "202.146.222.89",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 04 - xiaohe",
       "server": "202.146.222.174",
       "server_port": 443,
       "up_mbps": 100,
@@ -165,23 +125,76 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 05 - xiaohe",
-      "server": "152.32.254.68",
-      "server_port": 5010,
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 - xiaohe",
+      "server": "202.146.222.29",
+      "server_port": 443,
       "up_mbps": 100,
       "down_mbps": 100,
-      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "nas.aizhzo.com",
+        "server_name": "google.com",
         "insecure": true,
         "alpn": [
           "h3"
         ]
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 03 - xiaohe",
+      "server": "202.146.222.89",
+      "server_port": 443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "https://t.me/clashv8\\u0001f1e8\\u0001f1f3",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 04 - xiaohe",
+      "server": "31.57.248.176",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "b0917015b656b3dd2286b5633af0c5c1",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 05 - xiaohe",
+      "server": "8.217.1.203",
+      "server_port": 8443,
+      "uuid": "8b17beac-b143-447d-aa68-14cbb121a602",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.apple.com",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "74P0QFvaK6B13rHsxR_t0lqRlg4YLuORD4VaHr5Jd38",
+          "short_id": "0bf55f64"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -210,132 +223,65 @@
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 07 - xiaohe",
-      "server": "31.57.248.176",
-      "server_port": 50160,
+      "server": "152.32.254.68",
+      "server_port": 5010,
       "up_mbps": 100,
       "down_mbps": 100,
-      "password": "b0917015b656b3dd2286b5633af0c5c1",
+      "password": "eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147",
+        "server_name": "nas.aizhzo.com",
         "insecure": true,
         "alpn": [
           "h3"
         ]
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 08 - xiaohe",
-      "server": "156.245.232.239",
-      "server_port": 35043,
-      "uuid": "b15e481d-17e4-41a8-84c2-23d4f0514d9a",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {}
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "172.233.197.235",
-      "server_port": 63815,
-      "uuid": "c5b78fba-bfe0-438b-99b1-71a1f271c32f",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU",
-          "short_id": "1f2519bb96e5589c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9"
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "15.204.246.107",
-      "server_port": 8888,
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "23.150.152.38",
+      "server_port": 19999,
       "method": "aes-256-gcm",
-      "password": "Y6R9pAtvxxzmGC"
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
       "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 11 - xiaohe",
-      "server": "37.19.198.160",
+      "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
+      "server": "173.244.56.9",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
     },
     {
-      "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 12 - xiaohe",
-      "server": "67.220.85.46",
-      "server_port": 18000,
-      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
-      "alter_id": 0,
-      "security": "auto"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 13 - xiaohe",
-      "server": "37.19.198.243",
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
+      "server": "66.163.112.171",
       "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 14 - xiaohe",
-      "server": "159.89.87.21",
-      "server_port": 28190,
-      "uuid": "14c80e0e-f7ce-4991-94fc-99a1db4a9b1e",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "aws.amazon.com",
+        "server_name": "learn.unlockyourfuturefindyourperfectcareer.com",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 15 - xiaohe",
-      "server": "37.19.198.236",
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 11 - xiaohe",
+      "server": "66.163.112.147",
       "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 16 - xiaohe",
-      "server": "38.91.100.16",
-      "server_port": 1270,
-      "uuid": "5c040f1d-45db-43bd-8d46-e4950e433735",
-      "alter_id": 0,
-      "security": "auto",
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "xmfhlpy.com",
+        "server_name": "courses.unlockyourfuturefindyourperfectcareer.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -345,38 +291,63 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 17 - xiaohe",
-      "server": "149.40.57.133",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+      "tag": "🇺🇸 美国 (United States) 12 - xiaohe",
+      "server": "173.244.56.6",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
     },
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 18 - xiaohe",
-      "server": "169.40.42.74",
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 13 - xiaohe",
+      "server": "156.146.38.168",
       "server_port": 443,
-      "uuid": "d65cc14c-f53f-4fe2-b262-97856601319c",
-      "packet_encoding": "xudp",
-      "flow": "xtls-rprx-vision",
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 14 - xiaohe",
+      "server": "156.146.38.169",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 15 - xiaohe",
+      "server": "66.163.112.142",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "yahoo.com",
+        "server_name": "cdn.unlockyourfuturefindyourperfectcareer.com",
         "insecure": true,
-        "reality": {
-          "enabled": true,
-          "public_key": "e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg",
-          "short_id": "c39cc7310a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
       }
     },
     {
       "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 19 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 16 - xiaohe",
+      "server": "156.146.38.167",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 17 - xiaohe",
+      "server": "156.146.38.170",
+      "server_port": 443,
+      "method": "aes-128-gcm",
+      "password": "shadowsocks"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 日本 (Japan) 18 - xiaohe",
       "server": "149.22.87.241",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -384,7 +355,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 20 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 19 - xiaohe",
       "server": "149.22.87.240",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -392,31 +363,32 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 21 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 20 - xiaohe",
       "server": "149.22.87.204",
       "server_port": 443,
       "method": "aes-128-gcm",
       "password": "shadowsocks"
     },
     {
-      "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 22 - xiaohe",
-      "server": "168.138.43.75",
-      "server_port": 80,
-      "uuid": "11c3627f-31e8-4695-dfbd-34076e2f1f5d",
-      "alter_id": 0,
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/cctv13.m3u8",
-        "headers": {
-          "Host": "None"
-        }
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 21 - xiaohe",
+      "server": "8.211.175.236",
+      "server_port": 8443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
+      "tls": {
+        "enabled": true,
+        "server_name": "8.211.175.236",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 23 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 22 - xiaohe",
       "server": "8.209.247.109",
       "server_port": 443,
       "up_mbps": 100,
@@ -432,6 +404,14 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇯🇵 日本 (Japan) 23 - xiaohe",
+      "server": "84.247.155.196",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
+    },
+    {
       "type": "hysteria2",
       "tag": "🇯🇵 日本 (Japan) 24 - xiaohe",
       "server": "138.3.208.26",
@@ -441,7 +421,7 @@
       "password": "184cdec28da5a09450803c8debcd2cc9",
       "tls": {
         "enabled": true,
-        "server_name": "138.3.208.26",
+        "server_name": "off",
         "insecure": true,
         "alpn": [
           "h3"
@@ -449,8 +429,16 @@
       }
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 25 - xiaohe",
+      "server": "84.247.155.196",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 26 - xiaohe",
       "server": "sync.2ml.bid",
       "server_port": 443,
       "uuid": "8344360f-0349-4784-a19f-33fd92e89389",
@@ -470,54 +458,16 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 26 - xiaohe",
-      "server": "104.21.76.96",
-      "server_port": 443,
-      "uuid": "8344360f-0349-4784-a19f-33fd92e89389",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "server_name": "sync.2ml.bid",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "v3-direct"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 27 - xiaohe",
-      "server": "8.211.175.236",
-      "server_port": 8443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 28 - xiaohe",
-      "server": "168.110.63.247",
-      "server_port": 8081,
-      "uuid": "c3bde296-8e44-4b8c-a325-577d5b3cc7c8",
+      "tag": "🇯🇵 日本 (Japan) 27 - xiaohe",
+      "server": "168.138.43.75",
+      "server_port": 80,
+      "uuid": "11c3627f-31e8-4695-dfbd-34076e2f1f5d",
       "alter_id": 0,
       "security": "auto",
       "transport": {
         "type": "ws",
-        "path": "/vless",
+        "path": "/cctv13.m3u8",
         "headers": {
           "Host": "None"
         }
@@ -525,33 +475,16 @@
     },
     {
       "type": "vmess",
-      "tag": "🇰🇷 韩国 (South Korea) 29 - xiaohe",
-      "server": "140.238.2.250",
-      "server_port": 443,
-      "uuid": "41a7089a-040b-4538-8b8d-010902405bde",
+      "tag": "🇰🇷 韩国 (South Korea) 28 - xiaohe",
+      "server": "129.154.61.196",
+      "server_port": 800,
+      "uuid": "a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0",
       "alter_id": 0,
       "security": "auto"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 30 - xiaohe",
-      "server": "152.69.231.175",
-      "server_port": 50160,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "1beb216e3f60aea9555dae60d219a5ca",
-      "tls": {
-        "enabled": true,
-        "server_name": "127.0.0.1",
-        "insecure": true,
-        "alpn": [
-          "h3"
-        ]
-      }
-    },
-    {
       "type": "trojan",
-      "tag": "🇰🇷 韩国 (South Korea) 31 - xiaohe",
+      "tag": "🇰🇷 韩国 (South Korea) 29 - xiaohe",
       "server": "158.247.253.243",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -567,7 +500,7 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 32 - xiaohe",
+      "tag": "🇰🇷 韩国 (South Korea) 30 - xiaohe",
       "server": "152.70.237.123",
       "server_port": 2053,
       "up_mbps": 100,
@@ -575,7 +508,7 @@
       "password": "maintell",
       "tls": {
         "enabled": true,
-        "server_name": "152.70.237.123",
+        "server_name": "bing.com",
         "insecure": true,
         "alpn": [
           "h3"
@@ -584,7 +517,49 @@
     },
     {
       "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 31 - xiaohe",
+      "server": "152.67.200.82",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "3d7634af8cb2c6cb4bac1c0efad8b43d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 32 - xiaohe",
+      "server": "152.69.231.175",
+      "server_port": 50160,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "1beb216e3f60aea9555dae60d219a5ca",
+      "tls": {
+        "enabled": true,
+        "server_name": "127.0.0.1",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "shadowsocks",
       "tag": "🇰🇷 韩国 (South Korea) 33 - xiaohe",
+      "server": "115.161.136.145",
+      "server_port": 10099,
+      "method": "chacha20-ietf-poly1305",
+      "password": "12242"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇰🇷 韩国 (South Korea) 34 - xiaohe",
       "server": "132.226.226.189",
       "server_port": 50160,
       "up_mbps": 100,
@@ -601,10 +576,10 @@
     },
     {
       "type": "vmess",
-      "tag": "🇰🇷 韩国 (South Korea) 34 - xiaohe",
-      "server": "129.154.61.196",
-      "server_port": 800,
-      "uuid": "a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0",
+      "tag": "🇰🇷 韩国 (South Korea) 35 - xiaohe",
+      "server": "140.238.2.250",
+      "server_port": 443,
+      "uuid": "41a7089a-040b-4538-8b8d-010902405bde",
       "alter_id": 0,
       "security": "auto"
     }
