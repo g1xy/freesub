@@ -5,81 +5,89 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 193.151.163.18
-  port: 19999
+  server: 84.17.41.2
+  port: 18000
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 37.19.198.243
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 37.19.198.244
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 146.75.57.238
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2373eb03-66b2-4f42-bb40-95db8b210877
-  tls: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  tls: false
   skip-cert-verify: true
-  servername: cdn.akamai.steamstatic.com
-  network: xhttp
-  xhttp-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    host: fcdsxalkkkp.global.ssl.fastly.net
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 216.106.186.82
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 23.147.56.181
+  port: 52843
+  udp: true
+  type: vmess
+  uuid: 88be793c-c368-4eb1-8809-057e5df96606
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 169.197.142.22
+  port: 18000
+  udp: true
+  type: vmess
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 185.230.230.18
+  server: 95.215.201.18
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 37.19.198.160
+  server: 173.244.56.9
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 45.86.51.18
-  port: 19999
+  server: 167.88.61.198
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: cdn.browseseniorrolesandenhanceyourcareertoday.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 149.40.57.138
-  port: 19999
+  server: 167.88.61.52
+  port: 443
   udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 198.98.53.130
+  server: 167.88.61.175
   port: 443
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.browseseniorrolesandenhanceyourcareertoday.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 37.19.198.236
+  server: 167.88.61.20
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: api.browseseniorrolesandenhanceyourcareertoday.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,22 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - xiaohe
-  server: 217.142.138.61
-  port: 80
-  udp: true
-  type: vmess
-  uuid: ac1b933d-afff-4487-93ef-f57130a55dff
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  http-opts:
-  - GET
-  - /
-  - Host:
-    - 217.142.138.61
-- name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
   server: 140.238.2.250
   port: 443
   udp: true
@@ -30,6 +14,17 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
+  server: 152.69.226.63
+  port: 25555
+  udp: true
+  type: vless
+  uuid: 27c5483f-17f4-48ae-9a04-def53d88440d
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
   server: 152.69.231.175
   port: 50160
@@ -41,12 +36,12 @@ proxies:
   - h3
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
-  server: 152.67.200.82
+  server: 132.226.226.189
   port: 50160
   udp: true
   type: hysteria2
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: google.com
+  password: 1671a252e2a97dc2bda4e515475931da
+  sni: 132.226.226.189
   alpn:
   - h3
   skip-cert-verify: true
@@ -59,22 +54,22 @@ proxies:
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
-  server: 132.226.226.189
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 1671a252e2a97dc2bda4e515475931da
-  sni: 132.226.226.189
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
   server: 152.70.237.123
   port: 2053
   udp: true
   type: hysteria2
   password: maintell
-  sni: 152.70.237.123
+  sni: bing.com
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  server: 152.67.200.82
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  sni: google.com
   alpn:
   - h3
   skip-cert-verify: true
