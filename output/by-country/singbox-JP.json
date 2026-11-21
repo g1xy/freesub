@@ -57,29 +57,8 @@
       "tag": "block"
     },
     {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 01 - xiaohe",
-      "server": "104.21.76.96",
-      "server_port": 443,
-      "uuid": "8344360f-0349-4784-a19f-33fd92e89389",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "server_name": "sync.2ml.bid",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "v3-direct"
-      }
-    },
-    {
       "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 02 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 01 - xiaohe",
       "server": "149.22.87.241",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -87,7 +66,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 03 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 02 - xiaohe",
       "server": "149.22.87.204",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -95,7 +74,7 @@
     },
     {
       "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 03 - xiaohe",
       "server": "149.22.87.240",
       "server_port": 443,
       "method": "aes-128-gcm",
@@ -103,7 +82,7 @@
     },
     {
       "type": "vmess",
-      "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 04 - xiaohe",
       "server": "64.176.34.102",
       "server_port": 46130,
       "uuid": "477350b2-7536-4f38-ee21-020efdde2d1d",
@@ -111,25 +90,25 @@
       "security": "auto"
     },
     {
-      "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
-      "server": "8.211.175.236",
-      "server_port": 8443,
-      "up_mbps": 100,
-      "down_mbps": 100,
-      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 05 - xiaohe",
+      "server": "94.177.131.113",
+      "server_port": 443,
+      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
+      "packet_encoding": "xudp",
       "tls": {
         "enabled": true,
-        "server_name": "bing.com",
+        "server_name": "kuruish.org",
         "insecure": true,
         "alpn": [
-          "h3"
+          "h2",
+          "http/1.1"
         ]
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
+      "tag": "🇯🇵 日本 (Japan) 06 - xiaohe",
       "server": "8.209.247.109",
       "server_port": 443,
       "up_mbps": 100,
@@ -145,8 +124,41 @@
       }
     },
     {
-      "type": "vless",
+      "type": "shadowsocks",
+      "tag": "🇯🇵 日本 (Japan) 07 - xiaohe",
+      "server": "84.247.155.196",
+      "server_port": 80,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
+    },
+    {
+      "type": "shadowsocks",
       "tag": "🇯🇵 日本 (Japan) 08 - xiaohe",
+      "server": "84.247.155.196",
+      "server_port": 443,
+      "method": "aes-256-gcm",
+      "password": "3eOFeNssde7PYYMv"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
+      "server": "8.211.175.236",
+      "server_port": 8443,
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "password": "u63SxILNwtrQZ7Y1ZrFaZfsA",
+      "tls": {
+        "enabled": true,
+        "server_name": "8.211.175.236",
+        "insecure": true,
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 10 - xiaohe",
       "server": "172.67.192.112",
       "server_port": 443,
       "uuid": "8344360f-0349-4784-a19f-33fd92e89389",
@@ -163,31 +175,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "v3-direct"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇯🇵 日本 (Japan) 09 - xiaohe",
-      "server": "84.247.155.196",
-      "server_port": 443,
-      "method": "aes-256-gcm",
-      "password": "3eOFeNssde7PYYMv"
-    },
-    {
-      "type": "vless",
-      "tag": "🇯🇵 日本 (Japan) 10 - xiaohe",
-      "server": "94.177.131.113",
-      "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "packet_encoding": "xudp",
-      "tls": {
-        "enabled": true,
-        "server_name": "kuruish.org",
-        "insecure": true,
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ]
       }
     }
   ],
