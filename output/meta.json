@@ -1,37 +1,38 @@
 {
-  "generated_at": "2026-11-22T12:41:32+00:00",
+  "generated_at": "2026-11-22T18:41:30+00:00",
   "counts": {
-    "alive": 37,
-    "residential": 0,
+    "alive": 33,
+    "residential": 1,
     "countries": 4,
-    "dropped_total": 7860
+    "dropped_total": 7918
   },
   "protocols": {
-    "hysteria2": 12,
-    "ss": 12,
-    "vless": 8,
-    "vmess": 3,
-    "trojan": 2
+    "hysteria2": 11,
+    "vless": 10,
+    "ss": 9,
+    "trojan": 3
   },
   "countries": {
-    "HK": 10,
     "US": 10,
     "JP": 10,
-    "KR": 7
+    "HK": 7,
+    "KR": 6
   },
-  "residential_countries": {},
+  "residential_countries": {
+    "US": 1
+  },
   "quota": {
     "HK": {
       "target": 10,
-      "available": 10,
-      "selected": 10,
+      "available": 7,
+      "selected": 7,
       "residential": 0
     },
     "US": {
       "target": 10,
-      "available": 91,
+      "available": 88,
       "selected": 10,
-      "residential": 0
+      "residential": 1
     },
     "JP": {
       "target": 10,
@@ -41,179 +42,171 @@
     },
     "KR": {
       "target": 10,
-      "available": 7,
-      "selected": 7,
+      "available": 6,
+      "selected": 6,
       "residential": 0
     }
   },
   "delay_ms": {
-    "min": 26,
-    "p50": 878,
-    "p90": 1275,
-    "max": 5307
+    "min": 49,
+    "p50": 703,
+    "p90": 2397,
+    "max": 4961
   },
   "drop_reasons": {
     "batch_config_invalid": 2600,
-    "candidate_duplicated": 2115,
-    "probe_failed:ConnectionError": 1524,
-    "probe_failed:SSLError": 313,
-    "probe_failed:ReadTimeout": 311,
-    "batch_isolated_bad_node": 126,
-    "candidate_rejected:ss": 97,
+    "candidate_duplicated": 2142,
+    "probe_failed:ConnectionError": 1542,
+    "probe_failed:SSLError": 331,
+    "probe_failed:ReadTimeout": 308,
+    "batch_isolated_bad_node": 114,
     "classify_datacenter_asn": 97,
-    "sb_probe_failed:ConnectTimeout": 93,
-    "quota_overflow:US": 81,
-    "quota_country_excluded:NL": 74,
-    "classify_unconfirmed_exit": 49,
+    "sb_probe_failed:ConnectTimeout": 96,
+    "candidate_rejected:ss": 93,
+    "quota_overflow:US": 78,
+    "probe_no_confirmed_exit_ip": 63,
+    "classify_unconfirmed_exit": 63,
+    "quota_country_excluded:NL": 62,
     "ss_cipher_unresolvable": 46,
-    "probe_no_confirmed_exit_ip": 46,
-    "quota_country_excluded:DE": 28,
-    "quota_country_excluded:SG": 23,
+    "quota_country_excluded:DE": 23,
+    "quota_country_excluded:SG": 22,
     "ss_unsupported_cipher:rc4-md5": 21,
-    "sb_probe_failed:ConnectionError": 19,
+    "sb_probe_failed:ConnectionError": 21,
+    "quota_country_excluded:GB": 21,
     "quota_country_excluded:CA": 13,
     "candidate_rejected:vmess": 12,
+    "quota_country_excluded:FR": 12,
     "quota_country_excluded:IT": 12,
-    "quota_country_excluded:CH": 12,
-    "quota_country_excluded:RU": 11,
-    "quota_country_excluded:FR": 11,
     "vmess_bogus_host:127.0.0.53": 10,
-    "ss_unsupported_cipher:2022-blake3-chacha20-poly1305": 9,
-    "quota_country_excluded:GB": 9,
-    "quota_country_excluded:ES": 8,
+    "quota_country_excluded:CH": 9,
+    "quota_country_excluded:ES": 9,
+    "candidate_rejected:hysteria2": 8,
     "ss_unsupported_cipher:ywvzlteyoc1ny206c2hhzg93c29ja3m": 6,
-    "candidate_rejected:hysteria2": 6,
+    "hy2_bad_structure": 6,
+    "ss_unsupported_cipher:2022-blake3-chacha20-poly1305": 6,
+    "quota_country_excluded:RU": 6,
     "vless_invalid_uuid": 5,
     "candidate_rejected:vless": 5,
-    "probe_delay_out_of_range": 5,
     "ss_unsupported_cipher:aes-256-cfb": 4,
     "ss_unsupported_cipher:2022-blake3-aes-256-gcm": 4,
-    "hy2_bad_structure": 4,
+    "probe_delay_out_of_range": 4,
+    "quota_country_excluded:AE": 4,
     "quota_country_excluded:TW": 4,
-    "sb_probe_no_confirmed_exit_ip": 3,
     "quota_country_excluded:ZA": 3,
-    "quota_country_excluded:AE": 3,
-    "vmess_missing_address_or_id": 2,
+    "quota_country_excluded:AT": 3,
+    "quota_country_excluded:SC": 3,
     "hy2_bogus_host:None": 2,
     "ss_unsupported_cipher:ywvzlti1ni1ny206axr6dnbuqdmymq": 2,
-    "quota_country_excluded:IN": 2,
+    "vmess_missing_address_or_id": 2,
     "quota_country_excluded:BR": 2,
-    "quota_country_excluded:IQ": 2,
     "quota_overflow:JP": 2,
+    "ss_unsupported_cipher:ywvzlteyoc1ny206qndscwg3r2ngqg": 1,
     "ss_unsupported_cipher:aes-128-cfb": 1,
     "ss_unsupported_cipher:2022-blake3-aes-128-gcm": 1,
-    "ss_plugin_unsupported:obfs-local": 1,
     "ss_unsupported_cipher:chacha20-poly1305": 1,
-    "ss_unsupported_cipher:ywvzlteyoc1ny206qndscwg3r2ngqg": 1,
-    "sb_probe_delay_out_of_range": 1,
-    "quota_country_excluded:DK": 1,
-    "quota_country_excluded:CL": 1,
-    "quota_country_excluded:OTHER": 1,
-    "quota_country_excluded:SE": 1,
-    "quota_country_excluded:IL": 1,
-    "quota_country_excluded:NG": 1,
-    "quota_country_excluded:BY": 1,
-    "quota_country_excluded:CO": 1,
-    "quota_country_excluded:AT": 1,
-    "quota_country_excluded:SC": 1,
-    "quota_country_excluded:NO": 1,
-    "quota_country_excluded:RO": 1,
-    "quota_country_excluded:FI": 1,
-    "quota_country_excluded:CZ": 1,
-    "quota_country_excluded:EE": 1,
-    "quota_country_excluded:BG": 1,
     "quota_country_excluded:AU": 1,
-    "quota_country_excluded:CY": 1
+    "quota_country_excluded:IN": 1,
+    "quota_country_excluded:VN": 1,
+    "quota_country_excluded:IL": 1,
+    "quota_country_excluded:OTHER": 1,
+    "quota_country_excluded:CY": 1,
+    "quota_country_excluded:DK": 1,
+    "quota_country_excluded:LV": 1,
+    "quota_country_excluded:CL": 1,
+    "quota_country_excluded:SE": 1,
+    "quota_country_excluded:NG": 1,
+    "quota_country_excluded:RO": 1,
+    "quota_country_excluded:CO": 1
   },
   "stages": {
     "fetch_sec": 0.3,
     "setup_sec": 2.1,
-    "probe_xray_sec": 2120.2,
-    "probe_singbox_sec": 24.9,
-    "classify_sec": 10.9,
+    "probe_xray_sec": 2171.1,
+    "probe_singbox_sec": 23.8,
+    "classify_sec": 10.8,
     "export_sec": 0.0,
-    "total_sec": 2159.3
+    "total_sec": 2209.2
   },
   "sources": {
     "https://wild-cloud-9893.heleimail.workers.dev": {
       "total_success": 0,
-      "total_failure": 145,
-      "consecutive_failures": 145,
+      "total_failure": 146,
+      "consecutive_failures": 146,
       "last_node_count": 0,
       "last_error": "HTTP 404",
       "last_success_at": ""
     },
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt": {
-      "total_success": 144,
+      "total_success": 145,
       "total_failure": 1,
       "consecutive_failures": 0,
       "last_node_count": 29,
       "last_error": "ConnectionError: HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt (Caused by ReadTimeoutEr",
-      "last_success_at": "2026-11-22T12:05:33+00:00"
+      "last_success_at": "2026-11-22T18:04:41+00:00"
     },
     "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt": {
-      "total_success": 145,
+      "total_success": 146,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 548,
+      "last_node_count": 528,
       "last_error": "",
-      "last_success_at": "2026-11-22T12:05:33+00:00"
+      "last_success_at": "2026-11-22T18:04:41+00:00"
     },
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix": {
-      "total_success": 145,
+      "total_success": 146,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 706,
       "last_error": "",
-      "last_success_at": "2026-11-22T12:05:33+00:00"
+      "last_success_at": "2026-11-22T18:04:41+00:00"
     },
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/protocols/hysteria": {
-      "total_success": 145,
+      "total_success": 146,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 12,
       "last_error": "",
-      "last_success_at": "2026-11-22T12:05:33+00:00"
+      "last_success_at": "2026-11-22T18:04:41+00:00"
     },
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls": {
-      "total_success": 145,
+      "total_success": 146,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 2407,
       "last_error": "",
-      "last_success_at": "2026-11-22T12:05:33+00:00"
+      "last_success_at": "2026-11-22T18:04:41+00:00"
     },
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt": {
-      "total_success": 144,
+      "total_success": 145,
       "total_failure": 1,
       "consecutive_failures": 0,
       "last_node_count": 1751,
       "last_error": "ConnectionError: HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt (Caused by ReadTimeoutError(\"HTTPSConn",
-      "last_success_at": "2026-11-22T12:05:33+00:00"
+      "last_success_at": "2026-11-22T18:04:41+00:00"
     },
     "https://raw.githubusercontent.com/freefq/free/master/v2": {
-      "total_success": 145,
+      "total_success": 146,
       "total_failure": 0,
       "consecutive_failures": 0,
       "last_node_count": 15,
       "last_error": "",
-      "last_success_at": "2026-11-22T12:05:33+00:00"
+      "last_success_at": "2026-11-22T18:04:41+00:00"
     },
     "https://open.heleimail.workers.dev/": {
       "total_success": 0,
-      "total_failure": 145,
-      "consecutive_failures": 145,
+      "total_failure": 146,
+      "consecutive_failures": 146,
       "last_node_count": 0,
       "last_error": "HTTP 404",
       "last_success_at": ""
     },
     "https://www.ermao.net/sub/v2ray/ermao.net": {
-      "total_success": 145,
+      "total_success": 146,
       "total_failure": 0,
       "consecutive_failures": 0,
-      "last_node_count": 372,
+      "last_node_count": 386,
       "last_error": "",
-      "last_success_at": "2026-11-22T12:05:33+00:00"
+      "last_success_at": "2026-11-22T18:04:41+00:00"
     }
   }
 }
