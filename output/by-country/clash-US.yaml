@@ -5,39 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 156.146.38.168
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 67.220.73.247
-  port: 443
+  server: 104.238.140.45
+  port: 11051
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
-  password: DGjtV63aPW3E
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 38.64.138.135
-  port: 1270
+  password: JUXsy78dSs6ROkasikmoaL
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 129.146.77.248
+  port: 39495
   udp: true
   type: vmess
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
   alterId: 0
   cipher: auto
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: xmfhlpy.com
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 156.146.38.170
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 38.244.5.231
   port: 443
   udp: true
+  type: vless
+  uuid: 1bd6c8a2-01db-4a3d-8b2c-0b2f2c3e8b5a
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: DUpNPvLjiL1GzeF7DfKWba-LYLz1KPuQXewhgNGPiDM
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 137.184.89.151
+  port: 19999
+  udp: true
   type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 38.128.66.241
+  server: 23.150.152.65
   port: 1270
   udp: true
   type: vmess
@@ -48,41 +56,40 @@ proxies:
   skip-cert-verify: true
   servername: xmfhlpy.com
 - name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 156.146.38.169
+  server: 156.146.38.170
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 216.152.155.50
+  server: 173.244.56.9
   port: 443
   udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: cdn.nextjobopportunityandclaimyouridealrole.com
-  skip-cert-verify: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 37.19.198.244
+  server: 156.146.38.168
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 15.204.246.111
-  port: 5498
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: lGqs95QkFHo2NV
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 37.19.198.160
+  server: 173.244.56.6
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 95.215.201.18
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 proxy-groups:
 - name: PROXIES
   type: select
