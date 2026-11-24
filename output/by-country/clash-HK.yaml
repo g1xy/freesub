@@ -5,84 +5,43 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
-  server: 152.32.254.68
-  port: 5010
-  udp: true
-  type: hysteria2
-  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
-  sni: nas.aizhzo.com
-  alpn:
-  - h3
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
-- name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
-  server: 202.146.222.89
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/clashv8🇨🇳
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
-  server: 202.146.222.29
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: speedtest.tinkoff.ru
-  alpn:
-  - h3
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
-  server: 47.86.90.31
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 234a8041-2b4d-44a3-a8d8-523cbfd58dc4
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: bywxdhirqkjj8xaz.v.3dns.vip
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: bywxdhirqkjj8xaz.v.3dns.vip
-- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
   server: 213.176.92.148
   port: 40647
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
-- name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
-  server: 45.144.136.202
-  port: 20086
+- name: 🇭🇰 中国香港 (Hong Kong) 02 - xiaohe
+  server: 202.146.222.29
+  port: 443
   udp: true
-  type: vless
-  uuid: 16eb939a-75c3-4b59-bfc3-ff07316c7a80
-  tls: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/wangcai2üá
+  alpn:
+  - h3
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: ZMKSZGONIVWum7Ut-O7JIKJ6gUBfURgrNOiMrblUBxk
-  servername: www.paypal.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 03 - xiaohe
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 202.146.222.174
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 04 - xiaohe
+  server: 202.146.222.89
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 202.146.222.89
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   server: 45.192.193.54
   port: 35600
   udp: true
@@ -95,26 +54,21 @@ proxies:
     public-key: fJwbUNPAxu-CcoWnzWrvtDkX7QMDvJwFGWzJ3lDcFC4
   servername: www.iij.ad.jp
   client-fingerprint: firefox
-- name: 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
-  server: free.fugui.lol
-  port: 47396
+- name: 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
+  server: sclass-00.catcat321.com
+  port: 20123
   udp: true
-  type: vless
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  tls: true
+  type: trojan
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  sni: hk.catxstar.com
   skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ
-  servername: swdist.apple.com
-  client-fingerprint: chrome
-- name: 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
   server: 31.57.248.176
   port: 50160
   udp: true
   type: hysteria2
   password: b0917015b656b3dd2286b5633af0c5c1
-  sni: 31.57.248.176
+  sni: www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147
   alpn:
   - h3
   skip-cert-verify: true
@@ -130,9 +84,6 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -145,8 +96,5 @@ proxy-groups:
   - 🇭🇰 中国香港 (Hong Kong) 05 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 06 - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 07 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 08 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 09 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 10 - xiaohe
 rules:
 - MATCH,PROXIES
