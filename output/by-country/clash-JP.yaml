@@ -12,20 +12,42 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇯🇵 日本 (Japan) 02 - xiaohe
-  server: 149.22.87.240
+  server: 149.22.87.241
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇯🇵 日本 (Japan) 03 - xiaohe
-  server: 168.138.205.100
-  port: 53758
+  server: 149.22.87.240
+  port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
-  password: Bwlqh7GcFB
+  password: shadowsocks
 - name: 🇯🇵 日本 (Japan) 04 - xiaohe
+  server: 94.177.131.113
+  port: 443
+  udp: true
+  type: vless
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  tls: true
+  skip-cert-verify: true
+  servername: kuruish.org
+- name: 🇯🇵 日本 (Japan) 05 - xiaohe
+  server: 103.75.118.228
+  port: 11452
+  udp: true
+  type: vless
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 06 - xiaohe
   server: 168.110.63.247
   port: 8081
   udp: true
@@ -38,18 +60,7 @@ proxies:
   network: ws
   ws-opts:
     path: /vless
-    headers:
-      Host: None
-- name: 🇯🇵 日本 (Japan) 05 - xiaohe
-  server: 94.177.131.113
-  port: 443
-  udp: true
-  type: vless
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  tls: true
-  skip-cert-verify: true
-  servername: kuruish.org
-- name: 🇯🇵 日本 (Japan) 06 - xiaohe
+- name: 🇯🇵 日本 (Japan) 07 - xiaohe
   server: 158.101.151.157
   port: 443
   udp: true
@@ -62,7 +73,7 @@ proxies:
     public-key: 99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8
   servername: www.microsoft.com
   client-fingerprint: chrome
-- name: 🇯🇵 日本 (Japan) 07 - xiaohe
+- name: 🇯🇵 日本 (Japan) 08 - xiaohe
   server: 8.209.247.109
   port: 443
   udp: true
@@ -72,7 +83,7 @@ proxies:
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 08 - xiaohe
+- name: 🇯🇵 日本 (Japan) 09 - xiaohe
   server: 161.33.20.255
   port: 8880
   udp: true
@@ -85,7 +96,7 @@ proxies:
   network: ws
   ws-opts:
     path: /e0856508-d693-450a-a099-455091dc4f25-vm
-- name: 🇯🇵 日本 (Japan) 09 - xiaohe
+- name: 🇯🇵 日本 (Japan) 10 - xiaohe
   server: 129.225.181.46
   port: 8443
   udp: true
@@ -95,19 +106,6 @@ proxies:
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 10 - xiaohe
-  server: 154.36.152.216
-  port: 443
-  udp: true
-  type: vless
-  uuid: 052ad41f-7cf5-4027-b14d-c90f89e46103
-  tls: true
-  skip-cert-verify: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: dv37ircK63KvcVZwv3XJiUXvOsiP-dEsZQ3gXDdPmRs
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

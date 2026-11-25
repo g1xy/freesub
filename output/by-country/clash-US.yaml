@@ -12,28 +12,36 @@ proxies:
   cipher: aes-128-gcm
   password: shadowsocks
 - name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 156.146.38.169
+  server: 216.152.155.131
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 156.146.38.168
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
   server: 67.220.73.247
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: DGjtV63aPW3E
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 156.146.38.168
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 38.64.138.135
+  server: 156.146.38.169
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 38.64.138.187
   port: 1270
   udp: true
   type: vmess
@@ -43,41 +51,41 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: xmfhlpy.com
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 37.19.198.244
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
 - name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 37.19.198.243
+  server: 195.211.98.43
   port: 443
   udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
+  type: vless
+  uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+  tls: true
+  skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+  servername: www.cloudflare.com
+  client-fingerprint: random
 - name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 193.151.163.18
-  port: 19999
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
   server: 37.19.198.236
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 37.19.198.160
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 37.19.198.243
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 216.152.155.54
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
