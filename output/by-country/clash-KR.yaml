@@ -15,6 +15,16 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
+  server: 132.226.226.189
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 1671a252e2a97dc2bda4e515475931da
+  sni: 'off'
+  alpn:
+  - h3
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
   server: 152.70.237.123
   port: 2053
   udp: true
@@ -24,23 +34,13 @@ proxies:
   alpn:
   - h3
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  server: 132.226.226.189
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 1671a252e2a97dc2bda4e515475931da
-  sni: www.bing.com
-  alpn:
-  - h3
-  skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
   server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
   password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: google.com
+  sni: 'off'
   alpn:
   - h3
   skip-cert-verify: true
@@ -50,10 +50,44 @@ proxies:
   udp: true
   type: hysteria2
   password: 1beb216e3f60aea9555dae60d219a5ca
-  sni: 152.69.231.175
+  sni: 152-69-231-175.liao.kdns.fr
   alpn:
   - h3
   skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  server: ifdmbpb.kdns.fr
+  port: 443
+  udp: true
+  type: vless
+  uuid: 9a600801-e889-4705-9adb-bf9aeb366fc7
+  tls: true
+  skip-cert-verify: true
+  servername: ifdmbpb.kdns.fr
+- name: 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  server: krd.80782636.xyz
+  port: 443
+  udp: true
+  type: vless
+  uuid: db906786-8c49-4b17-9182-cea680ef954d
+  tls: true
+  skip-cert-verify: true
+  servername: krd.80782636.xyz
+  network: ws
+  ws-opts:
+    path: /kw7x2mq9
+    headers:
+      Host: krd.80782636.xyz
+- name: 🇰🇷 韩国 (South Korea) 08 - xiaohe
+  server: kr.075661.xyz
+  port: 19283
+  udp: true
+  type: vmess
+  uuid: 3153def6-eecb-414d-88aa-7e59ea525e5d
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: kr.075661.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -64,6 +98,9 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 03 - xiaohe
   - 🇰🇷 韩国 (South Korea) 04 - xiaohe
   - 🇰🇷 韩国 (South Korea) 05 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -74,5 +111,8 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 03 - xiaohe
   - 🇰🇷 韩国 (South Korea) 04 - xiaohe
   - 🇰🇷 韩国 (South Korea) 05 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 06 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 07 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 08 - xiaohe
 rules:
 - MATCH,PROXIES
