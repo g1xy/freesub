@@ -6,14 +6,17 @@ log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
   server: 179.254.94.184
-  port: 8443
+  port: 443
   udp: true
-  type: hysteria2
-  password: 0b396097d052915ef304b40d2bda6a2d
-  sni: www.bing.com
-  alpn:
-  - h3
+  type: vless
+  uuid: 2f12e5b5-6ce7-47ab-88b9-6110c1a3fc60
+  tls: true
   skip-cert-verify: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: q49v36UVMNsNION3nn-cQU6_8VwgM_psm1s5z7XVaWc
+  servername: www.bing.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select

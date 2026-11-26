@@ -5,42 +5,22 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 156.146.38.169
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
   server: 67.220.73.247
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: DGjtV63aPW3E
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 216.152.155.59
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: api.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 156.146.38.168
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 156.146.38.170
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 209.248.57.105
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 38.64.138.187
+  server: 38.128.66.241
   port: 1270
   udp: true
   type: vmess
@@ -50,29 +30,51 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: xmfhlpy.com
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 66.163.114.166
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 216.152.155.158
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.findconnectwithemployersandbuildprofessionalnetwork.com
+  sni: resources.nextjobopportunityandclaimyouridealrole.com
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 216.152.155.176
+- name: 🇺🇸 美国 (United States) 05 - xiaohe
+  server: 216.152.155.54
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.nextjobopportunityandclaimyouridealrole.com
+  sni: learn.nextjobopportunityandclaimyouridealrole.com
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 95.215.201.18
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 149.40.57.134
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 38.128.66.32
+  port: 19999
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 216.152.155.23
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.nextjobopportunityandclaimyouridealrole.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 15.204.246.132
+  port: 7307
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
 proxy-groups:
 - name: PROXIES
   type: select
