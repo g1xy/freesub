@@ -55,22 +55,23 @@
       "tag": "block"
     },
     {
-      "type": "shadowsocks",
+      "type": "vmess",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "67.220.73.247",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "DGjtV63aPW3E"
+      "server": "84.17.41.2",
+      "server_port": 18000,
+      "uuid": "f8c8dc3d-0d37-46b0-8b34-a7232882fcfe",
+      "alter_id": 0,
+      "security": "auto"
     },
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "216.152.155.59",
+      "server": "216.106.186.82",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "api.nextjobopportunityandclaimyouridealrole.com",
+        "server_name": "courses.findlocaljobnetworkandbuildcommunityconnections.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -79,16 +80,14 @@
       }
     },
     {
-      "type": "vmess",
+      "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "38.128.66.241",
-      "server_port": 1270,
-      "uuid": "5c040f1d-45db-43bd-8d46-e4950e433735",
-      "alter_id": 0,
-      "security": "auto",
+      "server": "216.106.186.155",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "xmfhlpy.com",
+        "server_name": "api.findlocaljobnetworkandbuildcommunityconnections.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -99,12 +98,12 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
-      "server": "216.152.155.158",
+      "server": "216.106.186.32",
       "server_port": 443,
-      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "password": "dba20dcb635e430fa4d3bfc303a149d2",
       "tls": {
         "enabled": true,
-        "server_name": "resources.nextjobopportunityandclaimyouridealrole.com",
+        "server_name": "blog.findlocaljobnetworkandbuildcommunityconnections.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -115,44 +114,28 @@
     {
       "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "216.152.155.54",
+      "server": "216.106.186.46",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "learn.nextjobopportunityandclaimyouridealrole.com",
+        "server_name": "cdn.findlocaljobnetworkandbuildcommunityconnections.com",
         "insecure": true,
         "alpn": [
           "h2",
           "http/1.1"
         ]
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "149.40.57.134",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "38.128.66.32",
-      "server_port": 19999,
-      "method": "aes-256-gcm",
-      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
       "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "216.152.155.23",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
+      "server": "216.106.186.33",
       "server_port": 443,
       "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "courses.nextjobopportunityandclaimyouridealrole.com",
+        "server_name": "resources.findlocaljobnetworkandbuildcommunityconnections.com",
         "insecure": true,
         "alpn": [
           "h2",
@@ -161,12 +144,66 @@
       }
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
+      "server": "15.204.97.198",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
+      "server": "15.204.97.219",
+      "server_port": 23576,
+      "uuid": "48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "packet_encoding": "xudp",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "fuck.rkn",
+        "insecure": true,
+        "reality": {
+          "enabled": true,
+          "public_key": "1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s",
+          "short_id": "01"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
       "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "15.204.246.132",
-      "server_port": 7307,
-      "method": "aes-256-gcm",
-      "password": "FoOiGlkAA9yPEGP"
+      "server": "resources.findlocaljobnetworkandbuildcommunityconnections.com",
+      "server_port": 443,
+      "password": "f0eb8c92ce8946aaba856569cff1a16b",
+      "tls": {
+        "enabled": true,
+        "server_name": "resources.findlocaljobnetworkandbuildcommunityconnections.com",
+        "insecure": true,
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ]
+      }
     }
   ],
   "route": {

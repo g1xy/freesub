@@ -16,7 +16,7 @@ proxies:
   reality-opts:
     public-key: q49v36UVMNsNION3nn-cQU6_8VwgM_psm1s5z7XVaWc
   servername: www.bing.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
